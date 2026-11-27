@@ -13,6 +13,9 @@
 </head>
 <body>
 
+  <!-- Przełącznik języka (przyciski generuje script.js) -->
+  <nav class="lang-switch" id="lang-switch" aria-label="Język"></nav>
+
   <!-- INTRO z paralaksą: warstwy przesuwają się z różną prędkością (data-speed) -->
   <header class="intro" id="intro" data-color="#0b0b14" data-accent="#d9b26f">
     <div class="intro__layer intro__layer--space" data-speed="0.45" aria-hidden="true"></div>
@@ -20,9 +23,9 @@
     <div class="intro__layer intro__layer--vignette" aria-hidden="true"></div>
 
     <div class="intro__content" data-speed="-0.15">
-      <p class="intro__eyebrow">Biblijna oś czasu</p>
-      <h1 class="intro__title">Na początku…</h1>
-      <p class="intro__lead">
+      <p class="intro__eyebrow" data-i18n="introEyebrow">Biblijna oś czasu</p>
+      <h1 class="intro__title" data-i18n="introTitle">Na początku…</h1>
+      <p class="intro__lead" data-i18n="introLead">
         …choć tak naprawdę nie było żadnego „początku”, bo sam czas jeszcze nie istniał.
         Stwórca istniał w czymś na kształt kontinuum — bez wyraźnego początku i końca.
         W pewnym momencie zapragnął jednak podzielić się radością istnienia, możliwością życia
@@ -30,24 +33,24 @@
         Tak powstał nasz wszechświat, a wraz z nim — upływ czasu.
       </p>
       <blockquote class="intro__quote">
-        „Na początku było Słowo”
-        <cite>Jana 1:1</cite>
+        <span data-i18n="introQuote">„Na początku było Słowo”</span>
+        <cite data-i18n="introCite">Jana 1:1</cite>
       </blockquote>
     </div>
 
     <a class="intro__scroll" href="#timeline">
-      <span>Rozpocznij podróż</span>
+      <span data-i18n="scrollCta">Rozpocznij podróż</span>
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v16m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </header>
 
   <!-- OŚ CZASU: wypełniana przez script.js z data/events.json -->
   <main id="timeline" class="timeline">
-    <p class="timeline__status">Ładowanie osi czasu…</p>
+    <p class="timeline__status" data-i18n="loading">Ładowanie osi czasu…</p>
   </main>
 
   <footer class="site-footer">
-    <p>Daty według chronologii z leksykonu <em>Wnikliwe poznawanie Pism</em>. Większość dat przed potopem i w okresie patriarchów wyliczono z wieku podanego w Biblii.</p>
+    <p data-i18n="footer">Daty według chronologii z leksykonu „Wnikliwe poznawanie Pism”. Przed stworzeniem Adama Biblia nie podaje dat.</p>
   </footer>
 
   <script src="script.js" defer></script>

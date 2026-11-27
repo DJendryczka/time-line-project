@@ -14,42 +14,44 @@ Dane są wczytywane przez `fetch`, dlatego strona musi działać przez lokalny s
 ## Struktura
 
 ```
-index.html          intro z paralaksą + kontener osi
+index.html          intro z paralaksą, przełącznik języka, kontener osi
 style.css           zmienne, fonty, responsywność, wygląd osi
-script.js           wczytuje dane, renderuje oś, paralaksa, kolory per epoka
-data/events.json    epoki i wydarzenia
+script.js           wczytuje dane, renderuje oś, języki, paralaksa, kolory epok
+data/events.json    epoki i wydarzenia (treść w 5 językach)
+data/i18n.json      teksty interfejsu, oznaczenia lat, skróty ksiąg biblijnych
 images/time.png     tło intro (kosmos)
 ```
 
+## Języki
+
+Dostępne są PL, EN, SV, DE i ES. Język wybierasz przyciskami w prawym górnym rogu albo przez `?lang=en` w adresie. Wybór jest zapamiętywany w przeglądarce.
+
 ## Dodawanie danych
 
-Każda epoka w `data/events.json`:
+Wydarzenie w `data/events.json`:
 
 ```json
 {
-  "id": "przed-potopem",
-  "title": "Świat przed potopem",
-  "subtitle": "Od stworzenia Adama do potopu",
-  "start": -4026,
-  "end": -2370,
-  "color": "#0f1a16",
-  "accent": "#8fc79a",
-  "summary": "Krótki opis epoki",
-  "events": [
-    { "year": -4026, "title": "Stworzenie Adama", "description": "…", "refs": ["Rdz 2:7"] }
-  ]
+  "year": -4026,
+  "refs": ["gen 2:7", "gen 2:15"],
+  "title":       { "pl": "Stworzenie Adama", "en": "Creation of Adam", "sv": "…", "de": "…", "es": "…" },
+  "description": { "pl": "…", "en": "…", "sv": "…", "de": "…", "es": "…" }
 }
 ```
 
-- **Lata:** liczby ujemne oznaczają p.n.e., dodatnie n.e. Roku 0 nie ma, a skrypt sam to uwzględnia przy liczeniu różnic.
-- **`"approx": true`** dodaje „ok.” przed datą.
-- **`color` / `accent`:** kolor tła strony i kolor akcentu, gdy epoka jest na środku ekranu.
-- Wydarzenia są sortowane automatycznie. Odstęp między nimi rośnie z liczbą lat.
+- **`year`:** liczba ujemna to p.n.e., dodatnia n.e. `null` oznacza *czas nieokreślony*. Roku 0 nie ma, a skrypt sam to uwzględnia przy liczeniu różnic.
+- **`"approx": true`** dodaje „ok.” / „c.” / „omkr.” / „um” / „h.” przed datą.
+- **`refs`:** kod księgi + werset, np. `"joh 1:1-3"`. Skrót wyświetla się w każdym języku osobno (np. Jn / Joh / Joh / Joh / Jn). Nowe księgi dopisuje się w `data/i18n.json` → `books`.
+- **Brak tłumaczenia:** pokaże się wersja polska.
+- **Epoka bez dat:** `"start": null, "end": null`.
+- Wydarzenia wyświetlają się w kolejności z pliku. Odstęp między datowanymi wydarzeniami rośnie z liczbą lat.
 
 ## Plan
 
 - [x] Fundament CSS, intro z paralaksą, dane z 4 epokami, renderowanie osi
 - [x] Kolory tła zmieniające się per epoka
+- [x] Epoka „Stwarzanie” (przed Adamem, bez dat)
+- [x] 5 języków: PL, EN, SV, DE, ES
 - [ ] Przyklejony licznik roku
 - [ ] Minimapa w prawdziwej skali
 - [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)

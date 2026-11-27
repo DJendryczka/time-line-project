@@ -1,236 +1,933 @@
 {
   "meta": {
-    "title": "Biblijna oś czasu",
     "source": "Chronologia wg „Wnikliwe poznawanie Pism”",
-    "yearFormat": "Lata ujemne = p.n.e., dodatnie = n.e. Roku 0 nie ma."
+    "yearFormat": "year: ujemne = p.n.e., dodatnie = n.e., null = czas nieokreślony. Roku 0 nie ma.",
+    "refs": "Kod księgi (gen, exo, joh…) + rozdział:werset. Skróty w każdym języku są w data/i18n.json → books."
   },
   "eras": [
     {
+      "id": "stwarzanie",
+      "start": null,
+      "end": null,
+      "color": "#0d0c1f",
+      "accent": "#b7a8ff",
+      "title": {
+        "pl": "Stwarzanie",
+        "en": "Creation",
+        "sv": "Skapelsen",
+        "de": "Die Schöpfung",
+        "es": "La creación"
+      },
+      "subtitle": {
+        "pl": "Od Słowa do ogrodu Eden",
+        "en": "From the Word to the garden of Eden",
+        "sv": "Från Ordet till Edens trädgård",
+        "de": "Vom Wort bis zum Garten Eden",
+        "es": "De la Palabra al jardín de Edén"
+      },
+      "summary": {
+        "pl": "Zanim pojawił się człowiek, Jehowa stwarzał przez niezmierzony czas — najpierw w sferze duchowej, potem materialny wszechświat. Biblia nie podaje tu dat, a „dni” stwarzania z Rodzaju 1 były długimi okresami.",
+        "en": "Before humans appeared, Jehovah was creating for an immeasurable time — first in the spirit realm, then the physical universe. The Bible gives no dates here, and the creative “days” of Genesis 1 were long periods of time.",
+        "sv": "Innan människan fanns skapade Jehova under en omätbar tid – först i andevärlden, sedan det fysiska universum. Bibeln ger inga datum här, och skapelse”dagarna” i 1 Moseboken 1 var långa tidsperioder.",
+        "de": "Bevor es Menschen gab, erschuf Jehova über unermesslich lange Zeit – zuerst im geistigen Bereich, dann das materielle Universum. Die Bibel nennt hier keine Daten, und die Schöpfungs„tage“ aus 1. Mose 1 waren lange Zeitabschnitte.",
+        "es": "Antes de que existieran los seres humanos, Jehová estuvo creando durante un tiempo inmensurable: primero en la región espiritual y después el universo físico. La Biblia no da fechas aquí, y los «días» creativos de Génesis 1 fueron largos periodos de tiempo."
+      },
+      "events": [
+        {
+          "year": null,
+          "refs": ["col 1:15", "rev 3:14", "pro 8:22, 30", "joh 1:1-3"],
+          "title": {
+            "pl": "Stworzenie Słowa — Jezusa",
+            "en": "Creation of the Word — Jesus",
+            "sv": "Ordet – Jesus – skapas",
+            "de": "Erschaffung des Wortes – Jesus",
+            "es": "Creación de la Palabra: Jesús"
+          },
+          "description": {
+            "pl": "Pierwszy i jedyny, którego Jehowa stworzył bezpośrednio. Jako „pierworodny wszelkiego stworzenia” współpracował potem z Ojcem przy całej reszcie stwarzania.",
+            "en": "The first and only one Jehovah created directly. As “the firstborn of all creation,” he then worked alongside his Father in creating everything else.",
+            "sv": "Den förste och ende som Jehova skapade direkt. Som ”den förstfödde av all skapelse” arbetade han sedan tillsammans med sin Far när allt annat skapades.",
+            "de": "Der Erste und Einzige, den Jehova direkt erschuf. Als „Erstgeborener aller Schöpfung“ wirkte er danach bei der gesamten übrigen Schöpfung mit seinem Vater zusammen.",
+            "es": "El primero y único creado directamente por Jehová. Como «primogénito de toda la creación», trabajó después junto a su Padre en la creación de todo lo demás."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["col 1:16", "job 38:4-7", "dan 7:10"],
+          "title": {
+            "pl": "Stworzenie aniołów",
+            "en": "Creation of the angels",
+            "sv": "Änglarna skapas",
+            "de": "Erschaffung der Engel",
+            "es": "Creación de los ángeles"
+          },
+          "description": {
+            "pl": "Przez Jezusa powstają miliony duchowych synów Boga. Byli już, gdy zakładano ziemię, i wykrzykiwali wtedy z radości.",
+            "en": "Through Jesus, millions of spirit sons of God come into existence. They were already there when the earth was founded and shouted for joy.",
+            "sv": "Genom Jesus blir miljontals andliga Guds söner till. De fanns redan när jorden grundlades och jublade av glädje.",
+            "de": "Durch Jesus entstehen Millionen geistige Söhne Gottes. Sie waren schon da, als die Erde gegründet wurde, und jubelten vor Freude.",
+            "es": "Por medio de Jesús llegan a existir millones de hijos espirituales de Dios. Ya estaban presentes cuando se fundó la tierra y gritaron de alegría."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:1", "isa 40:26", "heb 11:3"],
+          "title": {
+            "pl": "Stworzenie wszechświata",
+            "en": "Creation of the universe",
+            "sv": "Universum skapas",
+            "de": "Erschaffung des Universums",
+            "es": "Creación del universo"
+          },
+          "description": {
+            "pl": "Bóg stwarza niebiosa i ziemię — miliardy galaktyk i gwiazd, z których każdą zna po imieniu.",
+            "en": "God creates the heavens and the earth — billions of galaxies and stars, each of which he knows by name.",
+            "sv": "Gud skapar himlarna och jorden – miljarder galaxer och stjärnor, som han känner var och en vid namn.",
+            "de": "Gott erschafft Himmel und Erde – Milliarden Galaxien und Sterne, die er alle mit Namen kennt.",
+            "es": "Dios crea los cielos y la tierra: miles de millones de galaxias y estrellas, y conoce a cada una por su nombre."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:1", "psa 19:1", "jer 31:35"],
+          "title": {
+            "pl": "Układ Słoneczny",
+            "en": "The solar system",
+            "sv": "Solsystemet",
+            "de": "Das Sonnensystem",
+            "es": "El sistema solar"
+          },
+          "description": {
+            "pl": "Słońce, Księżyc i planety należą do „niebios” z Rodzaju 1:1. Biblia nie opisuje szczegółów, ale podkreśla porządek, w jakim Jehowa ustanowił ciała niebieskie.",
+            "en": "The sun, moon, and planets are part of “the heavens” of Genesis 1:1. The Bible gives no details but highlights the order with which Jehovah set the heavenly bodies in place.",
+            "sv": "Solen, månen och planeterna hör till ”himlarna” i 1 Moseboken 1:1. Bibeln går inte in på detaljer men framhåller den ordning som Jehova gav himlakropparna.",
+            "de": "Sonne, Mond und Planeten gehören zu den „Himmeln“ aus 1. Mose 1:1. Die Bibel nennt keine Einzelheiten, hebt aber die Ordnung hervor, die Jehova den Himmelskörpern gab.",
+            "es": "El Sol, la Luna y los planetas forman parte de «los cielos» de Génesis 1:1. La Biblia no da detalles, pero destaca el orden con que Jehová estableció los cuerpos celestes."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:2", "job 26:7"],
+          "title": {
+            "pl": "Ziemia",
+            "en": "The earth",
+            "sv": "Jorden",
+            "de": "Die Erde",
+            "es": "La tierra"
+          },
+          "description": {
+            "pl": "Ziemia, zawieszona „na niczym”, jest na początku bezkształtna i pusta, okryta wodą i ciemnością. Duch Boży porusza się nad wodami.",
+            "en": "Hanging “upon nothing,” the earth is at first formless and waste, covered with water and darkness. God’s active force moves over the waters.",
+            "sv": "Jorden, som hänger ”på ingenting”, är först formlös och öde, täckt av vatten och mörker. Guds verksamma kraft rör sig över vattnet.",
+            "de": "Die Erde, die „an nichts“ aufgehängt ist, ist anfangs formlos und öde, bedeckt von Wasser und Finsternis. Gottes wirksame Kraft bewegt sich über den Wassern.",
+            "es": "Suspendida «sobre nada», la tierra está al principio sin forma y desierta, cubierta de agua y oscuridad. La fuerza activa de Dios se mueve sobre las aguas."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:3-5"],
+          "title": {
+            "pl": "Dzień 1: światło",
+            "en": "Day 1: Light",
+            "sv": "Dag 1: Ljus",
+            "de": "Tag 1: Licht",
+            "es": "Día 1: La luz"
+          },
+          "description": {
+            "pl": "Światło przenika przez gęste warstwy otaczające Ziemię — powstaje różnica między dniem a nocą.",
+            "en": "Light penetrates the thick layers surrounding the earth, producing day and night.",
+            "sv": "Ljus tränger igenom de täta lager som omger jorden – dag och natt uppstår.",
+            "de": "Licht dringt durch die dichten Schichten um die Erde – Tag und Nacht entstehen.",
+            "es": "La luz atraviesa las densas capas que rodean la tierra y surgen el día y la noche."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:6-8"],
+          "title": {
+            "pl": "Dzień 2: przestworze",
+            "en": "Day 2: The expanse",
+            "sv": "Dag 2: Atmosfären",
+            "de": "Tag 2: Die Ausdehnung",
+            "es": "Día 2: La expansión"
+          },
+          "description": {
+            "pl": "Powstaje atmosfera, która oddziela wody na powierzchni ziemi od wód w górze.",
+            "en": "The atmosphere forms, separating the waters on the earth’s surface from the waters above.",
+            "sv": "Atmosfären bildas och skiljer vattnet på jordens yta från vattnet ovanför.",
+            "de": "Die Atmosphäre entsteht und trennt die Wasser auf der Erdoberfläche von den Wassern darüber.",
+            "es": "Se forma la atmósfera, que separa las aguas de la superficie terrestre de las aguas de arriba."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:9-13"],
+          "title": {
+            "pl": "Dzień 3: ląd i rośliny",
+            "en": "Day 3: Land and plants",
+            "sv": "Dag 3: Land och växter",
+            "de": "Tag 3: Land und Pflanzen",
+            "es": "Día 3: Tierra firme y plantas"
+          },
+          "description": {
+            "pl": "Z wód wyłania się suchy ląd. Pojawia się trawa, rośliny wydające nasiona i drzewa owocowe — każde „według swego rodzaju”.",
+            "en": "Dry land rises from the waters. Grass, seed-bearing plants, and fruit trees appear — each “according to its kind.”",
+            "sv": "Torra land stiger upp ur vattnet. Gräs, fröbärande växter och fruktträd växer fram – var och en ”efter sin art”.",
+            "de": "Trockenes Land steigt aus den Wassern. Gras, samentragende Pflanzen und Fruchtbäume entstehen – jedes „nach seiner Art“.",
+            "es": "Surge la tierra seca de entre las aguas. Aparecen la hierba, las plantas que dan semilla y los árboles frutales, cada uno «según su género»."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:14-19"],
+          "title": {
+            "pl": "Dzień 4: Słońce, Księżyc i gwiazdy",
+            "en": "Day 4: Sun, moon, and stars",
+            "sv": "Dag 4: Sol, måne och stjärnor",
+            "de": "Tag 4: Sonne, Mond und Sterne",
+            "es": "Día 4: Sol, luna y estrellas"
+          },
+          "description": {
+            "pl": "Ciała niebieskie stają się wyraźnie widoczne z powierzchni ziemi i odtąd wyznaczają pory roku, dni i lata.",
+            "en": "The heavenly bodies become clearly visible from the earth’s surface and now mark seasons, days, and years.",
+            "sv": "Himlakropparna blir tydligt synliga från jordens yta och markerar nu årstider, dagar och år.",
+            "de": "Die Himmelskörper werden von der Erdoberfläche aus deutlich sichtbar und markieren nun Jahreszeiten, Tage und Jahre.",
+            "es": "Los cuerpos celestes se hacen claramente visibles desde la superficie terrestre y marcan desde entonces las estaciones, los días y los años."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:20-23"],
+          "title": {
+            "pl": "Dzień 5: ryby i ptaki",
+            "en": "Day 5: Sea creatures and birds",
+            "sv": "Dag 5: Havsdjur och fåglar",
+            "de": "Tag 5: Meerestiere und Vögel",
+            "es": "Día 5: Animales marinos y aves"
+          },
+          "description": {
+            "pl": "Wody zapełniają się żywymi stworzeniami, od drobnych ryb po wielkie stworzenia morskie, a niebo — ptakami.",
+            "en": "The waters swarm with living creatures, from small fish to great sea creatures, and birds fill the sky.",
+            "sv": "Vattnet myllrar av levande varelser, från små fiskar till stora havsdjur, och fåglar fyller himlen.",
+            "de": "Die Wasser wimmeln von Lebewesen, von kleinen Fischen bis zu großen Meerestieren, und Vögel erfüllen den Himmel.",
+            "es": "Las aguas se llenan de seres vivos, desde pequeños peces hasta grandes criaturas marinas, y las aves llenan el cielo."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 1:24, 25"],
+          "title": {
+            "pl": "Dzień 6: zwierzęta lądowe",
+            "en": "Day 6: Land animals",
+            "sv": "Dag 6: Landdjur",
+            "de": "Tag 6: Landtiere",
+            "es": "Día 6: Animales terrestres"
+          },
+          "description": {
+            "pl": "Powstają zwierzęta domowe, dzikie i małe stworzenia lądowe. Ukoronowaniem tego dnia będzie człowiek.",
+            "en": "Domestic animals, wild animals, and small land creatures are made. The crowning work of this day will be man.",
+            "sv": "Tamdjur, vilda djur och små landdjur skapas. Kronan på verket denna dag blir människan.",
+            "de": "Haustiere, wilde Tiere und kleine Landtiere entstehen. Die Krönung dieses Tages wird der Mensch sein.",
+            "es": "Se crean los animales domésticos, los salvajes y los animales pequeños de la tierra. La obra culminante de este día será el ser humano."
+          }
+        },
+        {
+          "year": null,
+          "refs": ["gen 2:8-10, 15"],
+          "title": {
+            "pl": "Ogród Eden",
+            "en": "The garden of Eden",
+            "sv": "Edens trädgård",
+            "de": "Der Garten Eden",
+            "es": "El jardín de Edén"
+          },
+          "description": {
+            "pl": "Jehowa zasadza w Edenie, na wschodzie, ogród pełen pięknych drzew owocowych, nawadniany przez rzekę — przyszły dom człowieka.",
+            "en": "Jehovah plants a garden in Eden, toward the east, full of beautiful fruit trees and watered by a river — the future home of man.",
+            "sv": "Jehova planterar en trädgård i Eden, österut, full av vackra fruktträd och bevattnad av en flod – människans framtida hem.",
+            "de": "Jehova pflanzt in Eden, gegen Osten, einen Garten voller schöner Fruchtbäume, bewässert von einem Fluss – das künftige Zuhause des Menschen.",
+            "es": "Jehová planta un jardín en Edén, hacia el este, lleno de hermosos árboles frutales y regado por un río: el futuro hogar del ser humano."
+          }
+        }
+      ]
+    },
+    {
       "id": "przed-potopem",
-      "title": "Świat przed potopem",
-      "subtitle": "Od stworzenia Adama do potopu",
       "start": -4026,
       "end": -2370,
       "color": "#0f1a16",
       "accent": "#8fc79a",
-      "summary": "Pierwsi ludzie żyli setki lat. Rodowód z Rodzaju 5 łączy Adama z Noem i pozwala wyliczyć daty niemal co do roku.",
+      "title": {
+        "pl": "Świat przed potopem",
+        "en": "The world before the Flood",
+        "sv": "Världen före floden",
+        "de": "Die Welt vor der Sintflut",
+        "es": "El mundo antes del Diluvio"
+      },
+      "subtitle": {
+        "pl": "Od stworzenia Adama do potopu",
+        "en": "From Adam’s creation to the Flood",
+        "sv": "Från Adams skapelse till floden",
+        "de": "Von Adams Erschaffung bis zur Sintflut",
+        "es": "De la creación de Adán al Diluvio"
+      },
+      "summary": {
+        "pl": "Pierwsi ludzie żyli setki lat. Rodowód z Rodzaju 5 łączy Adama z Noem i pozwala wyliczyć daty niemal co do roku.",
+        "en": "The first humans lived for centuries. The genealogy in Genesis 5 links Adam to Noah and allows dates to be calculated almost to the year.",
+        "sv": "De första människorna levde i hundratals år. Släktlistan i 1 Moseboken 5 förbinder Adam med Noa och gör att datumen kan räknas ut nästan på året.",
+        "de": "Die ersten Menschen lebten Jahrhunderte. Das Geschlechtsregister in 1. Mose 5 verbindet Adam mit Noah und erlaubt es, Daten fast aufs Jahr genau zu berechnen.",
+        "es": "Los primeros humanos vivieron cientos de años. La genealogía de Génesis 5 enlaza a Adán con Noé y permite calcular las fechas casi al año exacto."
+      },
       "events": [
         {
           "year": -4026,
-          "title": "Stworzenie Adama",
-          "description": "Jehowa formuje pierwszego człowieka z prochu ziemi i umieszcza go w ogrodzie Eden.",
-          "refs": ["Rdz 2:7", "Rdz 2:15"]
+          "refs": ["gen 2:7", "gen 2:15"],
+          "title": {
+            "pl": "Stworzenie Adama",
+            "en": "Creation of Adam",
+            "sv": "Adam skapas",
+            "de": "Erschaffung Adams",
+            "es": "Creación de Adán"
+          },
+          "description": {
+            "pl": "Ukoronowanie szóstego dnia: Jehowa formuje człowieka z prochu ziemi, daje mu życie i umieszcza go w ogrodzie Eden.",
+            "en": "The crowning work of the sixth day: Jehovah forms man from the dust of the ground, gives him life, and places him in the garden of Eden.",
+            "sv": "Kronan på den sjätte dagen: Jehova formar människan av stoft från marken, ger honom liv och sätter honom i Edens trädgård.",
+            "de": "Die Krönung des sechsten Tages: Jehova formt den Menschen aus Staub vom Erdboden, gibt ihm Leben und setzt ihn in den Garten Eden.",
+            "es": "La obra culminante del sexto día: Jehová forma al hombre del polvo del suelo, le da vida y lo pone en el jardín de Edén."
+          }
+        },
+        {
+          "year": -4026,
+          "approx": true,
+          "refs": ["gen 2:21-24", "gen 2:2, 3", "heb 4:4-6"],
+          "title": {
+            "pl": "Stworzenie Ewy",
+            "en": "Creation of Eve",
+            "sv": "Eva skapas",
+            "de": "Erschaffung Evas",
+            "es": "Creación de Eva"
+          },
+          "description": {
+            "pl": "Z żebra Adama Jehowa tworzy kobietę — pierwsze małżeństwo. Kończy się szósty dzień i zaczyna siódmy, dzień Bożego odpoczynku, który trwa nadal.",
+            "en": "From Adam’s rib Jehovah makes the woman — the first marriage. The sixth day ends and the seventh begins, God’s rest day, which is still continuing.",
+            "sv": "Av Adams revben gör Jehova kvinnan – det första äktenskapet. Den sjätte dagen slutar och den sjunde börjar, Guds vilodag, som fortfarande pågår.",
+            "de": "Aus Adams Rippe macht Jehova die Frau – die erste Ehe. Der sechste Tag endet, und der siebte beginnt, Gottes Ruhetag, der noch andauert.",
+            "es": "Jehová forma a la mujer de una costilla de Adán: el primer matrimonio. Termina el sexto día y comienza el séptimo, el día de descanso de Dios, que aún continúa."
+          }
         },
         {
           "year": -3896,
-          "title": "Narodziny Seta",
-          "description": "Adam ma 130 lat, gdy rodzi mu się Set — przez niego biegnie linia aż do Noego.",
-          "refs": ["Rdz 5:3"]
+          "refs": ["gen 5:3"],
+          "title": {
+            "pl": "Narodziny Seta",
+            "en": "Birth of Seth",
+            "sv": "Set föds",
+            "de": "Geburt Seths",
+            "es": "Nace Set"
+          },
+          "description": {
+            "pl": "Adam ma 130 lat, gdy rodzi mu się Set — przez niego biegnie linia aż do Noego.",
+            "en": "Adam is 130 years old when Seth is born — the line leading to Noah runs through him.",
+            "sv": "Adam är 130 år när Set föds – genom honom går släktlinjen fram till Noa.",
+            "de": "Adam ist 130 Jahre alt, als Seth geboren wird – über ihn verläuft die Linie bis zu Noah.",
+            "es": "Adán tiene 130 años cuando nace Set; por medio de él continúa la línea hasta Noé."
+          }
         },
         {
           "year": -3404,
-          "title": "Narodziny Henocha",
-          "description": "Henoch „chodził z prawdziwym Bogiem” i prorokował o sądzie nad bezbożnymi.",
-          "refs": ["Rdz 5:18, 22", "Judy 14"]
+          "refs": ["gen 5:18, 22", "jud 14"],
+          "title": {
+            "pl": "Narodziny Henocha",
+            "en": "Birth of Enoch",
+            "sv": "Henok föds",
+            "de": "Geburt Henochs",
+            "es": "Nace Enoc"
+          },
+          "description": {
+            "pl": "Henoch „chodził z prawdziwym Bogiem” i prorokował o sądzie nad bezbożnymi.",
+            "en": "Enoch “walked with the true God” and prophesied about judgment on the ungodly.",
+            "sv": "Henok ”vandrade med den sanne Guden” och profeterade om domen över de ogudaktiga.",
+            "de": "Henoch „wandelte mit dem wahren Gott“ und prophezeite über das Gericht an den Gottlosen.",
+            "es": "Enoc «siguió andando con el Dios verdadero» y profetizó sobre el juicio contra los impíos."
+          }
         },
         {
           "year": -3339,
-          "title": "Narodziny Metuszelacha",
-          "description": "Syn Henocha — najdłużej żyjący człowiek opisany w Biblii (969 lat).",
-          "refs": ["Rdz 5:21, 27"]
+          "refs": ["gen 5:21, 27"],
+          "title": {
+            "pl": "Narodziny Metuszelacha",
+            "en": "Birth of Methuselah",
+            "sv": "Metusela föds",
+            "de": "Geburt Methusalems",
+            "es": "Nace Matusalén"
+          },
+          "description": {
+            "pl": "Syn Henocha — najdłużej żyjący człowiek opisany w Biblii (969 lat).",
+            "en": "Son of Enoch — the longest-lived person mentioned in the Bible (969 years).",
+            "sv": "Henoks son – den som levde längst av alla i Bibeln (969 år).",
+            "de": "Henochs Sohn – der langlebigste Mensch, den die Bibel erwähnt (969 Jahre).",
+            "es": "Hijo de Enoc, la persona más longeva mencionada en la Biblia (969 años)."
+          }
         },
         {
           "year": -3096,
-          "title": "Śmierć Adama",
-          "description": "Adam umiera w wieku 930 lat — wyrok wypowiedziany w Edenie się spełnia.",
-          "refs": ["Rdz 5:5", "Rdz 3:19"]
+          "refs": ["gen 5:5", "gen 3:19"],
+          "title": {
+            "pl": "Śmierć Adama",
+            "en": "Death of Adam",
+            "sv": "Adam dör",
+            "de": "Tod Adams",
+            "es": "Muere Adán"
+          },
+          "description": {
+            "pl": "Adam umiera w wieku 930 lat — wyrok wypowiedziany w Edenie się spełnia.",
+            "en": "Adam dies at the age of 930 — the sentence pronounced in Eden is fulfilled.",
+            "sv": "Adam dör 930 år gammal – domen som uttalades i Eden går i uppfyllelse.",
+            "de": "Adam stirbt im Alter von 930 Jahren – das in Eden ausgesprochene Urteil erfüllt sich.",
+            "es": "Adán muere a los 930 años: se cumple la sentencia pronunciada en Edén."
+          }
         },
         {
           "year": -3039,
-          "title": "Henoch zabrany przez Boga",
-          "description": "W wieku 365 lat Henoch zostaje zabrany, tak by nie zobaczył śmierci.",
-          "refs": ["Rdz 5:23, 24", "Heb 11:5"]
+          "refs": ["gen 5:23, 24", "heb 11:5"],
+          "title": {
+            "pl": "Henoch zabrany przez Boga",
+            "en": "God takes Enoch",
+            "sv": "Gud tar Henok",
+            "de": "Gott nimmt Henoch weg",
+            "es": "Dios se lleva a Enoc"
+          },
+          "description": {
+            "pl": "W wieku 365 lat Henoch zostaje zabrany, tak by nie zobaczył śmierci.",
+            "en": "At 365 years of age, Enoch is taken so that he would not see death.",
+            "sv": "Vid 365 års ålder tas Henok bort så att han inte skulle se döden.",
+            "de": "Mit 365 Jahren wird Henoch weggenommen, damit er den Tod nicht sehe.",
+            "es": "A los 365 años, Enoc es trasladado para que no viera la muerte."
+          }
         },
         {
           "year": -2970,
-          "title": "Narodziny Noego",
-          "description": "Lamech nadaje synowi imię Noe w nadziei na ulgę od trudu na przeklętej ziemi.",
-          "refs": ["Rdz 5:28, 29"]
+          "refs": ["gen 5:28, 29"],
+          "title": {
+            "pl": "Narodziny Noego",
+            "en": "Birth of Noah",
+            "sv": "Noa föds",
+            "de": "Geburt Noahs",
+            "es": "Nace Noé"
+          },
+          "description": {
+            "pl": "Lamech nadaje synowi imię Noe w nadziei na ulgę od trudu na przeklętej ziemi.",
+            "en": "Lamech names his son Noah, hoping for relief from toil on the cursed ground.",
+            "sv": "Lemek ger sin son namnet Noa i hopp om lättnad från slitet på den förbannade marken.",
+            "de": "Lamech nennt seinen Sohn Noah in der Hoffnung auf Erleichterung von der Mühsal auf dem verfluchten Erdboden.",
+            "es": "Lamec llama a su hijo Noé con la esperanza de alivio del duro trabajo en el suelo maldito."
+          }
         },
         {
           "year": -2370,
-          "title": "Potop",
-          "description": "W 600 roku życia Noego zaczyna się potop. Ocaleje tylko osiem osób w arce. W tym samym roku umiera Metuszelach.",
-          "refs": ["Rdz 7:6, 11", "1 Pt 3:20"]
+          "refs": ["gen 7:6, 11", "1pe 3:20"],
+          "title": {
+            "pl": "Potop",
+            "en": "The Flood",
+            "sv": "Floden",
+            "de": "Die Sintflut",
+            "es": "El Diluvio"
+          },
+          "description": {
+            "pl": "W 600 roku życia Noego zaczyna się potop. Ocaleje tylko osiem osób w arce. W tym samym roku umiera Metuszelach.",
+            "en": "In the 600th year of Noah’s life, the Flood begins. Only eight people survive in the ark. Methuselah dies the same year.",
+            "sv": "Under Noas 600:e levnadsår börjar floden. Bara åtta människor överlever i arken. Samma år dör Metusela.",
+            "de": "Im 600. Lebensjahr Noahs beginnt die Sintflut. Nur acht Menschen überleben in der Arche. Im selben Jahr stirbt Methusalem.",
+            "es": "En el año 600 de la vida de Noé comienza el Diluvio. Solo ocho personas sobreviven en el arca. Ese mismo año muere Matusalén."
+          }
         }
       ]
     },
     {
       "id": "po-potopie",
-      "title": "Nowy początek",
-      "subtitle": "Od potopu do przymierza z Abrahamem",
       "start": -2370,
       "end": -1943,
       "color": "#101826",
       "accent": "#8fb4e0",
-      "summary": "Ludzkość zaczyna od nowa z rodziną Noego. Po Babel narody rozchodzą się po ziemi, a Bóg wybiera Abrahama.",
+      "title": {
+        "pl": "Nowy początek",
+        "en": "A new beginning",
+        "sv": "En ny början",
+        "de": "Ein neuer Anfang",
+        "es": "Un nuevo comienzo"
+      },
+      "subtitle": {
+        "pl": "Od potopu do przymierza z Abrahamem",
+        "en": "From the Flood to the covenant with Abraham",
+        "sv": "Från floden till förbundet med Abraham",
+        "de": "Von der Sintflut bis zum Bund mit Abraham",
+        "es": "Del Diluvio al pacto con Abrahán"
+      },
+      "summary": {
+        "pl": "Ludzkość zaczyna od nowa z rodziną Noego. Po Babel narody rozchodzą się po ziemi, a Bóg wybiera Abrahama.",
+        "en": "Mankind starts afresh with Noah’s family. After Babel the nations scatter over the earth, and God chooses Abraham.",
+        "sv": "Mänskligheten börjar om med Noas familj. Efter Babel sprids folken över jorden, och Gud väljer Abraham.",
+        "de": "Die Menschheit beginnt mit Noahs Familie neu. Nach Babel zerstreuen sich die Völker über die Erde, und Gott wählt Abraham aus.",
+        "es": "La humanidad comienza de nuevo con la familia de Noé. Tras Babel, las naciones se dispersan por la tierra, y Dios escoge a Abrahán."
+      },
       "events": [
         {
           "year": -2369,
-          "title": "Wyjście z arki",
-          "description": "Ziemia obsycha. Noe składa ofiarę, a Bóg zawiera przymierze tęczy ze wszystkimi żywymi istotami.",
-          "refs": ["Rdz 8:13–19", "Rdz 9:12–16"]
+          "refs": ["gen 8:13-19", "gen 9:12-16"],
+          "title": {
+            "pl": "Wyjście z arki",
+            "en": "Leaving the ark",
+            "sv": "Ut ur arken",
+            "de": "Verlassen der Arche",
+            "es": "Salida del arca"
+          },
+          "description": {
+            "pl": "Ziemia obsycha. Noe składa ofiarę, a Bóg zawiera przymierze tęczy ze wszystkimi żywymi istotami.",
+            "en": "The earth dries out. Noah offers a sacrifice, and God makes the rainbow covenant with all living creatures.",
+            "sv": "Jorden torkar upp. Noa offrar, och Gud ingår regnbågsförbundet med allt levande.",
+            "de": "Die Erde trocknet. Noah bringt ein Opfer dar, und Gott schließt den Regenbogenbund mit allen Lebewesen.",
+            "es": "La tierra se seca. Noé ofrece un sacrificio, y Dios hace el pacto del arcoíris con todos los seres vivos."
+          }
         },
         {
           "year": -2368,
-          "title": "Narodziny Arpachszada",
-          "description": "Dwa lata po potopie Sem zostaje ojcem — od tej daty biegnie dalsza rachuba lat.",
-          "refs": ["Rdz 11:10"]
+          "refs": ["gen 11:10"],
+          "title": {
+            "pl": "Narodziny Arpachszada",
+            "en": "Birth of Arpachshad",
+            "sv": "Arpaksad föds",
+            "de": "Geburt Arpachschads",
+            "es": "Nace Arpaksad"
+          },
+          "description": {
+            "pl": "Dwa lata po potopie Sem zostaje ojcem — od tej daty biegnie dalsza rachuba lat.",
+            "en": "Two years after the Flood, Shem becomes a father — the count of years continues from this date.",
+            "sv": "Två år efter floden blir Sem far – härifrån fortsätter tideräkningen.",
+            "de": "Zwei Jahre nach der Sintflut wird Sem Vater – von diesem Datum an geht die Zeitrechnung weiter.",
+            "es": "Dos años después del Diluvio, Sem es padre; a partir de esta fecha continúa la cuenta de los años."
+          }
         },
         {
           "year": -2269,
-          "title": "Narodziny Pelega",
-          "description": "„Za jego dni ziemia została podzielona” — prawdopodobnie aluzja do pomieszania języków w Babel.",
-          "refs": ["Rdz 10:25", "Rdz 11:1–9"]
+          "refs": ["gen 10:25", "gen 11:1-9"],
+          "title": {
+            "pl": "Narodziny Pelega",
+            "en": "Birth of Peleg",
+            "sv": "Peleg föds",
+            "de": "Geburt Pelegs",
+            "es": "Nace Péleg"
+          },
+          "description": {
+            "pl": "„Za jego dni ziemia została podzielona” — prawdopodobnie aluzja do pomieszania języków w Babel.",
+            "en": "“In his days the earth was divided” — probably a reference to the confusion of languages at Babel.",
+            "sv": "”På hans tid delades jorden” – troligen en anspelning på språkförbistringen i Babel.",
+            "de": "„In seinen Tagen wurde die Erde geteilt“ – wahrscheinlich ein Hinweis auf die Sprachverwirrung in Babel.",
+            "es": "«En sus días la tierra fue dividida»: probablemente una alusión a la confusión de idiomas en Babel."
+          }
         },
         {
           "year": -2020,
-          "title": "Śmierć Noego",
-          "description": "Noe umiera, mając 950 lat — 350 lat po potopie.",
-          "refs": ["Rdz 9:28, 29"]
+          "refs": ["gen 9:28, 29"],
+          "title": {
+            "pl": "Śmierć Noego",
+            "en": "Death of Noah",
+            "sv": "Noa dör",
+            "de": "Tod Noahs",
+            "es": "Muere Noé"
+          },
+          "description": {
+            "pl": "Noe umiera, mając 950 lat — 350 lat po potopie.",
+            "en": "Noah dies at 950 years of age — 350 years after the Flood.",
+            "sv": "Noa dör 950 år gammal – 350 år efter floden.",
+            "de": "Noah stirbt mit 950 Jahren – 350 Jahre nach der Sintflut.",
+            "es": "Noé muere a los 950 años, 350 años después del Diluvio."
+          }
         },
         {
           "year": -2018,
-          "title": "Narodziny Abrama",
-          "description": "W Ur Chaldejskim rodzi się Abram, późniejszy Abraham — „przyjaciel Jehowy”.",
-          "refs": ["Rdz 11:26, 27", "Jak 2:23"]
+          "refs": ["gen 11:26, 27", "jas 2:23"],
+          "title": {
+            "pl": "Narodziny Abrama",
+            "en": "Birth of Abram",
+            "sv": "Abram föds",
+            "de": "Geburt Abrams",
+            "es": "Nace Abram"
+          },
+          "description": {
+            "pl": "W Ur Chaldejskim rodzi się Abram, późniejszy Abraham — „przyjaciel Jehowy”.",
+            "en": "In Ur of the Chaldeans, Abram is born — later Abraham, “Jehovah’s friend.”",
+            "sv": "I Ur i Kaldeen föds Abram, senare Abraham – ”Jehovas vän”.",
+            "de": "In Ur der Chaldäer wird Abram geboren, später Abraham – „Jehovas Freund“.",
+            "es": "En Ur de los caldeos nace Abram, más tarde Abrahán, «amigo de Jehová»."
+          }
         },
         {
           "year": -1943,
-          "title": "Przymierze z Abrahamem",
-          "description": "75-letni Abram przekracza Eufrat w drodze do Kanaanu. Zaczyna obowiązywać przymierze z Abrahamem.",
-          "refs": ["Rdz 12:1–7", "Gal 3:17"]
+          "refs": ["gen 12:1-7", "gal 3:17"],
+          "title": {
+            "pl": "Przymierze z Abrahamem",
+            "en": "Covenant with Abraham",
+            "sv": "Förbundet med Abraham",
+            "de": "Bund mit Abraham",
+            "es": "Pacto con Abrahán"
+          },
+          "description": {
+            "pl": "75-letni Abram przekracza Eufrat w drodze do Kanaanu. Zaczyna obowiązywać przymierze z Abrahamem.",
+            "en": "At 75, Abram crosses the Euphrates on his way to Canaan. The Abrahamic covenant takes effect.",
+            "sv": "75 år gammal korsar Abram Eufrat på väg till Kanaan. Förbundet med Abraham träder i kraft.",
+            "de": "Mit 75 Jahren überquert Abram auf dem Weg nach Kanaan den Euphrat. Der Abrahamische Bund tritt in Kraft.",
+            "es": "A los 75 años, Abram cruza el Éufrates camino de Canaán. Entra en vigor el pacto abrahámico."
+          }
         }
       ]
     },
     {
       "id": "patriarchowie",
-      "title": "Patriarchowie i Egipt",
-      "subtitle": "Od Abrahama do wyjścia z Egiptu",
       "start": -1943,
       "end": -1513,
       "color": "#1f160d",
       "accent": "#e0b46c",
-      "summary": "Obietnica przechodzi z Abrahama na Izaaka i Jakuba. Rodzina Jakuba trafia do Egiptu i z czasem zostaje tam zniewolona.",
+      "title": {
+        "pl": "Patriarchowie i Egipt",
+        "en": "The patriarchs and Egypt",
+        "sv": "Patriarkerna och Egypten",
+        "de": "Die Patriarchen und Ägypten",
+        "es": "Los patriarcas y Egipto"
+      },
+      "subtitle": {
+        "pl": "Od Abrahama do wyjścia z Egiptu",
+        "en": "From Abraham to the Exodus",
+        "sv": "Från Abraham till uttåget ur Egypten",
+        "de": "Von Abraham bis zum Auszug aus Ägypten",
+        "es": "De Abrahán al éxodo de Egipto"
+      },
+      "summary": {
+        "pl": "Obietnica przechodzi z Abrahama na Izaaka i Jakuba. Rodzina Jakuba trafia do Egiptu i z czasem zostaje tam zniewolona.",
+        "en": "The promise passes from Abraham to Isaac and Jacob. Jacob’s family ends up in Egypt and in time is enslaved there.",
+        "sv": "Löftet går vidare från Abraham till Isak och Jakob. Jakobs familj hamnar i Egypten och blir med tiden förslavad där.",
+        "de": "Die Verheißung geht von Abraham auf Isaak und Jakob über. Jakobs Familie gelangt nach Ägypten und wird dort mit der Zeit versklavt.",
+        "es": "La promesa pasa de Abrahán a Isaac y Jacob. La familia de Jacob llega a Egipto y con el tiempo es esclavizada allí."
+      },
       "events": [
         {
           "year": -1932,
-          "title": "Narodziny Izmaela",
-          "description": "Abram ma 86 lat, gdy Hagar rodzi mu Izmaela.",
-          "refs": ["Rdz 16:15, 16"]
+          "refs": ["gen 16:15, 16"],
+          "title": {
+            "pl": "Narodziny Izmaela",
+            "en": "Birth of Ishmael",
+            "sv": "Ismael föds",
+            "de": "Geburt Ismaels",
+            "es": "Nace Ismael"
+          },
+          "description": {
+            "pl": "Abram ma 86 lat, gdy Hagar rodzi mu Izmaela.",
+            "en": "Abram is 86 years old when Hagar bears him Ishmael.",
+            "sv": "Abram är 86 år när Hagar föder Ismael åt honom.",
+            "de": "Abram ist 86 Jahre alt, als Hagar ihm Ismael gebiert.",
+            "es": "Abram tiene 86 años cuando Agar le da a luz a Ismael."
+          }
         },
         {
           "year": -1919,
-          "title": "Przymierze obrzezania",
-          "description": "Abram otrzymuje imię Abraham. W tym samym roku zostają zniszczone Sodoma i Gomora.",
-          "refs": ["Rdz 17:1–5, 24", "Rdz 19:24, 25"]
+          "refs": ["gen 17:1-5, 24", "gen 19:24, 25"],
+          "title": {
+            "pl": "Przymierze obrzezania",
+            "en": "Covenant of circumcision",
+            "sv": "Omskärelseförbundet",
+            "de": "Bund der Beschneidung",
+            "es": "Pacto de la circuncisión"
+          },
+          "description": {
+            "pl": "Abram otrzymuje imię Abraham. W tym samym roku zostają zniszczone Sodoma i Gomora.",
+            "en": "Abram is renamed Abraham. In the same year, Sodom and Gomorrah are destroyed.",
+            "sv": "Abram får namnet Abraham. Samma år förstörs Sodom och Gomorra.",
+            "de": "Abram erhält den Namen Abraham. Im selben Jahr werden Sodom und Gomorra vernichtet.",
+            "es": "Abram recibe el nombre de Abrahán. Ese mismo año son destruidas Sodoma y Gomorra."
+          }
         },
         {
           "year": -1918,
-          "title": "Narodziny Izaaka",
-          "description": "Obiecany syn rodzi się, gdy Abraham ma 100 lat, a Sara 90.",
-          "refs": ["Rdz 21:1–5"]
+          "refs": ["gen 21:1-5"],
+          "title": {
+            "pl": "Narodziny Izaaka",
+            "en": "Birth of Isaac",
+            "sv": "Isak föds",
+            "de": "Geburt Isaaks",
+            "es": "Nace Isaac"
+          },
+          "description": {
+            "pl": "Obiecany syn rodzi się, gdy Abraham ma 100 lat, a Sara 90.",
+            "en": "The promised son is born when Abraham is 100 and Sarah 90.",
+            "sv": "Den utlovade sonen föds när Abraham är 100 år och Sara 90.",
+            "de": "Der verheißene Sohn wird geboren, als Abraham 100 und Sara 90 Jahre alt ist.",
+            "es": "El hijo prometido nace cuando Abrahán tiene 100 años y Sara 90."
+          }
         },
         {
           "year": -1858,
-          "title": "Narodziny Ezawa i Jakuba",
-          "description": "Izaak ma 60 lat, gdy Rebeka rodzi bliźnięta.",
-          "refs": ["Rdz 25:24–26"]
+          "refs": ["gen 25:24-26"],
+          "title": {
+            "pl": "Narodziny Ezawa i Jakuba",
+            "en": "Birth of Esau and Jacob",
+            "sv": "Esau och Jakob föds",
+            "de": "Geburt Esaus und Jakobs",
+            "es": "Nacen Esaú y Jacob"
+          },
+          "description": {
+            "pl": "Izaak ma 60 lat, gdy Rebeka rodzi bliźnięta.",
+            "en": "Isaac is 60 years old when Rebekah gives birth to twins.",
+            "sv": "Isak är 60 år när Rebecka föder tvillingar.",
+            "de": "Isaak ist 60 Jahre alt, als Rebekka Zwillinge zur Welt bringt.",
+            "es": "Isaac tiene 60 años cuando Rebeca da a luz gemelos."
+          }
         },
         {
           "year": -1843,
-          "title": "Śmierć Abrahama",
-          "description": "Abraham umiera w wieku 175 lat, „stary i nasycony życiem”.",
-          "refs": ["Rdz 25:7, 8"]
+          "refs": ["gen 25:7, 8"],
+          "title": {
+            "pl": "Śmierć Abrahama",
+            "en": "Death of Abraham",
+            "sv": "Abraham dör",
+            "de": "Tod Abrahams",
+            "es": "Muere Abrahán"
+          },
+          "description": {
+            "pl": "Abraham umiera w wieku 175 lat, „stary i nasycony życiem”.",
+            "en": "Abraham dies at 175, “old and satisfied.”",
+            "sv": "Abraham dör 175 år gammal, ”gammal och mätt på livet”.",
+            "de": "Abraham stirbt mit 175 Jahren, „alt und zufrieden“.",
+            "es": "Abrahán muere a los 175 años, «viejo y satisfecho»."
+          }
         },
         {
           "year": -1767,
-          "title": "Narodziny Józefa",
-          "description": "Rachela rodzi Jakubowi Józefa, jego ulubionego syna.",
-          "refs": ["Rdz 30:22–24"]
+          "refs": ["gen 30:22-24"],
+          "title": {
+            "pl": "Narodziny Józefa",
+            "en": "Birth of Joseph",
+            "sv": "Josef föds",
+            "de": "Geburt Josephs",
+            "es": "Nace José"
+          },
+          "description": {
+            "pl": "Rachela rodzi Jakubowi Józefa, jego ulubionego syna.",
+            "en": "Rachel bears Joseph, Jacob’s favorite son.",
+            "sv": "Rakel föder Josef, Jakobs favoritson.",
+            "de": "Rahel bringt Joseph zur Welt, Jakobs Lieblingssohn.",
+            "es": "Raquel da a luz a José, el hijo favorito de Jacob."
+          }
         },
         {
           "year": -1750,
-          "title": "Józef sprzedany w niewolę",
-          "description": "Zazdrośni bracia sprzedają 17-letniego Józefa kupcom zmierzającym do Egiptu.",
-          "refs": ["Rdz 37:2, 28"]
+          "refs": ["gen 37:2, 28"],
+          "title": {
+            "pl": "Józef sprzedany w niewolę",
+            "en": "Joseph sold into slavery",
+            "sv": "Josef säljs som slav",
+            "de": "Joseph als Sklave verkauft",
+            "es": "José, vendido como esclavo"
+          },
+          "description": {
+            "pl": "Zazdrośni bracia sprzedają 17-letniego Józefa kupcom zmierzającym do Egiptu.",
+            "en": "His jealous brothers sell 17-year-old Joseph to traders bound for Egypt.",
+            "sv": "De avundsjuka bröderna säljer den 17-årige Josef till köpmän på väg till Egypten.",
+            "de": "Die eifersüchtigen Brüder verkaufen den 17-jährigen Joseph an Händler auf dem Weg nach Ägypten.",
+            "es": "Sus hermanos, celosos, venden a José, de 17 años, a unos mercaderes que iban a Egipto."
+          }
         },
         {
           "year": -1737,
-          "title": "Józef zarządcą Egiptu",
-          "description": "W wieku 30 lat Józef staje przed faraonem i zostaje drugim po nim w kraju.",
-          "refs": ["Rdz 41:39–46"]
+          "refs": ["gen 41:39-46"],
+          "title": {
+            "pl": "Józef zarządcą Egiptu",
+            "en": "Joseph becomes ruler in Egypt",
+            "sv": "Josef blir styresman i Egypten",
+            "de": "Joseph wird Verwalter Ägyptens",
+            "es": "José, gobernante en Egipto"
+          },
+          "description": {
+            "pl": "W wieku 30 lat Józef staje przed faraonem i zostaje drugim po nim w kraju.",
+            "en": "At 30, Joseph stands before Pharaoh and becomes second only to him in the land.",
+            "sv": "30 år gammal står Josef inför farao och blir näst efter honom i landet.",
+            "de": "Mit 30 Jahren steht Joseph vor dem Pharao und wird der Zweite nach ihm im Land.",
+            "es": "A los 30 años, José comparece ante el faraón y llega a ser el segundo después de él en el país."
+          }
         },
         {
           "year": -1728,
-          "title": "Jakub przenosi się do Egiptu",
-          "description": "130-letni Jakub z całą rodziną osiedla się w ziemi Goszen.",
-          "refs": ["Rdz 46:26, 27", "Rdz 47:9"]
+          "refs": ["gen 46:26, 27", "gen 47:9"],
+          "title": {
+            "pl": "Jakub przenosi się do Egiptu",
+            "en": "Jacob moves to Egypt",
+            "sv": "Jakob flyttar till Egypten",
+            "de": "Jakob zieht nach Ägypten",
+            "es": "Jacob se traslada a Egipto"
+          },
+          "description": {
+            "pl": "130-letni Jakub z całą rodziną osiedla się w ziemi Goszen.",
+            "en": "At 130, Jacob settles with his whole family in the land of Goshen.",
+            "sv": "130 år gammal bosätter sig Jakob med hela familjen i landet Gosen.",
+            "de": "Mit 130 Jahren lässt sich Jakob mit seiner ganzen Familie im Land Goschen nieder.",
+            "es": "A los 130 años, Jacob se establece con toda su familia en la tierra de Gosén."
+          }
         },
         {
           "year": -1657,
-          "title": "Śmierć Józefa",
-          "description": "Józef umiera w wieku 110 lat i prosi, by jego kości zabrano do Ziemi Obiecanej.",
-          "refs": ["Rdz 50:24–26"]
+          "refs": ["gen 50:24-26"],
+          "title": {
+            "pl": "Śmierć Józefa",
+            "en": "Death of Joseph",
+            "sv": "Josef dör",
+            "de": "Tod Josephs",
+            "es": "Muere José"
+          },
+          "description": {
+            "pl": "Józef umiera w wieku 110 lat i prosi, by jego kości zabrano do Ziemi Obiecanej.",
+            "en": "Joseph dies at 110 and asks that his bones be taken to the Promised Land.",
+            "sv": "Josef dör 110 år gammal och ber att hans ben ska föras till det utlovade landet.",
+            "de": "Joseph stirbt mit 110 Jahren und bittet darum, seine Gebeine ins Verheißene Land zu bringen.",
+            "es": "José muere a los 110 años y pide que sus huesos sean llevados a la Tierra Prometida."
+          }
         },
         {
           "year": -1593,
-          "title": "Narodziny Mojżesza",
-          "description": "Ukryty w koszu z papirusu, zostaje znaleziony przez córkę faraona.",
-          "refs": ["Wj 2:1–10"]
+          "refs": ["exo 2:1-10"],
+          "title": {
+            "pl": "Narodziny Mojżesza",
+            "en": "Birth of Moses",
+            "sv": "Mose föds",
+            "de": "Geburt Moses",
+            "es": "Nace Moisés"
+          },
+          "description": {
+            "pl": "Ukryty w koszu z papirusu, zostaje znaleziony przez córkę faraona.",
+            "en": "Hidden in a papyrus basket, he is found by Pharaoh’s daughter.",
+            "sv": "Gömd i en papyruskorg hittas han av faraos dotter.",
+            "de": "In einem Papyruskästchen versteckt, wird er von der Tochter des Pharaos gefunden.",
+            "es": "Escondido en una cesta de papiro, lo encuentra la hija del faraón."
+          }
         }
       ]
     },
     {
       "id": "narod-izraela",
-      "title": "Naród pod Prawem",
-      "subtitle": "Od wyjścia z Egiptu do pierwszego króla",
       "start": -1513,
       "end": -1117,
       "color": "#1c1020",
       "accent": "#d7a0d6",
-      "summary": "Jehowa wyprowadza Izraela z Egiptu i zawiera z nim przymierze Prawa. Po 40 latach na pustkowiu naród wchodzi do Kanaanu, a potem rządzą nim sędziowie.",
+      "title": {
+        "pl": "Naród pod Prawem",
+        "en": "A nation under the Law",
+        "sv": "Ett folk under Lagen",
+        "de": "Ein Volk unter dem Gesetz",
+        "es": "Una nación bajo la Ley"
+      },
+      "subtitle": {
+        "pl": "Od wyjścia z Egiptu do pierwszego króla",
+        "en": "From the Exodus to the first king",
+        "sv": "Från uttåget till den förste kungen",
+        "de": "Vom Auszug bis zum ersten König",
+        "es": "Del éxodo al primer rey"
+      },
+      "summary": {
+        "pl": "Jehowa wyprowadza Izraela z Egiptu i zawiera z nim przymierze Prawa. Po 40 latach na pustkowiu naród wchodzi do Kanaanu, a potem rządzą nim sędziowie.",
+        "en": "Jehovah leads Israel out of Egypt and makes the Law covenant with them. After 40 years in the wilderness, the nation enters Canaan, and then judges rule it.",
+        "sv": "Jehova för Israel ut ur Egypten och ingår lagförbundet med folket. Efter 40 år i öknen går folket in i Kanaan, och sedan styrs det av domare.",
+        "de": "Jehova führt Israel aus Ägypten und schließt mit ihm den Gesetzesbund. Nach 40 Jahren in der Wildnis zieht das Volk in Kanaan ein; danach regieren Richter.",
+        "es": "Jehová saca a Israel de Egipto y hace con él el pacto de la Ley. Tras 40 años en el desierto, la nación entra en Canaán y después la gobiernan jueces."
+      },
       "events": [
         {
           "year": -1513,
-          "title": "Wyjście z Egiptu",
-          "description": "Po dziesięciu plagach Izraelici opuszczają Egipt — 430 lat po przymierzu z Abrahamem. Przy górze Synaj zostaje zawarte przymierze Prawa.",
-          "refs": ["Wj 12:40, 41", "Wj 24:3–8"]
+          "refs": ["exo 12:40, 41", "exo 24:3-8"],
+          "title": {
+            "pl": "Wyjście z Egiptu",
+            "en": "The Exodus",
+            "sv": "Uttåget ur Egypten",
+            "de": "Auszug aus Ägypten",
+            "es": "Éxodo de Egipto"
+          },
+          "description": {
+            "pl": "Po dziesięciu plagach Izraelici opuszczają Egipt — 430 lat po przymierzu z Abrahamem. Przy górze Synaj zostaje zawarte przymierze Prawa.",
+            "en": "After ten plagues, the Israelites leave Egypt — 430 years after the covenant with Abraham. At Mount Sinai the Law covenant is made.",
+            "sv": "Efter tio plågor lämnar israeliterna Egypten – 430 år efter förbundet med Abraham. Vid berget Sinai ingås lagförbundet.",
+            "de": "Nach zehn Plagen verlassen die Israeliten Ägypten – 430 Jahre nach dem Bund mit Abraham. Am Berg Sinai wird der Gesetzesbund geschlossen.",
+            "es": "Tras diez plagas, los israelitas salen de Egipto, 430 años después del pacto con Abrahán. En el monte Sinaí se hace el pacto de la Ley."
+          }
         },
         {
           "year": -1512,
-          "title": "Przybytek ukończony",
-          "description": "Pierwszego dnia drugiego roku wzniesiono przybytek — przenośne miejsce wielbienia.",
-          "refs": ["Wj 40:17"]
+          "refs": ["exo 40:17"],
+          "title": {
+            "pl": "Przybytek ukończony",
+            "en": "Tabernacle completed",
+            "sv": "Tabernaklet blir klart",
+            "de": "Stiftshütte fertiggestellt",
+            "es": "Se termina el tabernáculo"
+          },
+          "description": {
+            "pl": "Pierwszego dnia drugiego roku wzniesiono przybytek — przenośne miejsce wielbienia.",
+            "en": "On the first day of the second year, the tabernacle — a portable place of worship — is set up.",
+            "sv": "På första dagen i andra året reses tabernaklet – en flyttbar plats för tillbedjan.",
+            "de": "Am ersten Tag des zweiten Jahres wird die Stiftshütte aufgerichtet – ein tragbarer Ort der Anbetung.",
+            "es": "El primer día del segundo año se levanta el tabernáculo, un lugar de adoración portátil."
+          }
         },
         {
           "year": -1473,
-          "title": "Wejście do Kanaanu",
-          "description": "Mojżesz umiera na górze Nebo. Jozue prowadzi lud przez Jordan.",
-          "refs": ["Pwt 34:5–9", "Joz 3:14–17"]
+          "refs": ["deu 34:5-9", "jos 3:14-17"],
+          "title": {
+            "pl": "Wejście do Kanaanu",
+            "en": "Entry into Canaan",
+            "sv": "Intåget i Kanaan",
+            "de": "Einzug in Kanaan",
+            "es": "Entrada en Canaán"
+          },
+          "description": {
+            "pl": "Mojżesz umiera na górze Nebo. Jozue prowadzi lud przez Jordan.",
+            "en": "Moses dies on Mount Nebo. Joshua leads the people across the Jordan.",
+            "sv": "Mose dör på berget Nebo. Josua leder folket över Jordan.",
+            "de": "Moses stirbt auf dem Berg Nebo. Josua führt das Volk über den Jordan.",
+            "es": "Moisés muere en el monte Nebo. Josué guía al pueblo a través del Jordán."
+          }
         },
         {
           "year": -1467,
-          "title": "Podział ziemi",
-          "description": "Po głównych podbojach Kaleb otrzymuje Hebron, a plemiona — swoje działy.",
-          "refs": ["Joz 14:7–10"],
-          "approx": true
+          "approx": true,
+          "refs": ["jos 14:7-10"],
+          "title": {
+            "pl": "Podział ziemi",
+            "en": "Division of the land",
+            "sv": "Landet fördelas",
+            "de": "Verteilung des Landes",
+            "es": "Reparto de la tierra"
+          },
+          "description": {
+            "pl": "Po głównych podbojach Kaleb otrzymuje Hebron, a plemiona — swoje działy.",
+            "en": "After the main conquests, Caleb receives Hebron and the tribes their portions.",
+            "sv": "Efter de viktigaste erövringarna får Kaleb Hebron och stammarna sina områden.",
+            "de": "Nach den wichtigsten Eroberungen erhält Kaleb Hebron und die Stämme ihr Erbteil.",
+            "es": "Tras las principales conquistas, Caleb recibe Hebrón y las tribus su porción."
+          }
         },
         {
           "year": -1117,
-          "title": "Saul pierwszym królem",
-          "description": "Lud domaga się króla „jak u wszystkich narodów”. Samuel namaszcza Saula.",
-          "refs": ["1 Sm 8:5", "1 Sm 10:1"]
+          "refs": ["1sa 8:5", "1sa 10:1"],
+          "title": {
+            "pl": "Saul pierwszym królem",
+            "en": "Saul becomes the first king",
+            "sv": "Saul blir den förste kungen",
+            "de": "Saul wird erster König",
+            "es": "Saúl, primer rey"
+          },
+          "description": {
+            "pl": "Lud domaga się króla „jak u wszystkich narodów”. Samuel namaszcza Saula.",
+            "en": "The people demand a king “like all the nations.” Samuel anoints Saul.",
+            "sv": "Folket kräver en kung ”som alla andra folk”. Samuel smörjer Saul.",
+            "de": "Das Volk verlangt einen König „wie alle Nationen“. Samuel salbt Saul.",
+            "es": "El pueblo exige un rey «como todas las naciones». Samuel unge a Saúl."
+          }
         }
       ]
     }

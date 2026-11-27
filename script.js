@@ -1,36 +1,82 @@
 /* =========================================================
    Biblijna oś czasu — renderowanie z data/events.json
-   Konwencja lat: ujemne = p.n.e., dodatnie = n.e. (bez roku 0)
+   Języki: data/i18n.json (PL, EN, SV, DE, ES)
+   Lata: ujemne = p.n.e., dodatnie = n.e., null = czas nieokreślony
    ========================================================= */
 
-const DATA_URL = "data/events.json";
+const EVENTS_URL = "data/events.json";
+const I18N_URL = "data/i18n.json";
+const DEFAULT_LANG = "pl";
+const STORAGE_KEY = "timeline-lang";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ---------- Pomocnicze: lata ---------- */
+const state = {
+  lang: DEFAULT_LANG,
+  i18n: null,
+  data: null,
+  observers: [],
+};
 
-// Zamiana na rachubę astronomiczną (1 p.n.e. = 0), żeby różnice lat były poprawne
-const toAstro = (year) => (year < 0 ? year + 1 : year);
+/* ---------- Tłumaczenia ---------- */
 
-const yearsBetween = (a, b) => Math.abs(toAstro(b) - toAstro(a));
-
-function formatYear(year, approx = false) {
-  const prefix = approx ? "ok. " : "";
-  return year < 0 ? `${prefix}${Math.abs(year)} p.n.e.` : `${prefix}${year} n.e.`;
+// Wybiera tekst w bieżącym języku z obiektu { pl, en, … }; zapas: polski
+function tr(value) {
+  if (value == null) return "";
+  if (typeof value === "string") return value;
+  return value[state.lang] ?? value[DEFAULT_LANG] ?? "";
 }
 
-// Polska odmiana: 1 rok, 2–4 lata, 5+ lat (ale 12–14 lat, 22 lata…)
-function pluralYears(n) {
-  if (n === 1) return "1 rok";
-  const lastDigit = n % 10;
-  const lastTwo = n % 100;
-  if (lastDigit >= 2 && lastDigit <= 4 && !(lastTwo >= 12 && lastTwo <= 14)) return `${n} lata`;
-  return `${n} lat`;
+const ui = (key) => tr(state.i18n?.ui?.[key]);
+
+function detectLanguage(supported) {
+  const fromUrl = new URLSearchParams(location.search).get("lang");
+  if (fromUrl && supported.includes(fromUrl)) return fromUrl;
+
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved && supported.includes(saved)) return saved;
+  } catch { /* localStorage niedostępny */ }
+
+  const browser = (navigator.language || "").slice(0, 2).toLowerCase();
+  return supported.includes(browser) ? browser : DEFAULT_LANG;
+}
+
+/* ---------- Lata ---------- */
+
+// Rachuba astronomiczna (1 p.n.e. = 0), żeby różnice lat były poprawne
+const toAstro = (year) => (year < 0 ? year + 1 : year);
+const yearsBetween = (a, b) => Math.abs(toAstro(b) - toAstro(a));
+const isDated = (year) => typeof year === "number";
+
+function formatYear(year, approx = false) {
+  if (!isDated(year)) return ui("undated");
+  const y = state.i18n.years;
+  const suffix = tr(year < 0 ? y.bce : y.ce);
+  const prefix = approx ? `${tr(y.approx)} ` : "";
+  return `${prefix}${Math.abs(year)} ${suffix}`;
 }
 
 function formatRange(start, end) {
-  // Obie daty p.n.e. → "4026–2370 p.n.e."
-  if (start < 0 && end < 0) return `${Math.abs(start)}–${Math.abs(end)} p.n.e.`;
+  if (!isDated(start) || !isDated(end)) return ui("undated");
+  const y = state.i18n.years;
+  if (start < 0 && end < 0) return `${Math.abs(start)}–${Math.abs(end)} ${tr(y.bce)}`;
   return `${formatYear(start)} – ${formatYear(end)}`;
+}
+
+// „1656 lat”, „22 lata”, „1 year”… — reguły odmiany z Intl.PluralRules
+function formatDuration(n) {
+  const forms = state.i18n.years.plural[state.lang] ?? state.i18n.years.plural[DEFAULT_LANG];
+  const category = new Intl.PluralRules(state.lang).select(n);
+  return `${n} ${forms[category] ?? forms.other}`;
+}
+
+// „gen 1:3-5” → „Rdz 1:3–5” (skrót księgi w bieżącym języku)
+function formatRef(ref) {
+  const match = ref.match(/^(\S+)\s+(.+)$/);
+  if (!match) return ref;
+  const [, code, verses] = match;
+  const book = state.i18n.books[code];
+  return `${book ? tr(book) : code} ${verses.replace(/-/g, "–")}`;
 }
 
 // Odstęp między wydarzeniami rośnie z liczbą lat (pierwiastek, żeby nie przesadzić)
@@ -48,24 +94,27 @@ function el(tag, className, text) {
   return node;
 }
 
-function renderEvent(event, prevYear) {
-  const li = el("li", "event reveal");
-  if (prevYear != null) {
-    li.style.setProperty("--gap", gapForYears(yearsBetween(prevYear, event.year)));
+function renderEvent(event, prev) {
+  const dated = isDated(event.year);
+  const li = el("li", `event reveal${dated ? "" : " event--undated"}`);
+
+  if (prev && dated && isDated(prev.year)) {
+    li.style.setProperty("--gap", gapForYears(yearsBetween(prev.year, event.year)));
   }
 
   const card = el("article", "event__card");
-  const year = el("time", "event__year", formatYear(event.year, event.approx));
-  year.dateTime = String(event.year);
+  const year = el(dated ? "time" : "p", "event__year", formatYear(event.year, event.approx));
+  if (dated) year.dateTime = String(event.year);
 
-  card.append(year, el("h3", "event__title", event.title));
+  card.append(year, el("h3", "event__title", tr(event.title)));
 
-  if (event.description) card.append(el("p", "event__desc", event.description));
+  const desc = tr(event.description);
+  if (desc) card.append(el("p", "event__desc", desc));
 
   if (event.refs?.length) {
     const refs = el("ul", "event__refs");
-    refs.setAttribute("aria-label", "Wersety");
-    event.refs.forEach((ref) => refs.append(el("li", null, ref)));
+    refs.setAttribute("aria-label", ui("versesLabel"));
+    event.refs.forEach((ref) => refs.append(el("li", null, formatRef(ref))));
     card.append(refs);
   }
 
@@ -81,30 +130,78 @@ function renderEra(era) {
   section.setAttribute("aria-labelledby", `${era.id}-title`);
 
   const header = el("header", "era__header reveal");
-  const title = el("h2", "era__title", era.title);
+  const title = el("h2", "era__title", tr(era.title));
   title.id = `${era.id}-title`;
 
   header.append(el("p", "era__range", formatRange(era.start, era.end)), title);
-  if (era.subtitle) header.append(el("p", "era__subtitle", era.subtitle));
-  if (era.summary) header.append(el("p", "era__summary", era.summary));
-  header.append(el("span", "era__duration", pluralYears(yearsBetween(era.start, era.end))));
+  if (era.subtitle) header.append(el("p", "era__subtitle", tr(era.subtitle)));
+  if (era.summary) header.append(el("p", "era__summary", tr(era.summary)));
+  if (isDated(era.start) && isDated(era.end)) {
+    header.append(el("span", "era__duration", formatDuration(yearsBetween(era.start, era.end))));
+  }
 
+  // Kolejność jak w pliku danych (wydarzeń bez dat nie da się sortować)
   const list = el("ol", "era__events");
-  const events = [...(era.events ?? [])].sort((a, b) => a.year - b.year);
-  events.forEach((event, i) => {
-    list.append(renderEvent(event, i > 0 ? events[i - 1].year : null));
-  });
+  (era.events ?? []).forEach((event, i, all) => list.append(renderEvent(event, all[i - 1])));
 
   section.append(header, list);
   return section;
 }
 
-function renderTimeline(container, data) {
+function renderTimeline(container) {
   const fragment = document.createDocumentFragment();
-  const eras = [...data.eras].sort((a, b) => a.start - b.start);
-  eras.forEach((era) => fragment.append(renderEra(era)));
+  state.data.eras.forEach((era) => fragment.append(renderEra(era)));
   container.replaceChildren(fragment);
-  return eras;
+}
+
+/* ---------- Teksty statyczne i przełącznik języka ---------- */
+
+function applyStaticTexts() {
+  document.documentElement.lang = state.lang;
+  document.title = ui("docTitle");
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    node.textContent = ui(node.dataset.i18n);
+  });
+}
+
+function renderLanguageSwitch() {
+  const nav = document.getElementById("lang-switch");
+  if (!nav) return;
+  nav.setAttribute("aria-label", ui("languageLabel"));
+  nav.replaceChildren(
+    ...Object.entries(state.i18n.languages).map(([code, name]) => {
+      const btn = el("button", "lang-switch__btn", code.toUpperCase());
+      btn.type = "button";
+      btn.lang = code;
+      btn.title = name;
+      btn.setAttribute("aria-pressed", String(code === state.lang));
+      btn.addEventListener("click", () => setLanguage(code));
+      return btn;
+    })
+  );
+}
+
+function setLanguage(lang) {
+  if (lang === state.lang) return;
+  state.lang = lang;
+  try { localStorage.setItem(STORAGE_KEY, lang); } catch { /* ignoruj */ }
+
+  const url = new URL(location.href);
+  url.searchParams.set("lang", lang);
+  history.replaceState(null, "", url);
+
+  // Zachowaj pozycję względem epoki widocznej na środku ekranu
+  const anchor = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2)?.closest(".era");
+  const offset = anchor ? anchor.getBoundingClientRect().top : null;
+
+  applyStaticTexts();
+  renderLanguageSwitch();
+  mountTimeline({ animate: false });
+
+  if (anchor && offset != null) {
+    const again = document.getElementById(anchor.id);
+    if (again) window.scrollBy(0, again.getBoundingClientRect().top - offset);
+  }
 }
 
 /* ---------- Kolory tła per epoka ---------- */
@@ -119,26 +216,23 @@ function watchEras(container) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const { color, accent } = entry.target.dataset;
-          setTheme(color, accent);
-        }
+        if (entry.isIntersecting) setTheme(entry.target.dataset.color, entry.target.dataset.accent);
       });
     },
     // Epoka „aktywna”, gdy przecina środek ekranu
     { rootMargin: "-50% 0px -50% 0px" }
   );
   container.querySelectorAll(".era").forEach((era) => observer.observe(era));
-  // Powrót do intro przywraca kolory startowe
-  const intro = document.getElementById("intro");
+  const intro = document.getElementById("intro"); // powrót do intro = kolory startowe
   if (intro) observer.observe(intro);
+  state.observers.push(observer);
 }
 
 /* ---------- Pojawianie się przy przewijaniu ---------- */
 
-function watchReveals(container) {
+function watchReveals(container, animate) {
   const items = container.querySelectorAll(".reveal");
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || !animate) {
     items.forEach((item) => item.classList.add("is-visible"));
     return;
   }
@@ -154,6 +248,16 @@ function watchReveals(container) {
     { rootMargin: "0px 0px -12% 0px" }
   );
   items.forEach((item) => observer.observe(item));
+  state.observers.push(observer);
+}
+
+function mountTimeline({ animate = true } = {}) {
+  state.observers.forEach((o) => o.disconnect());
+  state.observers = [];
+  const container = document.getElementById("timeline");
+  renderTimeline(container);
+  watchEras(container);
+  watchReveals(container, animate);
 }
 
 /* ---------- Paralaksa intro ---------- */
@@ -194,33 +298,36 @@ function initParallax() {
 
 /* ---------- Start ---------- */
 
-async function loadData() {
-  const response = await fetch(DATA_URL);
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
   return response.json();
 }
 
-function showError(container, error) {
+function showError(error) {
   console.error(error);
+  const container = document.getElementById("timeline");
   const msg = el("p", "timeline__status timeline__status--error");
-  msg.textContent =
-    location.protocol === "file:"
-      ? "Nie można wczytać danych z pliku otwartego bezpośrednio. Uruchom stronę przez lokalny serwer (np. Live Server w VS Code)."
-      : "Nie udało się wczytać osi czasu. Spróbuj odświeżyć stronę.";
+  // Gdy i18n się nie wczytało, komunikat po polsku
+  msg.textContent = location.protocol === "file:"
+    ? (state.i18n ? ui("errorFile") : "Uruchom stronę przez lokalny serwer (np. Live Server w VS Code).")
+    : (state.i18n ? ui("errorGeneric") : "Nie udało się wczytać osi czasu.");
   container.replaceChildren(msg);
 }
 
 async function init() {
   initParallax();
-
-  const container = document.getElementById("timeline");
   try {
-    const data = await loadData();
-    renderTimeline(container, data);
-    watchEras(container);
-    watchReveals(container);
+    const [i18n, data] = await Promise.all([fetchJson(I18N_URL), fetchJson(EVENTS_URL)]);
+    state.i18n = i18n;
+    state.data = data;
+    state.lang = detectLanguage(Object.keys(i18n.languages));
+
+    applyStaticTexts();
+    renderLanguageSwitch();
+    mountTimeline();
   } catch (error) {
-    showError(container, error);
+    showError(error);
   }
 }
 

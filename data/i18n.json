@@ -1,0 +1,142 @@
+{
+  "languages": {
+    "pl": "Polski",
+    "en": "English",
+    "sv": "Svenska",
+    "de": "Deutsch",
+    "es": "Español"
+  },
+  "ui": {
+    "docTitle": {
+      "pl": "Biblijna oś czasu — od stworzenia",
+      "en": "Bible Timeline — from creation",
+      "sv": "Biblisk tidslinje – från skapelsen",
+      "de": "Biblische Zeitleiste – von der Schöpfung an",
+      "es": "Cronología bíblica: desde la creación"
+    },
+    "introEyebrow": {
+      "pl": "Biblijna oś czasu",
+      "en": "Bible Timeline",
+      "sv": "Biblisk tidslinje",
+      "de": "Biblische Zeitleiste",
+      "es": "Cronología bíblica"
+    },
+    "introTitle": {
+      "pl": "Na początku…",
+      "en": "In the beginning…",
+      "sv": "I begynnelsen…",
+      "de": "Am Anfang…",
+      "es": "En el principio…"
+    },
+    "introLead": {
+      "pl": "…choć tak naprawdę nie było żadnego „początku”, bo sam czas jeszcze nie istniał. Stwórca istniał w czymś na kształt kontinuum — bez wyraźnego początku i końca. W pewnym momencie zapragnął jednak podzielić się radością istnienia, możliwością życia i kształtowania własnej tożsamości. Wtedy zaczęło się to, co postrzegamy jako „początek”. Tak powstał nasz wszechświat, a wraz z nim — upływ czasu.",
+      "en": "…though there really was no “beginning,” because time itself did not yet exist. The Creator existed in something like a continuum — with no clear start or end. At a certain point, though, he wished to share the joy of existence, the gift of life, and the ability to shape one’s own identity. That is when what we perceive as “the beginning” began. So our universe came into being — and with it, the passing of time.",
+      "sv": "…fast det fanns egentligen ingen ”början”, eftersom tiden själv ännu inte fanns. Skaparen existerade i något som liknar ett kontinuum – utan tydlig början eller slut. Vid en viss tidpunkt ville han ändå dela glädjen i att existera, möjligheten till liv och förmågan att forma sin egen identitet. Det var då det vi uppfattar som ”början” tog sin början. Så blev vårt universum till – och med det tidens gång.",
+      "de": "…obwohl es eigentlich keinen „Anfang“ gab, denn die Zeit selbst existierte noch nicht. Der Schöpfer existierte in etwas wie einem Kontinuum – ohne klaren Anfang und ohne Ende. Irgendwann wollte er jedoch die Freude am Dasein teilen, die Möglichkeit zu leben und die eigene Identität zu gestalten. Da begann, was wir als „Anfang“ wahrnehmen. So entstand unser Universum – und mit ihm das Vergehen der Zeit.",
+      "es": "…aunque en realidad no hubo ningún «principio», porque el tiempo mismo aún no existía. El Creador existía en algo parecido a un continuo, sin un comienzo ni un final claros. Sin embargo, en cierto momento quiso compartir la alegría de existir, la posibilidad de vivir y la capacidad de forjar la propia identidad. Fue entonces cuando comenzó lo que percibimos como «el principio». Así nació nuestro universo y, con él, el paso del tiempo."
+    },
+    "introQuote": {
+      "pl": "„Na początku było Słowo”",
+      "en": "“In the beginning was the Word”",
+      "sv": "”I begynnelsen var Ordet”",
+      "de": "„Am Anfang war das Wort“",
+      "es": "«En el principio era la Palabra»"
+    },
+    "introCite": {
+      "pl": "Jana 1:1",
+      "en": "John 1:1",
+      "sv": "Johannes 1:1",
+      "de": "Johannes 1:1",
+      "es": "Juan 1:1"
+    },
+    "scrollCta": {
+      "pl": "Rozpocznij podróż",
+      "en": "Begin the journey",
+      "sv": "Börja resan",
+      "de": "Reise beginnen",
+      "es": "Comenzar el viaje"
+    },
+    "loading": {
+      "pl": "Ładowanie osi czasu…",
+      "en": "Loading timeline…",
+      "sv": "Laddar tidslinjen…",
+      "de": "Zeitleiste wird geladen…",
+      "es": "Cargando la cronología…"
+    },
+    "errorFile": {
+      "pl": "Nie można wczytać danych z pliku otwartego bezpośrednio. Uruchom stronę przez lokalny serwer (np. Live Server w VS Code).",
+      "en": "Data can’t be loaded from a file opened directly. Run the page through a local server (e.g. Live Server in VS Code).",
+      "sv": "Data kan inte läsas in från en fil som öppnats direkt. Kör sidan via en lokal server (t.ex. Live Server i VS Code).",
+      "de": "Daten können nicht aus einer direkt geöffneten Datei geladen werden. Starte die Seite über einen lokalen Server (z. B. Live Server in VS Code).",
+      "es": "No se pueden cargar los datos desde un archivo abierto directamente. Abre la página con un servidor local (p. ej., Live Server en VS Code)."
+    },
+    "errorGeneric": {
+      "pl": "Nie udało się wczytać osi czasu. Spróbuj odświeżyć stronę.",
+      "en": "The timeline could not be loaded. Try refreshing the page.",
+      "sv": "Tidslinjen kunde inte laddas. Försök att uppdatera sidan.",
+      "de": "Die Zeitleiste konnte nicht geladen werden. Bitte lade die Seite neu.",
+      "es": "No se pudo cargar la cronología. Intenta recargar la página."
+    },
+    "footer": {
+      "pl": "Daty według chronologii z leksykonu „Wnikliwe poznawanie Pism”. Przed stworzeniem Adama Biblia nie podaje dat.",
+      "en": "Dates follow the chronology in “Insight on the Scriptures.” The Bible gives no dates before Adam’s creation.",
+      "sv": "Datumen följer kronologin i ”Insikt i Skrifterna”. Före Adams skapelse anger Bibeln inga datum.",
+      "de": "Die Daten folgen der Chronologie in „Einsichten über die Heilige Schrift“. Vor Adams Erschaffung nennt die Bibel keine Daten.",
+      "es": "Las fechas siguen la cronología de «Perspicacia para comprender las Escrituras». Antes de la creación de Adán, la Biblia no da fechas."
+    },
+    "undated": {
+      "pl": "Czas nieokreślony",
+      "en": "Time not specified",
+      "sv": "Obestämd tid",
+      "de": "Unbestimmte Zeit",
+      "es": "Tiempo indeterminado"
+    },
+    "versesLabel": {
+      "pl": "Wersety",
+      "en": "Scriptures",
+      "sv": "Bibelställen",
+      "de": "Bibelstellen",
+      "es": "Textos"
+    },
+    "languageLabel": {
+      "pl": "Język",
+      "en": "Language",
+      "sv": "Språk",
+      "de": "Sprache",
+      "es": "Idioma"
+    }
+  },
+  "years": {
+    "bce": { "pl": "p.n.e.", "en": "B.C.E.", "sv": "f.v.t.", "de": "v. u. Z.", "es": "a. E.C." },
+    "ce": { "pl": "n.e.", "en": "C.E.", "sv": "v.t.", "de": "u. Z.", "es": "E.C." },
+    "approx": { "pl": "ok.", "en": "c.", "sv": "omkr.", "de": "um", "es": "h." },
+    "plural": {
+      "pl": { "one": "rok", "few": "lata", "many": "lat", "other": "lat" },
+      "en": { "one": "year", "other": "years" },
+      "sv": { "one": "år", "other": "år" },
+      "de": { "one": "Jahr", "other": "Jahre" },
+      "es": { "one": "año", "other": "años" }
+    }
+  },
+  "books": {
+    "gen": { "pl": "Rdz", "en": "Ge", "sv": "1Mo", "de": "1Mo", "es": "Gé" },
+    "exo": { "pl": "Wj", "en": "Ex", "sv": "2Mo", "de": "2Mo", "es": "Éx" },
+    "deu": { "pl": "Pwt", "en": "De", "sv": "5Mo", "de": "5Mo", "es": "Dt" },
+    "jos": { "pl": "Joz", "en": "Jos", "sv": "Jos", "de": "Jos", "es": "Jos" },
+    "1sa": { "pl": "1Sm", "en": "1Sa", "sv": "1Sa", "de": "1Sa", "es": "1Sa" },
+    "job": { "pl": "Hi", "en": "Job", "sv": "Job", "de": "Hi", "es": "Job" },
+    "psa": { "pl": "Ps", "en": "Ps", "sv": "Ps", "de": "Ps", "es": "Sl" },
+    "pro": { "pl": "Prz", "en": "Pr", "sv": "Ord", "de": "Spr", "es": "Pr" },
+    "isa": { "pl": "Iz", "en": "Isa", "sv": "Jes", "de": "Jes", "es": "Is" },
+    "jer": { "pl": "Jer", "en": "Jer", "sv": "Jer", "de": "Jer", "es": "Jer" },
+    "dan": { "pl": "Dn", "en": "Da", "sv": "Da", "de": "Da", "es": "Da" },
+    "joh": { "pl": "Jn", "en": "Joh", "sv": "Joh", "de": "Joh", "es": "Jn" },
+    "gal": { "pl": "Gal", "en": "Ga", "sv": "Gal", "de": "Gal", "es": "Gál" },
+    "col": { "pl": "Kol", "en": "Col", "sv": "Kol", "de": "Kol", "es": "Col" },
+    "heb": { "pl": "Heb", "en": "Heb", "sv": "Heb", "de": "Heb", "es": "Heb" },
+    "jas": { "pl": "Jk", "en": "Jas", "sv": "Jak", "de": "Jak", "es": "Snt" },
+    "1pe": { "pl": "1P", "en": "1Pe", "sv": "1Pe", "de": "1Pe", "es": "1Pe" },
+    "jud": { "pl": "Jud", "en": "Jude", "sv": "Jud", "de": "Jud", "es": "Jud" },
+    "rev": { "pl": "Obj", "en": "Re", "sv": "Upp", "de": "Off", "es": "Ap" }
+  }
+}
