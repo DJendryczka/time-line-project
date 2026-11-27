@@ -521,6 +521,43 @@
     },
   };
 
+  /* ---------- Obrazy zamiast animacji ----------
+     Krok z data-image="images/creation/day4" (bez rozszerzenia) próbuje kolejno
+     .webp, .jpg, .png. Dopóki pliku nie ma, w tym miejscu gra animacja. */
+
+  function createImages(root, steps) {
+    const holder = document.createElement("div");
+    holder.className = "cosmos__images";
+    const list = steps.map((step) => {
+      const base = step.dataset.image;
+      if (!base) return null;
+      const el = document.createElement("img");
+      el.className = "cosmos__img";
+      el.alt = "";
+      el.decoding = "async";
+      const entry = { el, ready: false };
+      const candidates = /\.\w{3,4}$/.test(base) ? [base] : ["webp", "jpg", "png"].map((ext) => `${base}.${ext}`);
+      let attempt = 0;
+      el.addEventListener("load", () => { entry.ready = true; });
+      el.addEventListener("error", () => {
+        attempt += 1;
+        if (attempt < candidates.length) el.src = candidates[attempt];
+      });
+      el.src = candidates[0];
+      holder.append(el);
+      return entry;
+    });
+
+    if (list.some(Boolean)) {
+      const shade = document.createElement("div");
+      shade.className = "cosmos__shade";
+      holder.append(shade);
+      list.shade = shade;
+      root.querySelector(".cosmos__stage").insertBefore(holder, root.querySelector(".cosmos__note"));
+    }
+    return list;
+  }
+
   /* ---------- Scena ---------- */
 
   function mount(root) {
@@ -530,6 +567,7 @@
     if (!canvas || !steps.length) return { destroy() {} };
 
     const ctx = canvas.getContext("2d");
+    const images = createImages(root, steps);
     const count = window.innerWidth < 700 ? 1000 : 1800;
     const particles = Array.from({ length: count }, (_, i) => ({
       i,
@@ -572,8 +610,24 @@
       const view = { ax: width / 2 / unit, ay: height / 2 / unit };
       const cx = width / 2, cy = height / 2;
 
+      // Obrazy (np. od 4. dnia) przenikają się z animacją i ze sobą nawzajem
+      let cover = 0;
+      images.forEach((img, k) => {
+        if (!img) return;
+        const w = img.ready ? clamp(1 - Math.abs(current - k)) : 0;
+        cover += w;
+        img.el.style.opacity = w.toFixed(3);
+        // Powolne zbliżenie kamery (efekt Kena Burnsa)
+        const zoom = reducedMotion ? 1.04 : 1.03 + 0.07 * clamp((current - k + 1) / 2);
+        img.el.style.transform = `scale(${zoom.toFixed(4)})`;
+      });
+      cover = clamp(cover);
+      if (images.shade) images.shade.style.opacity = cover.toFixed(3);
+      canvas.style.opacity = (1 - cover).toFixed(3);
+
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
+      if (cover > 0.98) return; // animacja całkiem przykryta — oszczędzamy procesor
       ctx.globalCompositeOperation = "lighter";
 
       // Poświaty (słońce, orbity, kula ziemska…) z wagą zależną od postępu

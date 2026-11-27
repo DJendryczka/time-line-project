@@ -467,8 +467,40 @@ a { color: inherit; }
   height: 100%;
 }
 
+/* Obrazy zastępujące animację (od 4. dnia) */
+.cosmos__images {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cosmos__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* Przyciemnienie pod kartami, żeby tekst był czytelny na jasnych obrazach */
+.cosmos__shade {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 55%);
+}
+
+@media (min-width: 860px) {
+  .cosmos__shade {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent 50%);
+  }
+}
+
 .cosmos__note {
   position: absolute;
+  z-index: 1;
   right: 1.25rem;
   bottom: 12vh;
   font-size: 0.7rem;

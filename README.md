@@ -21,6 +21,7 @@ script.js           wczytuje dane, renderuje oś, języki, paralaksa, kolory epo
 data/events.json    epoki i wydarzenia (treść w 5 językach)
 data/i18n.json      teksty interfejsu, oznaczenia lat, skróty ksiąg biblijnych
 images/time.png     tło intro (kosmos)
+images/creation/    obrazy dni 4–6 i Edenu + PROMPTY.md (jak je wygenerować)
 ```
 
 ## Języki
@@ -46,6 +47,7 @@ Wydarzenie w `data/events.json`:
 - **Brak tłumaczenia:** pokaże się wersja polska.
 - **Epoka bez dat:** `"start": null, "end": null`.
 - **Scena kosmosu:** kolejne wydarzenia z `"scene": "cosmos"` tworzą jedną animowaną scenę. `sceneState` i `stages[].state` wybierają etap animacji: `void`, `quarks`, `hadrons`, `atoms`, `stars`, `galaxies`, `solar`, `earth`, `day1`–`day6`, `eden`.
+- **`"image": "images/creation/day4"`** w wydarzeniu sceny: w tym miejscu zamiast animacji pojawia się obraz. Rozszerzenie można pominąć, wtedy strona próbuje .webp, .jpg i .png.
 - Wydarzenia wyświetlają się w kolejności z pliku. Odstęp między datowanymi wydarzeniami rośnie z liczbą lat.
 
 ## Plan
@@ -56,6 +58,7 @@ Wydarzenie w `data/events.json`:
 - [x] 5 języków: PL, EN, SV, DE, ES
 - [x] Animacja kosmosu: kwarki → atomy → gwiazdy → galaktyki → Układ Słoneczny → Ziemia
 - [x] Dni stwarzania i Eden jako dalsze etapy tej samej animacji
+- [x] Od 4. dnia przejście z animacji w obrazy (czekają na pliki, patrz `images/creation/PROMPTY.md`)
 - [ ] Przyklejony licznik roku
 - [ ] Minimapa w prawdziwej skali
 - [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)

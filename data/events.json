@@ -327,7 +327,8 @@
             "es": "Los cuerpos celestes se hacen claramente visibles desde la superficie terrestre y marcan desde entonces las estaciones, los días y los años."
           },
           "scene": "cosmos",
-          "sceneState": "day4"
+          "sceneState": "day4",
+          "image": "images/creation/day4"
         },
         {
           "year": null,
@@ -349,7 +350,8 @@
             "es": "Las aguas se llenan de seres vivos, desde pequeños peces hasta grandes criaturas marinas, y las aves llenan el cielo."
           },
           "scene": "cosmos",
-          "sceneState": "day5"
+          "sceneState": "day5",
+          "image": "images/creation/day5"
         },
         {
           "year": null,
@@ -371,7 +373,8 @@
             "es": "Se crean los animales domésticos, los salvajes y los animales pequeños de la tierra. La obra culminante de este día será el ser humano."
           },
           "scene": "cosmos",
-          "sceneState": "day6"
+          "sceneState": "day6",
+          "image": "images/creation/day6"
         },
         {
           "year": null,
@@ -393,7 +396,8 @@
             "es": "Jehová planta un jardín en Edén, hacia el este, lleno de hermosos árboles frutales y regado por un río: el futuro hogar del ser humano."
           },
           "scene": "cosmos",
-          "sceneState": "eden"
+          "sceneState": "eden",
+          "image": "images/creation/eden"
         }
       ]
     },

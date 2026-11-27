@@ -137,7 +137,7 @@ function appendRefs(card, refsData) {
 function renderCosmos(events) {
   const steps = [];
   events.forEach((event) => {
-    steps.push({ state: event.sceneState, card: buildCard(event, "cosmos__card event--undated") });
+    steps.push({ state: event.sceneState, image: event.image, card: buildCard(event, "cosmos__card event--undated") });
     (event.stages ?? []).forEach((stage) => {
       const card = el("article", "cosmos__card cosmos__card--stage");
       card.append(el("h3", "event__title", tr(stage.title)), el("p", "event__desc", tr(stage.text)));
@@ -156,8 +156,9 @@ function renderCosmos(events) {
   stage.append(canvas, el("p", "cosmos__note", ui("sceneNote")));
   root.append(stage);
 
-  steps.forEach(({ card }) => {
+  steps.forEach(({ card, image }) => {
     const step = el("div", "cosmos__step");
+    if (image) step.dataset.image = image; // obraz zamiast animacji (cosmos.js)
     step.append(card);
     root.append(step);
   });
