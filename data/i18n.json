@@ -160,6 +160,27 @@
       "sv": "Ungefärlig uppskattning – Bibeln anger inga siffror",
       "de": "Grobe Schätzung – die Bibel nennt keine Zahlen",
       "es": "Estimación orientativa: la Biblia no da cifras"
+    },
+    "popMen": {
+      "pl": "mężczyzn",
+      "en": "men",
+      "sv": "män",
+      "de": "Männer",
+      "es": "hombres"
+    },
+    "popWomen": {
+      "pl": "kobiet",
+      "en": "women",
+      "sv": "kvinnor",
+      "de": "Frauen",
+      "es": "mujeres"
+    },
+    "popSexNote": {
+      "pl": "Przyjęto, że chłopców i dziewczynek rodzi się mniej więcej po równo",
+      "en": "Assumes roughly equal numbers of boys and girls are born",
+      "sv": "Förutsätter att ungefär lika många pojkar och flickor föds",
+      "de": "Angenommen: etwa gleich viele Jungen und Mädchen",
+      "es": "Se supone que nacen aproximadamente tantos niños como niñas"
     }
   },
   "years": {

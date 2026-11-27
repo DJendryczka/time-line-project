@@ -497,6 +497,17 @@ a { color: inherit; }
   color: var(--accent);
 }
 
+.pop__sexes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+  margin-top: 0.2rem;
+  font-size: var(--fs-base);
+}
+
+.pop__sex--men { color: #9cc7ff; }
+.pop__sex--women { color: #f4a9c8; }
+
 .pop__chart {
   display: block;
   width: 100%;

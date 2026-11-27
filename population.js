@@ -165,8 +165,20 @@
       const famEl = document.createElement("strong");
       famEl.textContent = `~${formatCount(families)}`;
       stats.append(peopleEl, ` ${ui("popPeople")}  ·  `, famEl, ` ${ui("popFamilies")}`);
-      readout.append(year, stats);
-      chart.setAttribute("aria-label", `${year.textContent}: ${stats.textContent}`);
+      // Mężczyźni i kobiety: zakładamy, że chłopców i dziewczynek rodzi się mniej więcej po równo
+      const half = people / 2;
+      const sexes = document.createElement("p");
+      sexes.className = "pop__sexes";
+      const men = document.createElement("span");
+      men.className = "pop__sex pop__sex--men";
+      men.textContent = `♂ ~${formatCount(half)} ${ui("popMen")}`;
+      const women = document.createElement("span");
+      women.className = "pop__sex pop__sex--women";
+      women.textContent = `♀ ~${formatCount(half)} ${ui("popWomen")}`;
+      sexes.append(men, women);
+
+      readout.append(year, stats, sexes);
+      chart.setAttribute("aria-label", `${year.textContent}: ${stats.textContent}, ${men.textContent}, ${women.textContent}`);
     }
 
     function pointer(e) {
@@ -179,7 +191,7 @@
 
     const hint = document.createElement("p");
     hint.className = "pop__hint";
-    hint.textContent = `${ui("popHint")} · ${ui("popNote")}`;
+    hint.textContent = `${ui("popHint")} · ${ui("popNote")} · ${ui("popSexNote")}`;
 
     root.append(controls, readout, chart, hint);
     update();
