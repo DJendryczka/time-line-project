@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "title": "Biblijna oś czasu",
+    "source": "Chronologia wg „Wnikliwe poznawanie Pism”",
+    "yearFormat": "Lata ujemne = p.n.e., dodatnie = n.e. Roku 0 nie ma."
+  },
+  "eras": [
+    {
+      "id": "przed-potopem",
+      "title": "Świat przed potopem",
+      "subtitle": "Od stworzenia Adama do potopu",
+      "start": -4026,
+      "end": -2370,
+      "color": "#0f1a16",
+      "accent": "#8fc79a",
+      "summary": "Pierwsi ludzie żyli setki lat. Rodowód z Rodzaju 5 łączy Adama z Noem i pozwala wyliczyć daty niemal co do roku.",
+      "events": [
+        {
+          "year": -4026,
+          "title": "Stworzenie Adama",
+          "description": "Jehowa formuje pierwszego człowieka z prochu ziemi i umieszcza go w ogrodzie Eden.",
+          "refs": ["Rdz 2:7", "Rdz 2:15"]
+        },
+        {
+          "year": -3896,
+          "title": "Narodziny Seta",
+          "description": "Adam ma 130 lat, gdy rodzi mu się Set — przez niego biegnie linia aż do Noego.",
+          "refs": ["Rdz 5:3"]
+        },
+        {
+          "year": -3404,
+          "title": "Narodziny Henocha",
+          "description": "Henoch „chodził z prawdziwym Bogiem” i prorokował o sądzie nad bezbożnymi.",
+          "refs": ["Rdz 5:18, 22", "Judy 14"]
+        },
+        {
+          "year": -3339,
+          "title": "Narodziny Metuszelacha",
+          "description": "Syn Henocha — najdłużej żyjący człowiek opisany w Biblii (969 lat).",
+          "refs": ["Rdz 5:21, 27"]
+        },
+        {
+          "year": -3096,
+          "title": "Śmierć Adama",
+          "description": "Adam umiera w wieku 930 lat — wyrok wypowiedziany w Edenie się spełnia.",
+          "refs": ["Rdz 5:5", "Rdz 3:19"]
+        },
+        {
+          "year": -3039,
+          "title": "Henoch zabrany przez Boga",
+          "description": "W wieku 365 lat Henoch zostaje zabrany, tak by nie zobaczył śmierci.",
+          "refs": ["Rdz 5:23, 24", "Heb 11:5"]
+        },
+        {
+          "year": -2970,
+          "title": "Narodziny Noego",
+          "description": "Lamech nadaje synowi imię Noe w nadziei na ulgę od trudu na przeklętej ziemi.",
+          "refs": ["Rdz 5:28, 29"]
+        },
+        {
+          "year": -2370,
+          "title": "Potop",
+          "description": "W 600 roku życia Noego zaczyna się potop. Ocaleje tylko osiem osób w arce. W tym samym roku umiera Metuszelach.",
+          "refs": ["Rdz 7:6, 11", "1 Pt 3:20"]
+        }
+      ]
+    },
+    {
+      "id": "po-potopie",
+      "title": "Nowy początek",
+      "subtitle": "Od potopu do przymierza z Abrahamem",
+      "start": -2370,
+      "end": -1943,
+      "color": "#101826",
+      "accent": "#8fb4e0",
+      "summary": "Ludzkość zaczyna od nowa z rodziną Noego. Po Babel narody rozchodzą się po ziemi, a Bóg wybiera Abrahama.",
+      "events": [
+        {
+          "year": -2369,
+          "title": "Wyjście z arki",
+          "description": "Ziemia obsycha. Noe składa ofiarę, a Bóg zawiera przymierze tęczy ze wszystkimi żywymi istotami.",
+          "refs": ["Rdz 8:13–19", "Rdz 9:12–16"]
+        },
+        {
+          "year": -2368,
+          "title": "Narodziny Arpachszada",
+          "description": "Dwa lata po potopie Sem zostaje ojcem — od tej daty biegnie dalsza rachuba lat.",
+          "refs": ["Rdz 11:10"]
+        },
+        {
+          "year": -2269,
+          "title": "Narodziny Pelega",
+          "description": "„Za jego dni ziemia została podzielona” — prawdopodobnie aluzja do pomieszania języków w Babel.",
+          "refs": ["Rdz 10:25", "Rdz 11:1–9"]
+        },
+        {
+          "year": -2020,
+          "title": "Śmierć Noego",
+          "description": "Noe umiera, mając 950 lat — 350 lat po potopie.",
+          "refs": ["Rdz 9:28, 29"]
+        },
+        {
+          "year": -2018,
+          "title": "Narodziny Abrama",
+          "description": "W Ur Chaldejskim rodzi się Abram, późniejszy Abraham — „przyjaciel Jehowy”.",
+          "refs": ["Rdz 11:26, 27", "Jak 2:23"]
+        },
+        {
+          "year": -1943,
+          "title": "Przymierze z Abrahamem",
+          "description": "75-letni Abram przekracza Eufrat w drodze do Kanaanu. Zaczyna obowiązywać przymierze z Abrahamem.",
+          "refs": ["Rdz 12:1–7", "Gal 3:17"]
+        }
+      ]
+    },
+    {
+      "id": "patriarchowie",
+      "title": "Patriarchowie i Egipt",
+      "subtitle": "Od Abrahama do wyjścia z Egiptu",
+      "start": -1943,
+      "end": -1513,
+      "color": "#1f160d",
+      "accent": "#e0b46c",
+      "summary": "Obietnica przechodzi z Abrahama na Izaaka i Jakuba. Rodzina Jakuba trafia do Egiptu i z czasem zostaje tam zniewolona.",
+      "events": [
+        {
+          "year": -1932,
+          "title": "Narodziny Izmaela",
+          "description": "Abram ma 86 lat, gdy Hagar rodzi mu Izmaela.",
+          "refs": ["Rdz 16:15, 16"]
+        },
+        {
+          "year": -1919,
+          "title": "Przymierze obrzezania",
+          "description": "Abram otrzymuje imię Abraham. W tym samym roku zostają zniszczone Sodoma i Gomora.",
+          "refs": ["Rdz 17:1–5, 24", "Rdz 19:24, 25"]
+        },
+        {
+          "year": -1918,
+          "title": "Narodziny Izaaka",
+          "description": "Obiecany syn rodzi się, gdy Abraham ma 100 lat, a Sara 90.",
+          "refs": ["Rdz 21:1–5"]
+        },
+        {
+          "year": -1858,
+          "title": "Narodziny Ezawa i Jakuba",
+          "description": "Izaak ma 60 lat, gdy Rebeka rodzi bliźnięta.",
+          "refs": ["Rdz 25:24–26"]
+        },
+        {
+          "year": -1843,
+          "title": "Śmierć Abrahama",
+          "description": "Abraham umiera w wieku 175 lat, „stary i nasycony życiem”.",
+          "refs": ["Rdz 25:7, 8"]
+        },
+        {
+          "year": -1767,
+          "title": "Narodziny Józefa",
+          "description": "Rachela rodzi Jakubowi Józefa, jego ulubionego syna.",
+          "refs": ["Rdz 30:22–24"]
+        },
+        {
+          "year": -1750,
+          "title": "Józef sprzedany w niewolę",
+          "description": "Zazdrośni bracia sprzedają 17-letniego Józefa kupcom zmierzającym do Egiptu.",
+          "refs": ["Rdz 37:2, 28"]
+        },
+        {
+          "year": -1737,
+          "title": "Józef zarządcą Egiptu",
+          "description": "W wieku 30 lat Józef staje przed faraonem i zostaje drugim po nim w kraju.",
+          "refs": ["Rdz 41:39–46"]
+        },
+        {
+          "year": -1728,
+          "title": "Jakub przenosi się do Egiptu",
+          "description": "130-letni Jakub z całą rodziną osiedla się w ziemi Goszen.",
+          "refs": ["Rdz 46:26, 27", "Rdz 47:9"]
+        },
+        {
+          "year": -1657,
+          "title": "Śmierć Józefa",
+          "description": "Józef umiera w wieku 110 lat i prosi, by jego kości zabrano do Ziemi Obiecanej.",
+          "refs": ["Rdz 50:24–26"]
+        },
+        {
+          "year": -1593,
+          "title": "Narodziny Mojżesza",
+          "description": "Ukryty w koszu z papirusu, zostaje znaleziony przez córkę faraona.",
+          "refs": ["Wj 2:1–10"]
+        }
+      ]
+    },
+    {
+      "id": "narod-izraela",
+      "title": "Naród pod Prawem",
+      "subtitle": "Od wyjścia z Egiptu do pierwszego króla",
+      "start": -1513,
+      "end": -1117,
+      "color": "#1c1020",
+      "accent": "#d7a0d6",
+      "summary": "Jehowa wyprowadza Izraela z Egiptu i zawiera z nim przymierze Prawa. Po 40 latach na pustkowiu naród wchodzi do Kanaanu, a potem rządzą nim sędziowie.",
+      "events": [
+        {
+          "year": -1513,
+          "title": "Wyjście z Egiptu",
+          "description": "Po dziesięciu plagach Izraelici opuszczają Egipt — 430 lat po przymierzu z Abrahamem. Przy górze Synaj zostaje zawarte przymierze Prawa.",
+          "refs": ["Wj 12:40, 41", "Wj 24:3–8"]
+        },
+        {
+          "year": -1512,
+          "title": "Przybytek ukończony",
+          "description": "Pierwszego dnia drugiego roku wzniesiono przybytek — przenośne miejsce wielbienia.",
+          "refs": ["Wj 40:17"]
+        },
+        {
+          "year": -1473,
+          "title": "Wejście do Kanaanu",
+          "description": "Mojżesz umiera na górze Nebo. Jozue prowadzi lud przez Jordan.",
+          "refs": ["Pwt 34:5–9", "Joz 3:14–17"]
+        },
+        {
+          "year": -1467,
+          "title": "Podział ziemi",
+          "description": "Po głównych podbojach Kaleb otrzymuje Hebron, a plemiona — swoje działy.",
+          "refs": ["Joz 14:7–10"],
+          "approx": true
+        },
+        {
+          "year": -1117,
+          "title": "Saul pierwszym królem",
+          "description": "Lud domaga się króla „jak u wszystkich narodów”. Samuel namaszcza Saula.",
+          "refs": ["1 Sm 8:5", "1 Sm 10:1"]
+        }
+      ]
+    }
+  ]
+}

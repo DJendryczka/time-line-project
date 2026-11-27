@@ -1,61 +1,448 @@
+/* =========================================================
+   1. ZMIENNE
+   ========================================================= */
+:root {
+  /* Kolory bazowe — tło i akcent zmienia script.js per epoka */
+  --page-bg: #0b0b14;
+  --accent: #d9b26f;
+  --text: #ece6da;
+  --text-muted: #a9a294;
+  --line: rgba(236, 230, 218, 0.18);
+  --card-bg: rgba(255, 255, 255, 0.045);
+  --card-border: rgba(255, 255, 255, 0.09);
 
-*{
-    padding: 0;
-    margin: 0;
-}
-body{
-    box-sizing: border-box;
-    color: antiquewhite;
-}
-img{
-    display: block;
+  /* Typografia */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Płynne rozmiary (mobile → desktop) */
+  --fs-sm: clamp(0.8rem, 0.77rem + 0.15vw, 0.9rem);
+  --fs-base: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --fs-lg: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --fs-xl: clamp(1.8rem, 1.5rem + 1.5vw, 2.8rem);
+  --fs-hero: clamp(3rem, 2rem + 6vw, 7.5rem);
+
+  /* Odstępy */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: clamp(5rem, 3rem + 8vw, 10rem);
+
+  --content-width: 72rem;
+  --axis-x: 1.4rem;            /* pozycja linii osi na mobile */
+  --radius: 14px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-h1{
-    font-size: 3rem;
+/* =========================================================
+   2. RESET I BAZA
+   ========================================================= */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--page-bg);
+  transition: background-color 1.2s ease;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   3. INTRO Z PARALAKSĄ
+   ========================================================= */
+.intro {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  min-height: 34rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: #05050b;
+}
+
+.intro__layer {
+  position: absolute;
+  inset: -15% 0;             /* zapas na przesunięcie warstw */
+  will-change: transform;
+  pointer-events: none;
+}
+
+.intro__layer--space {
+  background: url("images/time.png") center / cover no-repeat;
+  opacity: 0.75;
+}
+
+/* Drobne gwiazdy generowane gradientami — bliższa warstwa */
+.intro__layer--stars {
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 78% 14%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 34% 68%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 64% 48%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 88% 76%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 88%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 52% 8%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 6% 52%, #fff 50%, transparent 51%);
+  background-size: 420px 420px;
+  opacity: 0.55;
+}
+
+/* Ciemne krawędzie i płynne przejście w tło strony */
+.intro__layer--vignette {
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 30%, rgba(5, 5, 11, 0.75) 100%),
+    linear-gradient(to bottom, transparent 60%, var(--page-bg) 100%);
+}
+
+.intro__content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2.5rem, 46rem);
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.intro__eyebrow {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+  animation: fade-up 1.2s var(--ease) both;
+}
+
+.intro__title {
+  font-size: var(--fs-hero);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+  animation: fade-up 1.4s 0.15s var(--ease) both;
+}
+
+.intro__lead {
+  font-size: var(--fs-base);
+  color: rgba(236, 230, 218, 0.85);
+  max-width: 38rem;
+  margin-inline: auto;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
+  animation: fade-up 1.4s 0.35s var(--ease) both;
+}
+
+.intro__quote {
+  margin-top: var(--space-md);
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--accent);
+  animation: fade-up 1.4s 0.55s var(--ease) both;
+}
+
+.intro__quote cite {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.intro__scroll {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.intro__scroll:hover { color: var(--accent); }
+.intro__scroll svg { animation: bob 2.2s ease-in-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
+
+/* =========================================================
+   4. OŚ CZASU
+   ========================================================= */
+.timeline {
+  position: relative;
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+  padding-block: var(--space-lg) var(--space-xl);
+}
+
+/* Pionowa linia osi */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--axis-x);
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--line) 4rem, var(--line) calc(100% - 4rem), transparent);
+}
+
+.timeline__status {
+  text-align: center;
+  color: var(--text-muted);
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.timeline__status--error { color: #f0a58f; }
+
+/* ---------- Epoka ---------- */
+.era {
+  position: relative;
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.era__header {
+  position: relative;
+  padding-left: calc(var(--axis-x) * 2 + 0.5rem);
+  margin-bottom: var(--space-lg);
+}
+
+/* Romb na osi przy nagłówku epoki */
+.era__header::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: var(--axis-x);
+  width: 14px;
+  height: 14px;
+  background: var(--page-bg);
+  border: 2px solid var(--accent);
+  transform: translate(-50%, 0) rotate(45deg);
+  transition: background-color 1.2s ease, border-color 1.2s ease;
+}
+
+.era__range {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: color 1.2s ease;
+}
+
+.era__title {
+  font-size: var(--fs-xl);
+  margin-block: 0.3rem 0.4rem;
+}
+
+.era__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.era__summary {
+  margin-top: var(--space-sm);
+  max-width: 40rem;
+  color: rgba(236, 230, 218, 0.82);
+}
+
+.era__duration {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: 0.2rem 0.7rem;
+  font-size: var(--fs-sm);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  color: var(--text-muted);
+}
+
+/* ---------- Wydarzenia ---------- */
+.era__events { list-style: none; }
+
+.event {
+  position: relative;
+  padding-left: calc(var(--axis-x) * 2 + 0.5rem);
+  margin-top: var(--gap, 2rem);   /* odstęp zależny od liczby lat — ustawia JS */
+}
+
+.event:first-child { margin-top: 0; }
+
+/* Kropka na osi */
+.event::before {
+  content: "";
+  position: absolute;
+  top: 1.45rem;
+  left: var(--axis-x);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px var(--page-bg), 0 0 18px var(--accent);
+  transform: translateX(-50%);
+  transition: background-color 1.2s ease, box-shadow 1.2s ease;
+}
+
+.event__card {
+  padding: 1.1rem 1.3rem 1.2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(4px);
+}
+
+.event__year {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--accent);
+  transition: color 1.2s ease;
+}
+
+.event__title {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  margin-block: 0.15rem 0.4rem;
+}
+
+.event__desc {
+  color: rgba(236, 230, 218, 0.82);
+}
+
+.event__refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+  list-style: none;
+}
+
+.event__refs li {
+  font-size: var(--fs-sm);
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+}
+
+/* Wejście przy przewijaniu */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Desktop: oś na środku, karty naprzemiennie ---------- */
+@media (min-width: 860px) {
+  :root { --axis-x: 50%; }
+
+  .era__header {
+    padding-left: 0;
     text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-p{
-    font-size: 1.5rem;
-    padding: 2rem 3rem;
-}
-
-.wrapper{
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 20px;
-    scroll-behavior: smooth;
-}
-header{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    transform-style: preserve-3d;
-    background-color: rgba(0, 0, 0, 0.525);
-    z-index: -1;
-}
-.background{
-    position: absolute;
-    height: 100%;
-    width: 101%;
-    object-fit: cover;
-    object-position: center;
-    transform: translateZ(-10px) scale(2);
-    z-index: -1;
-    
-}
-.background img{
-    width: 100%;
-    height: 100%;
+    padding-top: 2.2rem;
   }
 
-  .container{
-    background-color: #333;
+  .era__header::before { top: 0; }
+
+  .era__summary { margin-inline: auto; }
+
+  .event {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 3rem;
   }
+
+  .event::before {
+    left: 100%;
+  }
+
+  .event:nth-child(even) {
+    margin-left: 50%;
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+
+  .event:nth-child(even)::before { left: 0; }
+
+  .event:nth-child(odd) .event__card { text-align: right; }
+  .event:nth-child(odd) .event__refs { justify-content: flex-end; }
+
+  .reveal { transform: translateY(36px); }
+}
+
+/* =========================================================
+   5. STOPKA
+   ========================================================= */
+.site-footer {
+  width: min(100% - 2rem, 40rem);
+  margin: 0 auto;
+  padding-block: var(--space-lg);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  border-top: 1px solid var(--line);
+}
+
+/* =========================================================
+   6. OGRANICZONY RUCH
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
