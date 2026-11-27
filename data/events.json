@@ -1294,6 +1294,29 @@
           }
         },
         {
+          "year": -1613,
+          "qualifier": "approx",
+          "refs": [
+            "job 1:1, 8",
+            "job 1:9-11",
+            "job 42:10, 16"
+          ],
+          "title": {
+            "pl": "Próba Hioba",
+            "en": "Job’s test",
+            "sv": "Jobs prövning",
+            "de": "Hiobs Prüfung",
+            "es": "La prueba de Job"
+          },
+          "description": {
+            "pl": "W ziemi Uc żyje Hiob — człowiek „nienaganny i prostolinijny”, jakiego nie było wtedy na ziemi. Szatan twierdzi, że Hiob służy Bogu dla korzyści. Hiob traci majątek, dzieci i zdrowie, ale zachowuje wierność. Jehowa błogosławi mu podwójnie, a Hiob żyje jeszcze 140 lat.",
+            "en": "In the land of Uz lives Job — a man “blameless and upright,” with no one like him on earth at that time. Satan claims Job serves God for selfish gain. Job loses his wealth, his children, and his health, yet he keeps his integrity. Jehovah blesses him with double, and Job lives another 140 years.",
+            "sv": "I landet Us bor Job – en man som är ”klanderfri och rättfram”, utan like på jorden vid den tiden. Satan påstår att Job tjänar Gud av egennytta. Job förlorar sin rikedom, sina barn och sin hälsa, men behåller sin ostrafflighet. Jehova välsignar honom dubbelt, och Job lever ytterligare 140 år.",
+            "de": "Im Land Uz lebt Hiob – ein Mann, „untadelig und rechtschaffen“, wie es damals keinen anderen auf der Erde gab. Satan behauptet, Hiob diene Gott aus Eigennutz. Hiob verliert seinen Besitz, seine Kinder und seine Gesundheit, bewahrt aber seine Lauterkeit. Jehova segnet ihn doppelt, und Hiob lebt noch 140 Jahre.",
+            "es": "En la tierra de Uz vive Job, un hombre «sin culpa y recto», como no había otro en la tierra en aquel tiempo. Satanás afirma que Job sirve a Dios por interés. Job pierde sus riquezas, sus hijos y su salud, pero mantiene su integridad. Jehová lo bendice el doble, y Job vive otros 140 años."
+          }
+        },
+        {
           "year": -1593,
           "refs": [
             "exo 2:1-10"
@@ -1403,6 +1426,27 @@
             "sv": "Mose dör på berget Nebo. Josua leder folket över Jordan.",
             "de": "Moses stirbt auf dem Berg Nebo. Josua führt das Volk über den Jordan.",
             "es": "Moisés muere en el monte Nebo. Josué guía al pueblo a través del Jordán."
+          }
+        },
+        {
+          "year": -1473,
+          "qualifier": "approx",
+          "refs": [
+            "job 42:16, 17"
+          ],
+          "title": {
+            "pl": "Księga Hioba spisana",
+            "en": "Book of Job written",
+            "sv": "Jobs bok skrivs",
+            "de": "Das Buch Hiob wird niedergeschrieben",
+            "es": "Se escribe el libro de Job"
+          },
+          "description": {
+            "pl": "Mojżesz kończy spisywać dzieje Hioba, prawdopodobnie niedługo po jego śmierci, gdy Izraelici zbliżają się do Ziemi Obiecanej.",
+            "en": "Moses completes the account of Job, probably not long after Job’s death, as the Israelites near the Promised Land.",
+            "sv": "Mose skriver färdigt berättelsen om Job, troligen kort efter Jobs död, när israeliterna närmar sig det utlovade landet.",
+            "de": "Moses vollendet den Bericht über Hiob, wahrscheinlich kurz nach Hiobs Tod, als sich die Israeliten dem Verheißenen Land nähern.",
+            "es": "Moisés termina de escribir la historia de Job, probablemente poco después de su muerte, cuando los israelitas se acercan a la Tierra Prometida."
           }
         },
         {
