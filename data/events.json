@@ -259,7 +259,9 @@
             "sv": "Ljus tränger igenom de täta lager som omger jorden – dag och natt uppstår.",
             "de": "Licht dringt durch die dichten Schichten um die Erde – Tag und Nacht entstehen.",
             "es": "La luz atraviesa las densas capas que rodean la tierra y surgen el día y la noche."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "day1"
         },
         {
           "year": null,
@@ -279,7 +281,9 @@
             "sv": "Atmosfären bildas och skiljer vattnet på jordens yta från vattnet ovanför.",
             "de": "Die Atmosphäre entsteht und trennt die Wasser auf der Erdoberfläche von den Wassern darüber.",
             "es": "Se forma la atmósfera, que separa las aguas de la superficie terrestre de las aguas de arriba."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "day2"
         },
         {
           "year": null,
@@ -299,7 +303,9 @@
             "sv": "Torra land stiger upp ur vattnet. Gräs, fröbärande växter och fruktträd växer fram – var och en ”efter sin art”.",
             "de": "Trockenes Land steigt aus den Wassern. Gras, samentragende Pflanzen und Fruchtbäume entstehen – jedes „nach seiner Art“.",
             "es": "Surge la tierra seca de entre las aguas. Aparecen la hierba, las plantas que dan semilla y los árboles frutales, cada uno «según su género»."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "day3"
         },
         {
           "year": null,
@@ -319,7 +325,9 @@
             "sv": "Himlakropparna blir tydligt synliga från jordens yta och markerar nu årstider, dagar och år.",
             "de": "Die Himmelskörper werden von der Erdoberfläche aus deutlich sichtbar und markieren nun Jahreszeiten, Tage und Jahre.",
             "es": "Los cuerpos celestes se hacen claramente visibles desde la superficie terrestre y marcan desde entonces las estaciones, los días y los años."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "day4"
         },
         {
           "year": null,
@@ -339,7 +347,9 @@
             "sv": "Vattnet myllrar av levande varelser, från små fiskar till stora havsdjur, och fåglar fyller himlen.",
             "de": "Die Wasser wimmeln von Lebewesen, von kleinen Fischen bis zu großen Meerestieren, und Vögel erfüllen den Himmel.",
             "es": "Las aguas se llenan de seres vivos, desde pequeños peces hasta grandes criaturas marinas, y las aves llenan el cielo."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "day5"
         },
         {
           "year": null,
@@ -359,7 +369,9 @@
             "sv": "Tamdjur, vilda djur och små landdjur skapas. Kronan på verket denna dag blir människan.",
             "de": "Haustiere, wilde Tiere und kleine Landtiere entstehen. Die Krönung dieses Tages wird der Mensch sein.",
             "es": "Se crean los animales domésticos, los salvajes y los animales pequeños de la tierra. La obra culminante de este día será el ser humano."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "day6"
         },
         {
           "year": null,
@@ -379,7 +391,9 @@
             "sv": "Jehova planterar en trädgård i Eden, österut, full av vackra fruktträd och bevattnad av en flod – människans framtida hem.",
             "de": "Jehova pflanzt in Eden, gegen Osten, einen Garten voller schöner Fruchtbäume, bewässert von einem Fluss – das künftige Zuhause des Menschen.",
             "es": "Jehová planta un jardín en Edén, hacia el este, lleno de hermosos árboles frutales y regado por un río: el futuro hogar del ser humano."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "eden"
         }
       ]
     },

@@ -45,7 +45,7 @@ Wydarzenie w `data/events.json`:
 - **`refs`:** kod księgi + werset, np. `"joh 1:1-3"`. Skrót wyświetla się w każdym języku osobno (np. Jn / Joh / Joh / Joh / Jn). Nowe księgi dopisuje się w `data/i18n.json` → `books`.
 - **Brak tłumaczenia:** pokaże się wersja polska.
 - **Epoka bez dat:** `"start": null, "end": null`.
-- **Scena kosmosu:** kolejne wydarzenia z `"scene": "cosmos"` tworzą jedną animowaną scenę. `sceneState` i `stages[].state` wybierają etap animacji: `void`, `quarks`, `hadrons`, `atoms`, `stars`, `galaxies`, `solar`, `earth`.
+- **Scena kosmosu:** kolejne wydarzenia z `"scene": "cosmos"` tworzą jedną animowaną scenę. `sceneState` i `stages[].state` wybierają etap animacji: `void`, `quarks`, `hadrons`, `atoms`, `stars`, `galaxies`, `solar`, `earth`, `day1`–`day6`, `eden`.
 - Wydarzenia wyświetlają się w kolejności z pliku. Odstęp między datowanymi wydarzeniami rośnie z liczbą lat.
 
 ## Plan
@@ -55,6 +55,7 @@ Wydarzenie w `data/events.json`:
 - [x] Epoka „Stwarzanie” (przed Adamem, bez dat)
 - [x] 5 języków: PL, EN, SV, DE, ES
 - [x] Animacja kosmosu: kwarki → atomy → gwiazdy → galaktyki → Układ Słoneczny → Ziemia
+- [x] Dni stwarzania i Eden jako dalsze etapy tej samej animacji
 - [ ] Przyklejony licznik roku
 - [ ] Minimapa w prawdziwej skali
 - [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)

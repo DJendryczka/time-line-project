@@ -2,6 +2,7 @@
    Kosmos — animacja cząstek sterowana przewijaniem
    Etapy (nazwy z data/events.json → sceneState / stages[].state):
    void → quarks → hadrons → atoms → stars → galaxies → solar → earth
+   → day1 … day6 → eden (dni stwarzania na tej samej planecie)
    Te same cząstki płynnie przechodzą z jednego układu w następny.
    ========================================================= */
 
@@ -59,6 +60,175 @@
     o.r = 255; o.g = 255; o.b = 255;
     o.a = 0.25 + 0.25 * Math.sin(t * 1.5 + p.r3 * 40);
   }
+
+  /* ---------- Planeta podczas dni stwarzania ----------
+     Cząstki powierzchni mają stałe „domowe” miejsce na tarczy Ziemi,
+     więc lądy, chmury i zwierzęta nie skaczą między etapami. */
+
+  const EARTH_R = 0.5;
+  const EDEN_ZOOM = 2.6;
+  const CLOUDS = 26;
+
+  // Gładki „szum” wyznaczający kontynenty (wartość > LAND_LEVEL = ląd)
+  const LAND_LEVEL = 0.45;
+  const landNoise = (x, y) =>
+    Math.sin(x * 5.1 + 1.3) * Math.cos(y * 4.7 - 0.7) +
+    0.5 * Math.sin(x * 9.3 - y * 7.1 + 2.1) +
+    0.3 * Math.sin((x + y) * 13);
+
+  // Eden: najbardziej „lądowy” punkt blisko środka tarczy
+  const EDEN = (() => {
+    let best = { x: 0, y: 0, n: -Infinity };
+    for (let x = -0.25; x <= 0.25; x += 0.01) {
+      for (let y = -0.2; y <= 0.2; y += 0.01) {
+        const n = landNoise(x, y);
+        if (n > best.n) best = { x, y, n };
+      }
+    }
+    return best;
+  })();
+
+  function surface(p) {
+    if (p.sx !== undefined) return;
+    const ang = p.r1 * TAU;
+    const rad = EARTH_R * Math.sqrt(p.r2);
+    p.sx = Math.cos(ang) * rad;
+    p.sy = Math.sin(ang) * rad;
+    p.nz = Math.sqrt(Math.max(0, 1 - (rad / EARTH_R) ** 2));
+    p.land = landNoise(p.sx, p.sy) > LAND_LEVEL;
+    p.edenDist = Math.hypot(p.sx - EDEN.x, p.sy - EDEN.y);
+  }
+
+  // Oświetlenie kuli: L = kierunek światła, amb = światło rozproszone
+  function shade(p, [lx, ly, lz], amb) {
+    const d = (p.sx / EARTH_R) * lx + (p.sy / EARTH_R) * ly + p.nz * lz;
+    return amb + (1 - amb) * clamp(d);
+  }
+
+  const LIGHT_DIFFUSE = [-0.45, -0.3, 0.84];
+  const LIGHT_SUN = [-0.68, -0.42, 0.6];
+
+  const sunPos = (v) => [-Math.min(v.ax, 1.7) * 0.78, -v.ay * 0.68];
+  const moonPos = (v) => [Math.min(v.ax, 1.7) * 0.74, -v.ay * 0.6];
+
+  /* opts: water, land (kolory lub null), light, amb, sky ('dim' | 'stars' | 'sun'),
+           atmo ('haze' | 'clear'), fish, birds, animals, eden */
+  function planet(p, t, v, o, opts) {
+    surface(p);
+
+    // --- Powierzchnia ---
+    if (p.r6 < 0.6) {
+      const L = shade(p, opts.light, opts.amb);
+      let col = opts.water;
+      let glow = false; // ogród, ryby i zwierzęta lekko świecą, także po stronie nocnej
+      if (opts.land && p.land) col = p.r3 < 0.3 ? [150, 125, 80] : opts.land;
+      o.x = p.sx;
+      o.y = p.sy;
+      o.s = 1.6;
+      o.a = 0.9;
+
+      if (opts.eden && p.edenDist < 0.07 && p.land) {
+        col = p.r3 < 0.12 ? [255, 120, 90] : [90, 225, 110]; // ogród i owoce
+        o.a = 1;
+        glow = true;
+      } else if (opts.fish && !p.land && p.r3 < 0.16) {
+        o.x += Math.sin(t * 1.5 + p.r4 * 20) * 0.012;
+        o.y += Math.cos(t * 1.1 + p.r4 * 20) * 0.006;
+        col = [130, 235, 255];
+        o.s = 1.3;
+        glow = true;
+      } else if (opts.animals && p.land && p.r3 > 0.3 && p.r3 < 0.48) {
+        o.x += Math.sin(t * 0.6 + p.r4 * 30) * 0.008;
+        o.y += Math.cos(t * 0.5 + p.r5 * 30) * 0.005;
+        col = [240, 175, 100];
+        o.s = 1.5;
+        glow = true;
+      }
+      const lit = glow ? Math.max(L, 0.55) : L;
+      o.r = col[0] * lit; o.g = col[1] * lit; o.b = col[2] * lit;
+    }
+
+    // --- Atmosfera, chmury, ptaki ---
+    else if (p.r6 < 0.75) {
+      if (opts.atmo === "haze") {
+        const rad = EARTH_R + 0.01 + 0.055 * p.r2;
+        const ang = p.r1 * TAU + t * 0.04;
+        o.x = Math.cos(ang) * rad;
+        o.y = Math.sin(ang) * rad;
+        o.s = 2.2;
+        o.r = 195; o.g = 200; o.b = 215;
+        o.a = 0.3;
+      } else if (p.r3 < 0.5) {
+        if (opts.birds && p.r4 < 0.6) {
+          const rad = EARTH_R + 0.02 + 0.06 * p.r2;
+          const ang = p.r1 * TAU + t * (0.12 + 0.1 * p.r5);
+          o.x = Math.cos(ang) * rad;
+          o.y = Math.sin(ang) * rad + Math.sin(t * 12 + p.r3 * 40) * 0.004;
+          o.s = 1.2;
+          o.r = 255; o.g = 255; o.b = 255;
+          o.a = 0.9;
+        } else {
+          // Cienka, niebieska atmosfera
+          const rad = EARTH_R + 0.008 + 0.028 * p.r2;
+          const ang = p.r1 * TAU;
+          o.x = Math.cos(ang) * rad;
+          o.y = Math.sin(ang) * rad;
+          o.s = 1.8;
+          o.r = 110; o.g = 170; o.b = 255;
+          o.a = 0.35;
+        }
+      } else {
+        // Chmury: skupiska nad powierzchnią, powoli dryfujące
+        const c = p.i % CLOUDS;
+        const ca = hash(c, 11) * TAU + t * 0.015;
+        const cr = EARTH_R * 0.88 * Math.sqrt(hash(c, 12));
+        const off = 0.055 * p.r2;
+        o.x = Math.cos(ca) * cr + Math.cos(p.r4 * TAU) * off * 1.6;
+        o.y = Math.sin(ca) * cr + Math.sin(p.r4 * TAU) * off * 0.7;
+        const fake = { sx: o.x, sy: o.y, nz: Math.sqrt(Math.max(0, 1 - (o.x ** 2 + o.y ** 2) / EARTH_R ** 2)) };
+        const L = shade(fake, opts.light, opts.amb + 0.15);
+        o.s = 2.2;
+        o.r = 240 * L; o.g = 244 * L; o.b = 252 * L;
+        o.a = 0.5;
+      }
+    }
+
+    // --- Niebo w tle: gwiazdy, Słońce, Księżyc ---
+    else {
+      if (opts.sky === "sun" && p.r1 < 0.25) {
+        const [sx, sy] = sunPos(v);
+        const rad = 0.075 * Math.sqrt(p.r2);
+        o.x = sx + Math.cos(p.r3 * TAU) * rad;
+        o.y = sy + Math.sin(p.r3 * TAU) * rad;
+        o.s = 1.8;
+        o.r = 255; o.g = 215 + p.r4 * 30; o.b = 120;
+        o.a = 0.85;
+      } else if (opts.sky === "sun" && p.r1 < 0.32) {
+        const [mx, my] = moonPos(v);
+        const rad = 0.038 * Math.sqrt(p.r2);
+        const ang = p.r3 * TAU;
+        o.x = mx + Math.cos(ang) * rad;
+        o.y = my + Math.sin(ang) * rad;
+        const lit = 0.25 + 0.75 * clamp(0.5 - Math.cos(ang) * Math.sqrt(p.r2));
+        o.s = 1.4;
+        o.r = 215 * lit; o.g = 215 * lit; o.b = 205 * lit;
+        o.a = 0.9;
+      } else {
+        backgroundStar(p, t, v, o);
+        if (opts.sky === "dim") o.a *= 0.4;
+      }
+      return; // tło nie podlega zbliżeniu na Eden
+    }
+
+    if (opts.eden) {
+      o.x = (o.x - EDEN.x) * EDEN_ZOOM;
+      o.y = (o.y - EDEN.y) * EDEN_ZOOM;
+    }
+  }
+
+  const WATER_DARK = [55, 75, 105];
+  const WATER = [35, 105, 200];
+  const GREEN = [60, 145, 70];
 
   const STATES = {
     // Punkt światła — przed „wybuchem” stworzenia
@@ -203,9 +373,74 @@
         backgroundStar(p, t, v, o);
       }
     },
+
+    // Dzień 1: światło przenika przez gęste warstwy — rozproszona poświata
+    day1(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER_DARK, land: null, light: LIGHT_DIFFUSE, amb: 0.18, sky: "dim", atmo: "haze" });
+    },
+    // Dzień 2: przestworze — przejrzysta atmosfera i chmury nad wodami
+    day2(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER, land: null, light: LIGHT_DIFFUSE, amb: 0.2, sky: "dim", atmo: "clear" });
+    },
+    // Dzień 3: ląd i rośliny
+    day3(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER, land: GREEN, light: LIGHT_DIFFUSE, amb: 0.2, sky: "dim", atmo: "clear" });
+    },
+    // Dzień 4: Słońce i Księżyc wyraźnie widoczne, ostry podział na dzień i noc
+    day4(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER, land: GREEN, light: LIGHT_SUN, amb: 0.07, sky: "sun", atmo: "clear" });
+    },
+    // Dzień 5: ryby w morzach, ptaki na niebie
+    day5(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER, land: GREEN, light: LIGHT_SUN, amb: 0.07, sky: "sun", atmo: "clear", fish: true, birds: true });
+    },
+    // Dzień 6: zwierzęta lądowe
+    day6(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER, land: GREEN, light: LIGHT_SUN, amb: 0.07, sky: "sun", atmo: "clear", fish: true, birds: true, animals: true });
+    },
+    // Ogród Eden: zbliżenie na jedno miejsce na lądzie
+    eden(p, t, v, o) {
+      planet(p, t, v, o, { water: WATER, land: GREEN, light: LIGHT_SUN, amb: 0.07, sky: "stars", atmo: "clear", fish: true, birds: true, animals: true, eden: true });
+    },
   };
 
   /* ---------- Dodatkowe efekty rysowane pod cząstkami ---------- */
+
+  // Pełna tarcza planety pod cząstkami (żeby nie prześwitywała)
+  function planetDisc(ctx, w, cx, cy, unit, lit, dark, hl) {
+    const R = unit * EARTH_R;
+    const g = ctx.createRadialGradient(cx - R * hl, cy - R * hl * 0.7, R * 0.05, cx, cy, R);
+    g.addColorStop(0, `rgba(${lit.join(",")},${0.85 * w})`);
+    g.addColorStop(0.75, `rgba(${dark.join(",")},${0.9 * w})`);
+    g.addColorStop(1, `rgba(${dark.join(",")},${0.95 * w})`);
+    ctx.globalCompositeOperation = "source-over";
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, 0, TAU);
+    ctx.fill();
+    ctx.globalCompositeOperation = "lighter";
+  }
+
+  function hazeGlow(ctx, w, cx, cy, unit, rgb, strength) {
+    const R = unit * EARTH_R;
+    const g = ctx.createRadialGradient(cx, cy, R * 0.92, cx, cy, R * 1.18);
+    g.addColorStop(0, `rgba(${rgb},${strength * w})`);
+    g.addColorStop(1, `rgba(${rgb},0)`);
+    ctx.fillStyle = g;
+    ctx.fillRect(cx - R * 1.2, cy - R * 1.2, R * 2.4, R * 2.4);
+  }
+
+  function sunlitDecor(ctx, w, cx, cy, unit, view) {
+    planetDisc(ctx, w, cx, cy, unit, [45, 120, 205], [3, 8, 20], 0.55);
+    hazeGlow(ctx, w, cx, cy, unit, "110,170,255", 0.3);
+    const [sx, sy] = sunPos(view);
+    const x = cx + sx * unit, y = cy + sy * unit, r = unit * 0.35;
+    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+    g.addColorStop(0, `rgba(255,225,140,${0.7 * w})`);
+    g.addColorStop(1, "rgba(255,225,140,0)");
+    ctx.fillStyle = g;
+    ctx.fillRect(x - r, y - r, r * 2, r * 2);
+  }
 
   const DECOR = {
     void(ctx, w, cx, cy, unit) {
@@ -251,6 +486,38 @@
       ctx.beginPath();
       ctx.arc(cx, cy, R, 0, TAU);
       ctx.fill();
+    },
+    day1(ctx, w, cx, cy, unit) { planetDisc(ctx, w, cx, cy, unit, [70, 85, 110], [12, 16, 26], 0.35); hazeGlow(ctx, w, cx, cy, unit, "200,205,220", 0.35); },
+    day2(ctx, w, cx, cy, unit) { planetDisc(ctx, w, cx, cy, unit, [40, 110, 200], [6, 20, 45], 0.35); hazeGlow(ctx, w, cx, cy, unit, "110,170,255", 0.3); },
+    day3(ctx, w, cx, cy, unit) { planetDisc(ctx, w, cx, cy, unit, [40, 115, 190], [6, 20, 45], 0.35); hazeGlow(ctx, w, cx, cy, unit, "110,170,255", 0.3); },
+    day4: sunlitDecor,
+    day5: sunlitDecor,
+    day6: sunlitDecor,
+    eden(ctx, w, cx, cy, unit) {
+      const z = EDEN_ZOOM;
+      const ox = cx - EDEN.x * z * unit;
+      const oy = cy - EDEN.y * z * unit;
+      planetDisc(ctx, w, ox, oy, unit * z, [45, 120, 200], [5, 15, 35], 0.6);
+      // Rzeka wypływająca z Edenu i dzieląca się na cztery odnogi (Rdz 2:10)
+      ctx.strokeStyle = `rgba(120,200,255,${0.55 * w})`;
+      ctx.lineWidth = Math.max(1.5, unit * 0.006);
+      ctx.lineCap = "round";
+      for (let k = 0; k < 4; k++) {
+        const ang = k * (TAU / 4) + 0.5;
+        const len = unit * (0.32 + 0.08 * k);
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.quadraticCurveTo(
+          cx + Math.cos(ang + 0.5) * len * 0.5, cy + Math.sin(ang + 0.5) * len * 0.5,
+          cx + Math.cos(ang) * len, cy + Math.sin(ang) * len
+        );
+        ctx.stroke();
+      }
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, unit * 0.3);
+      g.addColorStop(0, `rgba(140,255,150,${0.35 * w})`);
+      g.addColorStop(1, "rgba(140,255,150,0)");
+      ctx.fillStyle = g;
+      ctx.fillRect(cx - unit * 0.3, cy - unit * 0.3, unit * 0.6, unit * 0.6);
     },
   };
 

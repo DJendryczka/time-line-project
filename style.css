@@ -345,6 +345,7 @@ a { color: inherit; }
 
 .event {
   position: relative;
+  z-index: 2;                     /* karty zawsze nad tłem sceny kosmosu */
   padding-left: calc(var(--axis-x) * 2 + 0.5rem);
   margin-top: var(--gap, 2rem);   /* odstęp zależny od liczby lat — ustawia JS */
 }
