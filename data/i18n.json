@@ -141,11 +141,11 @@
       "es": "familias"
     },
     "popAfter": {
-      "pl": "{n} lat od stworzenia Adama",
-      "en": "{n} years after Adam’s creation",
-      "sv": "{n} år efter Adams skapelse",
-      "de": "{n} Jahre nach Adams Erschaffung",
-      "es": "{n} años después de la creación de Adán"
+      "pl": "{n} od stworzenia Adama",
+      "en": "{n} after Adam’s creation",
+      "sv": "{n} efter Adams skapelse",
+      "de": "{n} nach Adams Erschaffung",
+      "es": "{n} después de la creación de Adán"
     },
     "popHint": {
       "pl": "Najedź lub przesuń palcem po wykresie",
@@ -181,6 +181,27 @@
       "sv": "Förutsätter att ungefär lika många pojkar och flickor föds",
       "de": "Angenommen: etwa gleich viele Jungen und Mädchen",
       "es": "Se supone que nacen aproximadamente tantos niños como niñas"
+    },
+    "popFamilyTitle": {
+      "pl": "Rodzina Adama i Ewy w tym roku",
+      "en": "Adam and Eve’s family in this year",
+      "sv": "Adams och Evas familj detta år",
+      "de": "Adams und Evas Familie in diesem Jahr",
+      "es": "La familia de Adán y Eva en este año"
+    },
+    "popIfAlive": {
+      "pl": "jeśli jeszcze żył",
+      "en": "if still alive",
+      "sv": "om han levde",
+      "de": "falls er noch lebte",
+      "es": "si aún vivía"
+    },
+    "popFamilyNote": {
+      "pl": "Biblia podaje dokładny wiek tylko Adama i Seta. Wiek Ewy, Kaina, Abla i córki to przypuszczenia: przyjęto, że Kain urodził się wkrótce po wypędzeniu z Edenu, Abel nieco później, a córki — w tym przyszła żona Kaina — w kolejnych latach.",
+      "en": "The Bible gives exact ages only for Adam and Seth. The ages of Eve, Cain, Abel and the daughter are assumptions: Cain is assumed to be born soon after the expulsion from Eden, Abel a little later, and daughters — including Cain’s future wife — in the following years.",
+      "sv": "Bibeln anger exakt ålder bara för Adam och Set. Evas, Kains, Abels och dotterns ålder är antaganden: Kain antas vara född kort efter utdrivningen ur Eden, Abel lite senare och döttrarna – bland dem Kains blivande hustru – under de följande åren.",
+      "de": "Die Bibel nennt das genaue Alter nur von Adam und Seth. Das Alter von Eva, Kain, Abel und der Tochter ist angenommen: Kain wurde vermutlich kurz nach der Vertreibung aus Eden geboren, Abel etwas später und die Töchter – darunter Kains spätere Frau – in den folgenden Jahren.",
+      "es": "La Biblia da la edad exacta solo de Adán y Set. Las edades de Eva, Caín, Abel y la hija son suposiciones: se supone que Caín nació poco después de la expulsión de Edén, Abel algo más tarde y las hijas —entre ellas la futura esposa de Caín— en los años siguientes."
     }
   },
   "years": {

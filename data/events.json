@@ -575,6 +575,79 @@
                   "es": "muere Adán"
                 }
               }
+            ],
+            "family": [
+              {
+                "name": {
+                  "pl": "Adam",
+                  "en": "Adam",
+                  "sv": "Adam",
+                  "de": "Adam",
+                  "es": "Adán"
+                },
+                "born": 0,
+                "exact": true
+              },
+              {
+                "name": {
+                  "pl": "Ewa",
+                  "en": "Eve",
+                  "sv": "Eva",
+                  "de": "Eva",
+                  "es": "Eva"
+                },
+                "born": 0
+              },
+              {
+                "name": {
+                  "pl": "Kain",
+                  "en": "Cain",
+                  "sv": "Kain",
+                  "de": "Kain",
+                  "es": "Caín"
+                },
+                "born": 1
+              },
+              {
+                "name": {
+                  "pl": "Abel",
+                  "en": "Abel",
+                  "sv": "Abel",
+                  "de": "Abel",
+                  "es": "Abel"
+                },
+                "born": 3,
+                "uncertainFrom": 3,
+                "deadFrom": 130,
+                "deadNote": {
+                  "pl": "zginął przed narodzinami Seta",
+                  "en": "killed before Seth was born",
+                  "sv": "dödad före Sets födelse",
+                  "de": "getötet vor Seths Geburt",
+                  "es": "murió antes de que naciera Set"
+                }
+              },
+              {
+                "name": {
+                  "pl": "najstarsza córka",
+                  "en": "eldest daughter",
+                  "sv": "äldsta dottern",
+                  "de": "älteste Tochter",
+                  "es": "hija mayor"
+                },
+                "born": 5
+              },
+              {
+                "name": {
+                  "pl": "Set",
+                  "en": "Seth",
+                  "sv": "Set",
+                  "de": "Seth",
+                  "es": "Set"
+                },
+                "born": 130,
+                "exact": true
+              }
             ]
           },
           "refs": [

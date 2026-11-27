@@ -508,6 +508,49 @@ a { color: inherit; }
 .pop__sex--men { color: #9cc7ff; }
 .pop__sex--women { color: #f4a9c8; }
 
+.pop__family {
+  margin-top: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pop__family-title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.pop__family-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  list-style: none;
+}
+
+.pop__family-list li {
+  display: inline-flex;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: var(--fs-sm);
+}
+
+.pop__family-name { font-weight: 600; }
+.pop__family-age { color: var(--accent); }
+.pop__family-list li.is-dead { opacity: 0.6; }
+.pop__family-list li.is-dead .pop__family-age { color: var(--text-muted); }
+
+.pop__family-note {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 .pop__chart {
   display: block;
   width: 100%;

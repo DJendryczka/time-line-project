@@ -15,12 +15,13 @@
 
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 
-  // Ułamek pokolenia urodzonego do roku t (rozłożony na g lat)
-  const bornShare = (t, n, g) => (n === 0 ? (t >= 0 ? 1 : 0) : clamp((t - (n * g - g / 2)) / g));
+  // Ułamek pokolenia urodzonego do roku t: pokolenie n rodzi się w latach (n-1)·g … n·g
+  // (dzieci Adama i Ewy od 1. roku, ich dzieci od ok. g-tego roku itd.)
+  const bornShare = (t, n, g) => (n === 0 ? (t >= 0 ? 1 : 0) : clamp((t - (n - 1) * g) / g));
 
   function model(t, k, g) {
     let people = 0, families = 0;
-    for (let n = 0; n * g - g / 2 <= t; n++) {
+    for (let n = 0; (n - 1) * g <= t; n++) {
       const size = n === 0 ? 2 : k * Math.pow(k / 2, n - 1);
       const alive = bornShare(t, n, g) - bornShare(t - LIFESPAN, n, g);
       people += size * alive;
@@ -37,7 +38,7 @@
     return node;
   }
 
-  function create(event, { ui, tr, lang, formatYear }) {
+  function create(event, { ui, tr, lang, formatYear, formatDuration }) {
     const cfg = event.widgetConfig ?? {};
     const startYear = event.yearRange?.[0] ?? -4026;
     const span = cfg.span ?? 930;
@@ -148,7 +149,11 @@
 
     function select(t) {
       selected = Math.round(t);
-      const { people, families } = model(selected, params.k, params.g);
+      const est = model(selected, params.k, params.g);
+      // Nie mniej ludzi niż członków rodziny wymienionych poniżej
+      const named = (cfg.family ?? []).filter((m) => selected >= m.born && !(m.deadFrom != null && selected >= m.deadFrom)).length;
+      const people = Math.max(est.people, named);
+      const families = est.families;
       cursor.setAttribute("x1", x(selected));
       cursor.setAttribute("x2", x(selected));
       dot.setAttribute("cx", x(selected));
@@ -157,7 +162,7 @@
       readout.replaceChildren();
       const year = document.createElement("p");
       year.className = "pop__year";
-      year.textContent = `${formatYear(startYear + selected)} · ${ui("popAfter").replace("{n}", selected)}`;
+      year.textContent = `${formatYear(startYear + selected)} · ${ui("popAfter").replace("{n}", formatDuration(selected))}`;
       const stats = document.createElement("p");
       stats.className = "pop__stats";
       const peopleEl = document.createElement("strong");
@@ -166,19 +171,64 @@
       famEl.textContent = `~${formatCount(families)}`;
       stats.append(peopleEl, ` ${ui("popPeople")}  ·  `, famEl, ` ${ui("popFamilies")}`);
       // Mężczyźni i kobiety: zakładamy, że chłopców i dziewczynek rodzi się mniej więcej po równo
-      const half = people / 2;
+      // Liczby całkowite, żeby mężczyźni + kobiety = ludzie (np. 5 = 3 + 2)
+      const total = Math.round(people);
+      const menCount = Math.ceil(total / 2);
+      const womenCount = total - menCount;
       const sexes = document.createElement("p");
       sexes.className = "pop__sexes";
       const men = document.createElement("span");
       men.className = "pop__sex pop__sex--men";
-      men.textContent = `♂ ~${formatCount(half)} ${ui("popMen")}`;
+      men.textContent = `♂ ~${formatCount(menCount)} ${ui("popMen")}`;
       const women = document.createElement("span");
       women.className = "pop__sex pop__sex--women";
-      women.textContent = `♀ ~${formatCount(half)} ${ui("popWomen")}`;
+      women.textContent = `♀ ~${formatCount(womenCount)} ${ui("popWomen")}`;
       sexes.append(men, women);
 
-      readout.append(year, stats, sexes);
+      readout.append(year, stats, sexes, renderFamily(selected));
       chart.setAttribute("aria-label", `${year.textContent}: ${stats.textContent}, ${men.textContent}, ${women.textContent}`);
+    }
+
+    /* Wiek członków rodziny Adama w wybranym roku.
+       born: rok od stworzenia Adama; exact: wiek znany z Biblii (Adam, Set);
+       unknownAfter: od tego roku los nieznany (Abel — zginął przed narodzinami Seta). */
+    function renderFamily(t) {
+      const box = document.createElement("div");
+      box.className = "pop__family";
+      const head = document.createElement("p");
+      head.className = "pop__family-title";
+      head.textContent = ui("popFamilyTitle");
+      const list = document.createElement("ul");
+      list.className = "pop__family-list";
+
+      (cfg.family ?? []).forEach((m) => {
+        if (t < m.born) return; // jeszcze się nie urodził(a)
+        const li = document.createElement("li");
+        const name = document.createElement("span");
+        name.className = "pop__family-name";
+        name.textContent = tr(m.name);
+        const age = document.createElement("span");
+        age.className = "pop__family-age";
+        const years = t - m.born;
+
+        if (m.deadFrom != null && t >= m.deadFrom) {
+          age.textContent = `† ${tr(m.deadNote)}`;
+          li.classList.add("is-dead");
+        } else {
+          age.textContent = `${m.exact ? "" : "~"}${formatDuration(years)}`;
+          if (m.uncertainFrom != null && t >= m.uncertainFrom) {
+            age.textContent += ` (${ui("popIfAlive")})`;
+          }
+        }
+        li.append(name, age);
+        list.append(li);
+      });
+
+      const note = document.createElement("p");
+      note.className = "pop__family-note";
+      note.textContent = ui("popFamilyNote");
+      box.append(head, list, note);
+      return box;
     }
 
     function pointer(e) {
