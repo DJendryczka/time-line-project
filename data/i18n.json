@@ -197,11 +197,25 @@
       "es": "si aún vivía"
     },
     "popFamilyNote": {
-      "pl": "Biblia podaje dokładny wiek tylko Adama i Seta. Wiek Ewy, Kaina, Abla i córki to przypuszczenia: przyjęto, że Kain urodził się wkrótce po wypędzeniu z Edenu, Abel nieco później, a córki — w tym przyszła żona Kaina — w kolejnych latach.",
-      "en": "The Bible gives exact ages only for Adam and Seth. The ages of Eve, Cain, Abel and the daughter are assumptions: Cain is assumed to be born soon after the expulsion from Eden, Abel a little later, and daughters — including Cain’s future wife — in the following years.",
-      "sv": "Bibeln anger exakt ålder bara för Adam och Set. Evas, Kains, Abels och dotterns ålder är antaganden: Kain antas vara född kort efter utdrivningen ur Eden, Abel lite senare och döttrarna – bland dem Kains blivande hustru – under de följande åren.",
-      "de": "Die Bibel nennt das genaue Alter nur von Adam und Seth. Das Alter von Eva, Kain, Abel und der Tochter ist angenommen: Kain wurde vermutlich kurz nach der Vertreibung aus Eden geboren, Abel etwas später und die Töchter – darunter Kains spätere Frau – in den folgenden Jahren.",
-      "es": "La Biblia da la edad exacta solo de Adán y Set. Las edades de Eva, Caín, Abel y la hija son suposiciones: se supone que Caín nació poco después de la expulsión de Edén, Abel algo más tarde y las hijas —entre ellas la futura esposa de Caín— en los años siguientes."
+      "pl": "Wiek Adama i jego potomków z rodowodu Seta (Set, Enosz, Kenan, Mahalalel, Jared, Henoch, Metuszelach, Lamech) wynika dokładnie z Rodzaju 5. Wiek Ewy, Kaina, Abla i córki to przypuszczenia: przyjęto, że Kain urodził się wkrótce po wypędzeniu z Edenu, Abel nieco później, a córki — w tym przyszła żona Kaina — w kolejnych latach.",
+      "en": "The ages of Adam and his descendants in Seth’s line (Seth, Enosh, Kenan, Mahalalel, Jared, Enoch, Methuselah, Lamech) follow exactly from Genesis 5. The ages of Eve, Cain, Abel and the daughter are assumptions: Cain is assumed to be born soon after the expulsion from Eden, Abel a little later, and daughters — including Cain’s future wife — in the following years.",
+      "sv": "Åldern för Adam och hans ättlingar i Sets släktlinje (Set, Enos, Kenan, Mahalalel, Jered, Henok, Metusela, Lemek) följer exakt av 1 Moseboken 5. Evas, Kains, Abels och dotterns ålder är antaganden: Kain antas vara född kort efter utdrivningen ur Eden, Abel lite senare och döttrarna – bland dem Kains blivande hustru – under de följande åren.",
+      "de": "Das Alter Adams und seiner Nachkommen in der Linie Seths (Seth, Enosch, Kenan, Mahalalel, Jered, Henoch, Methusalem, Lamech) ergibt sich genau aus 1. Mose 5. Das Alter von Eva, Kain, Abel und der Tochter ist angenommen: Kain wurde vermutlich kurz nach der Vertreibung aus Eden geboren, Abel etwas später und die Töchter – darunter Kains spätere Frau – in den folgenden Jahren.",
+      "es": "Las edades de Adán y sus descendientes por la línea de Set (Set, Enós, Quenán, Mahalalel, Jared, Enoc, Matusalén, Lamec) se deducen exactamente de Génesis 5. Las edades de Eva, Caín, Abel y la hija son suposiciones: se supone que Caín nació poco después de la expulsión de Edén, Abel algo más tarde y las hijas —entre ellas la futura esposa de Caín— en los años siguientes."
+    },
+    "popCainLine": {
+      "pl": "Ród Kaina (Rdz 4:17–22), lata nieznane:",
+      "en": "Cain’s descendants (Genesis 4:17-22), years unknown:",
+      "sv": "Kains ättlingar (1 Moseboken 4:17–22), år okända:",
+      "de": "Kains Nachkommen (1. Mose 4:17-22), Jahre unbekannt:",
+      "es": "Descendientes de Caín (Génesis 4:17-22), años desconocidos:"
+    },
+    "popNoah": {
+      "pl": "Noe urodzi się 126 lat po śmierci Adama (2970 p.n.e.).",
+      "en": "Noah will be born 126 years after Adam’s death (2970 B.C.E.).",
+      "sv": "Noa föds 126 år efter Adams död (2970 f.v.t.).",
+      "de": "Noah wird 126 Jahre nach Adams Tod geboren (2970 v. u. Z.).",
+      "es": "Noé nacerá 126 años después de la muerte de Adán (2970 a. E.C.)."
     }
   },
   "years": {

@@ -544,6 +544,21 @@ a { color: inherit; }
 .pop__family-list li.is-dead { opacity: 0.6; }
 .pop__family-list li.is-dead .pop__family-age { color: var(--text-muted); }
 
+.pop__family-extra {
+  margin-top: 0.5rem;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.pop__family-extra strong { color: var(--text); font-weight: 600; }
+
+.pop__birth {
+  fill: var(--accent);
+  stroke: var(--page-bg);
+  stroke-width: 1.5;
+  cursor: pointer;
+}
+
 .pop__family-note {
   margin-top: 0.5rem;
   font-size: 0.72rem;

@@ -131,12 +131,25 @@
       });
     }
 
+    // Narodziny osób z rodowodu jako kropki przy osi czasu (z podpowiedzią)
+    function drawBirths() {
+      (cfg.family ?? []).filter((m) => m.marker && m.born <= span).forEach((m) => {
+        const c = svg("circle", { cx: x(m.born), cy: H - PAD.b, r: 3.5, class: "pop__birth" });
+        const title = svg("title");
+        title.textContent = `${tr(m.name)} — ${formatYear(startYear + m.born)}`;
+        c.append(title);
+        c.addEventListener("click", () => select(m.born));
+        gMarkers.append(c);
+      });
+    }
+
     function update() {
       const end = model(span, params.k, params.g).people;
       const newExp = Math.max(3, Math.ceil(Math.log10(Math.max(10, end))));
       if (newExp !== yMaxExp) { yMaxExp = newExp; }
       drawGrid();
       drawMarkers();
+      drawBirths();
 
       let d = "";
       for (let t = 0; t <= span; t += 3) {
@@ -224,10 +237,28 @@
         list.append(li);
       });
 
+      box.append(head, list);
+
+      // Ród Kaina — imiona znane, lata nie
+      if (cfg.cainLine && t > 100) {
+        const cain = document.createElement("p");
+        cain.className = "pop__family-extra";
+        const label = document.createElement("strong");
+        label.textContent = ui("popCainLine");
+        cain.append(label, ` ${tr(cfg.cainLine)}`);
+        box.append(cain);
+      }
+      if (t >= span - 60) {
+        const noah = document.createElement("p");
+        noah.className = "pop__family-extra";
+        noah.textContent = ui("popNoah");
+        box.append(noah);
+      }
+
       const note = document.createElement("p");
       note.className = "pop__family-note";
       note.textContent = ui("popFamilyNote");
-      box.append(head, list, note);
+      box.append(note);
       return box;
     }
 

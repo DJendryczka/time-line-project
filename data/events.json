@@ -646,13 +646,105 @@
                   "es": "Set"
                 },
                 "born": 130,
-                "exact": true
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Enosz",
+                  "en": "Enosh",
+                  "sv": "Enos",
+                  "de": "Enosch",
+                  "es": "Enós"
+                },
+                "born": 235,
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Kenan",
+                  "en": "Kenan",
+                  "sv": "Kenan",
+                  "de": "Kenan",
+                  "es": "Quenán"
+                },
+                "born": 325,
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Mahalalel",
+                  "en": "Mahalalel",
+                  "sv": "Mahalalel",
+                  "de": "Mahalalel",
+                  "es": "Mahalalel"
+                },
+                "born": 395,
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Jared",
+                  "en": "Jared",
+                  "sv": "Jered",
+                  "de": "Jered",
+                  "es": "Jared"
+                },
+                "born": 460,
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Henoch",
+                  "en": "Enoch",
+                  "sv": "Henok",
+                  "de": "Henoch",
+                  "es": "Enoc"
+                },
+                "born": 622,
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Metuszelach",
+                  "en": "Methuselah",
+                  "sv": "Metusela",
+                  "de": "Methusalem",
+                  "es": "Matusalén"
+                },
+                "born": 687,
+                "exact": true,
+                "marker": true
+              },
+              {
+                "name": {
+                  "pl": "Lamech",
+                  "en": "Lamech",
+                  "sv": "Lemek",
+                  "de": "Lamech",
+                  "es": "Lamec"
+                },
+                "born": 874,
+                "exact": true,
+                "marker": true
               }
-            ]
+            ],
+            "cainLine": {
+              "pl": "Henoch, Irad, Mehujael, Metuszael, Lamech, Jabal, Jubal, Tubal-Kain, Naama",
+              "en": "Enoch, Irad, Mehujael, Methushael, Lamech, Jabal, Jubal, Tubal-cain, Naamah",
+              "sv": "Henok, Irad, Mehujael, Metusael, Lemek, Jabal, Jubal, Tubal-Kain, Naama",
+              "de": "Henoch, Irad, Mehujaël, Methuschaël, Lamech, Jabal, Jubal, Tubal-Kain, Naama",
+              "es": "Enoc, Irad, Mehujael, Metusael, Lamec, Jabal, Jubal, Tubal-caín, Naamá"
+            }
           },
           "refs": [
-            "gen 4:17",
-            "gen 5:4",
+            "gen 4:17-22",
+            "gen 5:3-32",
             "lev 18:6"
           ],
           "title": {
