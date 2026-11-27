@@ -398,7 +398,8 @@
           },
           "scene": "cosmos",
           "sceneState": "eden",
-          "image": "images/creation/eden"
+          "image": "images/creation/eden",
+          "outroBackdrop": "images/creation/eden.jpg"
         }
       ]
     },
@@ -472,6 +473,128 @@
             "sv": "Av Adams revben gör Jehova kvinnan – det första äktenskapet. Den sjätte dagen slutar och den sjunde börjar, Guds vilodag, som fortfarande pågår.",
             "de": "Aus Adams Rippe macht Jehova die Frau – die erste Ehe. Der sechste Tag endet, und der siebte beginnt, Gottes Ruhetag, der noch andauert.",
             "es": "Jehová forma a la mujer de una costilla de Adán: el primer matrimonio. Termina el sexto día y comienza el séptimo, el día de descanso de Dios, que aún continúa."
+          }
+        },
+        {
+          "year": -4026,
+          "qualifier": "after",
+          "refs": [
+            "gen 3:6",
+            "gen 3:15",
+            "gen 3:23, 24"
+          ],
+          "title": {
+            "pl": "Bunt w Edenie",
+            "en": "Rebellion in Eden",
+            "sv": "Upproret i Eden",
+            "de": "Rebellion in Eden",
+            "es": "Rebelión en Edén"
+          },
+          "description": {
+            "pl": "Ewa, a potem Adam, łamią jedyny zakaz Boga. Zostają wypędzeni z ogrodu, ale Jehowa od razu zapowiada „potomstwo”, które naprawi skutki buntu.",
+            "en": "Eve, and then Adam, break God’s only prohibition. They are driven out of the garden, but Jehovah immediately foretells an “offspring” who will undo the damage.",
+            "sv": "Eva och sedan Adam bryter Guds enda förbud. De drivs ut ur trädgården, men Jehova förutsäger genast en ”avkomma” som ska reparera skadan.",
+            "de": "Eva und dann Adam übertreten Gottes einziges Verbot. Sie werden aus dem Garten vertrieben, doch Jehova kündigt sofort einen „Nachkommen“ an, der den Schaden beheben wird.",
+            "es": "Eva, y después Adán, desobedecen la única prohibición de Dios. Son expulsados del jardín, pero Jehová anuncia enseguida una «descendencia» que reparará el daño."
+          }
+        },
+        {
+          "yearRange": [
+            -4026,
+            -3896
+          ],
+          "refs": [
+            "gen 4:1, 2"
+          ],
+          "title": {
+            "pl": "Narodziny Kaina i Abla",
+            "en": "Birth of Cain and Abel",
+            "sv": "Kain och Abel föds",
+            "de": "Geburt von Kain und Abel",
+            "es": "Nacen Caín y Abel"
+          },
+          "description": {
+            "pl": "Po wypędzeniu z Edenu Ewa rodzi Kaina, a potem Abla — pierwsze dzieci na ziemi. Kain uprawia ziemię, Abel pasie owce. Biblia nie podaje dat, ale musiało to być przed narodzinami Seta.",
+            "en": "After the expulsion from Eden, Eve gives birth to Cain and then Abel — the first children on earth. Cain cultivates the ground; Abel herds sheep. The Bible gives no dates, but it was before Seth was born.",
+            "sv": "Efter utdrivningen ur Eden föder Eva Kain och sedan Abel – de första barnen på jorden. Kain odlar jorden, Abel vaktar får. Bibeln anger inga datum, men det var före Sets födelse.",
+            "de": "Nach der Vertreibung aus Eden bringt Eva Kain und dann Abel zur Welt – die ersten Kinder auf der Erde. Kain bebaut den Boden, Abel hütet Schafe. Die Bibel nennt keine Daten, doch es war vor Seths Geburt.",
+            "es": "Tras la expulsión de Edén, Eva da a luz a Caín y después a Abel, los primeros niños de la tierra. Caín cultiva la tierra y Abel cuida ovejas. La Biblia no da fechas, pero fue antes del nacimiento de Set."
+          }
+        },
+        {
+          "year": -3896,
+          "qualifier": "before",
+          "refs": [
+            "gen 4:3-8",
+            "gen 4:16",
+            "heb 11:4"
+          ],
+          "title": {
+            "pl": "Kain zabija Abla",
+            "en": "Cain kills Abel",
+            "sv": "Kain dödar Abel",
+            "de": "Kain tötet Abel",
+            "es": "Caín mata a Abel"
+          },
+          "description": {
+            "pl": "Bóg przyjmuje ofiarę Abla, a Kain, pełen zazdrości, zabija brata. Abel jest pierwszym człowiekiem wiernym Bogu aż do śmierci. Kain zostaje wygnany i osiada w ziemi Nod.",
+            "en": "God approves Abel’s offering, and Cain, consumed by jealousy, kills his brother. Abel is the first man faithful to God until death. Cain is banished and settles in the land of Nod.",
+            "sv": "Gud godkänner Abels offer, och Kain, fylld av avund, dödar sin bror. Abel är den förste människan som är trogen mot Gud ända till döden. Kain fördrivs och bosätter sig i landet Nod.",
+            "de": "Gott nimmt Abels Opfer an, und Kain tötet voller Eifersucht seinen Bruder. Abel ist der erste Mensch, der Gott bis in den Tod treu bleibt. Kain wird verbannt und lässt sich im Land Nod nieder.",
+            "es": "Dios aprueba la ofrenda de Abel, y Caín, lleno de celos, mata a su hermano. Abel es el primer hombre fiel a Dios hasta la muerte. Caín es desterrado y se establece en la tierra de Nod."
+          }
+        },
+        {
+          "yearRange": [
+            -4026,
+            -3096
+          ],
+          "widget": "population",
+          "widgetConfig": {
+            "children": 8,
+            "generation": 100,
+            "span": 930,
+            "markers": [
+              {
+                "year": -3896,
+                "label": {
+                  "pl": "Set",
+                  "en": "Seth",
+                  "sv": "Set",
+                  "de": "Seth",
+                  "es": "Set"
+                }
+              },
+              {
+                "year": -3096,
+                "label": {
+                  "pl": "śmierć Adama",
+                  "en": "Adam dies",
+                  "sv": "Adam dör",
+                  "de": "Adams Tod",
+                  "es": "muere Adán"
+                }
+              }
+            ]
+          },
+          "refs": [
+            "gen 4:17",
+            "gen 5:4",
+            "lev 18:6"
+          ],
+          "title": {
+            "pl": "Ludzkości przybywa",
+            "en": "Humanity grows",
+            "sv": "Mänskligheten växer",
+            "de": "Die Menschheit wächst",
+            "es": "La humanidad crece"
+          },
+          "description": {
+            "pl": "Biblia nie podaje, ile dzieci mieli Adam i Ewa — mówi tylko, że Adam „został ojcem synów i córek”. Ludzie żyli wtedy setki lat, więc liczba ludzi rosła bardzo szybko. Synowie żenili się z siostrami lub dalszymi krewnymi; ludzie byli wtedy bliscy doskonałości, więc nie było to szkodliwe, a zakaz pojawił się dopiero w Prawie Mojżeszowym. Kain też założył rodzinę i zbudował miasto. Poniżej prosty szacunek — zmień założenia suwakami.",
+            "en": "The Bible doesn’t say how many children Adam and Eve had — only that Adam “became father to sons and daughters.” People then lived for centuries, so the population grew very quickly. Sons married sisters or other relatives; humans were then close to perfection, so this was not harmful, and it was forbidden only later in the Mosaic Law. Cain too had a family and built a city. Below is a simple estimate — change the assumptions with the sliders.",
+            "sv": "Bibeln säger inte hur många barn Adam och Eva fick – bara att Adam ”blev far till söner och döttrar”. Människor levde då i hundratals år, så befolkningen växte mycket snabbt. Söner gifte sig med systrar eller andra släktingar; människorna var då nära fullkomlighet, så det var inte skadligt, och det förbjöds först senare i Mose lag. Även Kain bildade familj och byggde en stad. Nedan finns en enkel uppskattning – ändra antagandena med reglagen.",
+            "de": "Die Bibel sagt nicht, wie viele Kinder Adam und Eva hatten – nur, dass Adam „Vater von Söhnen und Töchtern“ wurde. Die Menschen lebten damals Jahrhunderte, daher wuchs die Bevölkerung sehr schnell. Söhne heirateten Schwestern oder andere Verwandte; die Menschen waren damals der Vollkommenheit nahe, deshalb war das nicht schädlich, und es wurde erst später im mosaischen Gesetz verboten. Auch Kain gründete eine Familie und baute eine Stadt. Unten eine einfache Schätzung – ändere die Annahmen mit den Reglern.",
+            "es": "La Biblia no dice cuántos hijos tuvieron Adán y Eva; solo que Adán «llegó a ser padre de hijos e hijas». La gente vivía entonces cientos de años, así que la población creció muy rápido. Los hijos se casaban con hermanas u otros parientes; los seres humanos estaban entonces cerca de la perfección, así que no era perjudicial, y se prohibió solo más tarde en la Ley mosaica. También Caín formó una familia y construyó una ciudad. Abajo hay una estimación sencilla: cambia los supuestos con los controles."
           }
         },
         {
@@ -618,7 +741,8 @@
             "es": "En el año 600 de la vida de Noé comienza el Diluvio. Solo ocho personas sobreviven en el arca. Ese mismo año muere Matusalén."
           }
         }
-      ]
+      ],
+      "backdrop": "images/creation/eden.jpg"
     },
     {
       "id": "po-potopie",

@@ -111,6 +111,55 @@
       "sv": "Konstnärlig visualisering",
       "de": "Künstlerische Darstellung",
       "es": "Visualización artística"
+    },
+    "popChildren": {
+      "pl": "Dzieci na rodzinę",
+      "en": "Children per family",
+      "sv": "Barn per familj",
+      "de": "Kinder pro Familie",
+      "es": "Hijos por familia"
+    },
+    "popGeneration": {
+      "pl": "Lata między pokoleniami",
+      "en": "Years between generations",
+      "sv": "År mellan generationer",
+      "de": "Jahre zwischen Generationen",
+      "es": "Años entre generaciones"
+    },
+    "popPeople": {
+      "pl": "ludzi",
+      "en": "people",
+      "sv": "människor",
+      "de": "Menschen",
+      "es": "personas"
+    },
+    "popFamilies": {
+      "pl": "rodzin",
+      "en": "families",
+      "sv": "familjer",
+      "de": "Familien",
+      "es": "familias"
+    },
+    "popAfter": {
+      "pl": "{n} lat od stworzenia Adama",
+      "en": "{n} years after Adam’s creation",
+      "sv": "{n} år efter Adams skapelse",
+      "de": "{n} Jahre nach Adams Erschaffung",
+      "es": "{n} años después de la creación de Adán"
+    },
+    "popHint": {
+      "pl": "Najedź lub przesuń palcem po wykresie",
+      "en": "Hover or drag across the chart",
+      "sv": "Hovra eller dra över diagrammet",
+      "de": "Über das Diagramm fahren oder wischen",
+      "es": "Pasa el cursor o desliza sobre el gráfico"
+    },
+    "popNote": {
+      "pl": "Szacunek poglądowy — Biblia nie podaje liczb",
+      "en": "Illustrative estimate — the Bible gives no numbers",
+      "sv": "Ungefärlig uppskattning – Bibeln anger inga siffror",
+      "de": "Grobe Schätzung – die Bibel nennt keine Zahlen",
+      "es": "Estimación orientativa: la Biblia no da cifras"
     }
   },
   "years": {
@@ -158,6 +207,20 @@
         "one": "año",
         "other": "años"
       }
+    },
+    "before": {
+      "pl": "przed",
+      "en": "before",
+      "sv": "före",
+      "de": "vor",
+      "es": "antes de"
+    },
+    "after": {
+      "pl": "po",
+      "en": "after",
+      "sv": "efter",
+      "de": "nach",
+      "es": "después de"
     }
   },
   "books": {
@@ -293,6 +356,13 @@
       "sv": "Upp",
       "de": "Off",
       "es": "Ap"
+    },
+    "lev": {
+      "pl": "Kpł",
+      "en": "Le",
+      "sv": "3Mo",
+      "de": "3Mo",
+      "es": "Le"
     }
   }
 }

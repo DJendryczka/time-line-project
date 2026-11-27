@@ -49,13 +49,23 @@ const toAstro = (year) => (year < 0 ? year + 1 : year);
 const yearsBetween = (a, b) => Math.abs(toAstro(b) - toAstro(a));
 const isDated = (year) => typeof year === "number";
 
-function formatYear(year, approx = false) {
+// qualifier: "approx" (ok.), "before" (przed), "after" (po)
+function formatYear(year, qualifier = null) {
   if (!isDated(year)) return ui("undated");
   const y = state.i18n.years;
   const suffix = tr(year < 0 ? y.bce : y.ce);
-  const prefix = approx ? `${tr(y.approx)} ` : "";
+  const prefix = qualifier && y[qualifier] ? `${tr(y[qualifier])} ` : "";
   return `${prefix}${Math.abs(year)} ${suffix}`;
 }
+
+// Data wydarzenia: pojedynczy rok, rok z kwalifikatorem albo zakres lat
+function formatEventDate(event) {
+  if (event.yearRange) return formatRange(...event.yearRange);
+  return formatYear(event.year, event.qualifier ?? (event.approx ? "approx" : null));
+}
+
+// Rok używany do odstępów na osi (dla zakresu — jego koniec)
+const eventYear = (event) => (isDated(event.year) ? event.year : event.yearRange?.[1] ?? null);
 
 function formatRange(start, end) {
   if (!isDated(start) || !isDated(end)) return ui("undated");
@@ -96,14 +106,21 @@ function el(tag, className, text) {
 }
 
 function renderEvent(event, prev) {
-  const dated = isDated(event.year);
-  const li = el("li", `event reveal${dated ? "" : " event--undated"}`);
+  const dated = isDated(eventYear(event));
+  const classes = ["event", "reveal"];
+  if (!dated) classes.push("event--undated");
+  if (event.widget) classes.push("event--wide");
+  const li = el("li", classes.join(" "));
 
-  if (prev && dated && isDated(prev.year)) {
-    li.style.setProperty("--gap", gapForYears(yearsBetween(prev.year, event.year)));
+  if (prev && dated && isDated(eventYear(prev))) {
+    li.style.setProperty("--gap", gapForYears(yearsBetween(eventYear(prev), eventYear(event))));
   }
 
-  li.append(buildCard(event, "event__card"));
+  const card = buildCard(event, "event__card");
+  if (event.widget === "population" && window.PopulationWidget) {
+    card.append(window.PopulationWidget.create(event, { ui, tr, lang: state.lang, formatYear }));
+  }
+  li.append(card);
   return li;
 }
 
@@ -111,7 +128,7 @@ function renderEvent(event, prev) {
 function buildCard(event, className) {
   const card = el("article", className);
   const dated = isDated(event.year);
-  const year = el(dated ? "time" : "p", "event__year", formatYear(event.year, event.approx));
+  const year = el(dated ? "time" : "p", "event__year", formatEventDate(event));
   if (dated) year.dateTime = String(event.year);
 
   card.append(year, el("h3", "event__title", tr(event.title)));
@@ -134,7 +151,7 @@ function appendRefs(card, refsData) {
    Kolejne wydarzenia z "scene": "cosmos" tworzą jeden blok: przyklejone płótno
    w tle i karty przewijane nad nim. Każda karta = jeden etap animacji. */
 
-function renderCosmos(events) {
+function renderCosmos(events, era) {
   const steps = [];
   events.forEach((event) => {
     steps.push({ state: event.sceneState, image: event.image, card: buildCard(event, "cosmos__card event--undated") });
@@ -163,6 +180,20 @@ function renderCosmos(events) {
     root.append(step);
   });
 
+  // Zakończenie sceny: ostatni obraz rozmywa się i przechodzi w tło następnej epoki
+  const last = events[events.length - 1];
+  if (last?.outroBackdrop) {
+    const outro = el("div", "cosmos__step cosmos__step--outro");
+    outro.dataset.image = last.image ?? "";
+    outro.dataset.outro = "true";
+    outro.dataset.theme = "";
+    outro.dataset.color = era.color;
+    outro.dataset.accent = era.accent;
+    outro.dataset.backdrop = last.outroBackdrop;
+    root.dataset.states += `,${steps[steps.length - 1].state}`;
+    root.append(outro);
+  }
+
   li.append(root);
   return li;
 }
@@ -170,8 +201,10 @@ function renderCosmos(events) {
 function renderEra(era) {
   const section = el("section", "era");
   section.id = era.id;
+  section.dataset.theme = "";
   section.dataset.color = era.color;
   section.dataset.accent = era.accent;
+  if (era.backdrop) section.dataset.backdrop = era.backdrop;
   section.setAttribute("aria-labelledby", `${era.id}-title`);
 
   const header = el("header", "era__header reveal");
@@ -195,7 +228,7 @@ function renderEra(era) {
       const group = [];
       while (i < events.length && events[i].scene === scene) group.push(events[i++]);
       i--;
-      list.append(renderCosmos(group));
+      list.append(renderCosmos(group, era));
     } else {
       list.append(renderEvent(events[i], events[i - 1]));
     }
@@ -263,23 +296,43 @@ function setLanguage(lang) {
 
 /* ---------- Kolory tła per epoka ---------- */
 
-function setTheme(color, accent) {
+function setTheme({ color, accent, backdrop }) {
   const root = document.documentElement.style;
   if (color) root.setProperty("--page-bg", color);
   if (accent) root.setProperty("--accent", accent);
+
+  // Rozmyte tło epoki (np. Eden za epoką przed potopem)
+  const layer = document.getElementById("backdrop");
+  if (!layer) return;
+  if (backdrop) {
+    if (layer.dataset.src !== backdrop) {
+      layer.style.backgroundImage = `url("${backdrop}")`;
+      layer.dataset.src = backdrop;
+    }
+    layer.classList.add("is-on");
+  } else {
+    layer.classList.remove("is-on");
+  }
 }
 
+/* Elementy z data-theme (intro, epoki, zakończenie sceny) ustawiają kolory i tło,
+   gdy przecinają środek ekranu. Przy kilku naraz wygrywa najgłębszy/najpóźniejszy. */
 function watchEras(container) {
+  const active = new Set();
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setTheme(entry.target.dataset.color, entry.target.dataset.accent);
+        if (entry.isIntersecting) active.add(entry.target);
+        else active.delete(entry.target);
       });
+      const winner = [...active].sort((a, b) =>
+        a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+      ).pop();
+      if (winner) setTheme(winner.dataset);
     },
-    // Epoka „aktywna”, gdy przecina środek ekranu
     { rootMargin: "-50% 0px -50% 0px" }
   );
-  container.querySelectorAll(".era").forEach((era) => observer.observe(era));
+  container.querySelectorAll("[data-theme]").forEach((node) => observer.observe(node));
   const intro = document.getElementById("intro"); // powrót do intro = kolory startowe
   if (intro) observer.observe(intro);
   state.observers.push(observer);

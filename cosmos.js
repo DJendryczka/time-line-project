@@ -577,6 +577,7 @@
 
     const ctx = canvas.getContext("2d");
     const images = createImages(root, steps);
+    const outroIndex = steps.findIndex((step) => step.dataset.outro === "true");
     const count = window.innerWidth < 700 ? 1000 : 1800;
     const particles = Array.from({ length: count }, (_, i) => ({
       i,
@@ -631,6 +632,13 @@
         const span = img.end - img.start + 2;
         const zoom = reducedMotion ? 1.04 : 1.03 + 0.07 * clamp((current - img.start + 1) / span);
         img.el.style.transform = `scale(${zoom.toFixed(4)})`;
+        // Zakończenie: obraz rozmywa się i ciemnieje — tak samo jak tło następnej epoki
+        if (outroIndex > 0 && img.end === outroIndex) {
+          const f = clamp(current - (outroIndex - 1));
+          img.el.style.filter = f > 0.001
+            ? `blur(${(f * 16).toFixed(1)}px) brightness(${(1 - f * 0.68).toFixed(3)}) saturate(${(1 - f * 0.15).toFixed(3)})`
+            : "";
+        }
       });
       cover = clamp(cover);
       if (images.shade) images.shade.style.opacity = cover.toFixed(3);

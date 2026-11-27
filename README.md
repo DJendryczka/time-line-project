@@ -16,6 +16,7 @@ Dane są wczytywane przez `fetch`, dlatego strona musi działać przez lokalny s
 ```
 index.html          intro z paralaksą, przełącznik języka, kontener osi
 style.css           zmienne, fonty, responsywność, wygląd osi
+population.js       widżet „Ludzkości przybywa” (wykres + suwaki)
 cosmos.js           animacja kosmosu (cząstki na canvas) sterowana przewijaniem
 script.js           wczytuje dane, renderuje oś, języki, paralaksa, kolory epok
 data/events.json    epoki i wydarzenia (treść w 5 językach)
@@ -42,7 +43,10 @@ Wydarzenie w `data/events.json`:
 ```
 
 - **`year`:** liczba ujemna to p.n.e., dodatnia n.e. `null` oznacza *czas nieokreślony*. Roku 0 nie ma, a skrypt sam to uwzględnia przy liczeniu różnic.
-- **`"approx": true`** dodaje „ok.” / „c.” / „omkr.” / „um” / „h.” przed datą.
+- **`"qualifier"`:** `"approx"` daje „ok. 4026”, `"before"` „przed 3896”, `"after"` „po 4026”. Starsze `"approx": true` też działa.
+- **`"yearRange": [-4026, -3896]`** pokazuje zakres lat zamiast jednego roku.
+- **`"backdrop"`** w epoce ustawia rozmyte tło. **`"outroBackdrop"`** w ostatnim wydarzeniu sceny rozmywa jej ostatni obraz i płynnie przechodzi w to tło.
+- **`"widget": "population"`** wstawia wykres wzrostu ludzkości. Ustawienia są w `widgetConfig`.
 - **`refs`:** kod księgi + werset, np. `"joh 1:1-3"`. Skrót wyświetla się w każdym języku osobno (np. Jn / Joh / Joh / Joh / Jn). Nowe księgi dopisuje się w `data/i18n.json` → `books`.
 - **Brak tłumaczenia:** pokaże się wersja polska.
 - **Epoka bez dat:** `"start": null, "end": null`.
@@ -59,6 +63,8 @@ Wydarzenie w `data/events.json`:
 - [x] Animacja kosmosu: kwarki → atomy → gwiazdy → galaktyki → Układ Słoneczny → Ziemia
 - [x] Dni stwarzania i Eden jako dalsze etapy tej samej animacji
 - [x] Od 4. dnia przejście z animacji w obrazy (czekają na pliki, patrz `images/creation/PROMPTY.md`)
+- [x] Eden przechodzi w rozmyte tło epoki przed potopem
+- [x] Bunt w Edenie, Kain i Abel, wykres „Ludzkości przybywa”
 - [ ] Przyklejony licznik roku
 - [ ] Minimapa w prawdziwej skali
 - [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)

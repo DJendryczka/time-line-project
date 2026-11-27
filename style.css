@@ -73,6 +73,20 @@ a { color: inherit; }
   border-radius: 4px;
 }
 
+/* Rozmyte tło epoki — pod całą treścią */
+.backdrop {
+  position: fixed;
+  inset: -40px;               /* zapas, żeby rozmyte krawędzie nie prześwitywały */
+  z-index: -1;
+  background: center / cover no-repeat;
+  filter: blur(16px) brightness(0.32) saturate(0.85);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  pointer-events: none;
+}
+
+.backdrop.is-on { opacity: 1; }
+
 /* =========================================================
    3. PRZEŁĄCZNIK JĘZYKA
    ========================================================= */
@@ -438,6 +452,75 @@ a { color: inherit; }
   transform: none;
 }
 
+/* ---------- Szeroka karta (np. wykres) ---------- */
+.event--wide .event__card { max-width: 46rem; }
+
+/* ---------- Widżet: Ludzkości przybywa ---------- */
+.pop { margin-top: 1.1rem; }
+
+.pop__controls {
+  display: grid;
+  gap: 0.9rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.pop__slider { display: grid; gap: 0.35rem; font-size: var(--fs-sm); }
+
+.pop__slider-head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+}
+
+.pop__slider output {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.pop__slider input {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.pop__readout { margin-top: 1rem; }
+
+.pop__year {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.pop__stats { font-size: var(--fs-lg); }
+
+.pop__stats strong {
+  font-family: var(--font-display);
+  font-size: 1.35em;
+  color: var(--accent);
+}
+
+.pop__chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.6rem;
+  touch-action: pan-y;
+  cursor: crosshair;
+}
+
+.pop__grid line { stroke: var(--line); stroke-width: 1; }
+.pop__grid text,
+.pop__markers text { fill: var(--text-muted); font: 11px var(--font-body); }
+.pop__markers line { stroke: var(--text-muted); stroke-dasharray: 3 4; opacity: 0.6; }
+.pop__line { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.pop__area { fill: var(--accent); opacity: 0.12; }
+.pop__cursor { stroke: var(--text); stroke-width: 1; opacity: 0.4; }
+.pop__dot { fill: var(--accent); stroke: var(--page-bg); stroke-width: 2; }
+
+.pop__hint {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
 /* ---------- Scena kosmosu ----------
    Płótno przykleja się do ekranu, a karty etapów przewijają się nad nim.
    Każdy krok ma wysokość ekranu = jeden etap animacji. */
@@ -574,6 +657,25 @@ a { color: inherit; }
   }
 
   .event:nth-child(even)::before { left: 0; }
+
+  .event--wide,
+  .event--wide:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.6rem 0 0;
+  }
+
+  .event--wide::before,
+  .event--wide:nth-child(even)::before { left: 50%; top: 0; }
+
+  .event--wide .event__card,
+  .event--wide:nth-child(odd) .event__card {
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .event--wide .event__refs,
+  .event--wide:nth-child(odd) .event__refs { justify-content: flex-start; }
 
   .event:nth-child(odd) .event__card { text-align: right; }
   .event:nth-child(odd) .event__refs { justify-content: flex-end; }
