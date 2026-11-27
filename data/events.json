@@ -2,7 +2,8 @@
   "meta": {
     "source": "Chronologia wg „Wnikliwe poznawanie Pism”",
     "yearFormat": "year: ujemne = p.n.e., dodatnie = n.e., null = czas nieokreślony. Roku 0 nie ma.",
-    "refs": "Kod księgi (gen, exo, joh…) + rozdział:werset. Skróty w każdym języku są w data/i18n.json → books."
+    "refs": "Kod księgi (gen, exo, joh…) + rozdział:werset. Skróty w każdym języku są w data/i18n.json → books.",
+    "scene": "Kolejne wydarzenia z \"scene\": \"cosmos\" tworzą jedną animowaną scenę (cosmos.js). sceneState / stages[].state = etap animacji."
   },
   "eras": [
     {
@@ -35,7 +36,12 @@
       "events": [
         {
           "year": null,
-          "refs": ["col 1:15", "rev 3:14", "pro 8:22, 30", "joh 1:1-3"],
+          "refs": [
+            "col 1:15",
+            "rev 3:14",
+            "pro 8:22, 30",
+            "joh 1:1-3"
+          ],
           "title": {
             "pl": "Stworzenie Słowa — Jezusa",
             "en": "Creation of the Word — Jesus",
@@ -53,7 +59,11 @@
         },
         {
           "year": null,
-          "refs": ["col 1:16", "job 38:4-7", "dan 7:10"],
+          "refs": [
+            "col 1:16",
+            "job 38:4-7",
+            "dan 7:10"
+          ],
           "title": {
             "pl": "Stworzenie aniołów",
             "en": "Creation of the angels",
@@ -71,7 +81,11 @@
         },
         {
           "year": null,
-          "refs": ["gen 1:1", "isa 40:26", "heb 11:3"],
+          "refs": [
+            "gen 1:1",
+            "isa 40:26",
+            "heb 11:3"
+          ],
           "title": {
             "pl": "Stworzenie wszechświata",
             "en": "Creation of the universe",
@@ -80,16 +94,113 @@
             "es": "Creación del universo"
           },
           "description": {
-            "pl": "Bóg stwarza niebiosa i ziemię — miliardy galaktyk i gwiazd, z których każdą zna po imieniu.",
-            "en": "God creates the heavens and the earth — billions of galaxies and stars, each of which he knows by name.",
-            "sv": "Gud skapar himlarna och jorden – miljarder galaxer och stjärnor, som han känner var och en vid namn.",
-            "de": "Gott erschafft Himmel und Erde – Milliarden Galaxien und Sterne, die er alle mit Namen kennt.",
-            "es": "Dios crea los cielos y la tierra: miles de millones de galaxias y estrellas, y conoce a cada una por su nombre."
-          }
+            "pl": "Bóg stwarza niebiosa i ziemię. Biblia nie opisuje, jak to zrobił, ale podkreśla Jego ogromną moc i energię. Przewijaj dalej, by zobaczyć, jak mogło to wyglądać.",
+            "en": "God creates the heavens and the earth. The Bible doesn’t say how he did it, but it highlights his immense power and energy. Keep scrolling to see how it may have looked.",
+            "sv": "Gud skapar himlarna och jorden. Bibeln säger inte hur han gjorde det, men framhåller hans enorma kraft och energi. Scrolla vidare för att se hur det kan ha sett ut.",
+            "de": "Gott erschafft Himmel und Erde. Die Bibel sagt nicht, wie er es tat, hebt aber seine gewaltige Macht und Energie hervor. Scroll weiter, um zu sehen, wie es ausgesehen haben könnte.",
+            "es": "Dios crea los cielos y la tierra. La Biblia no dice cómo lo hizo, pero destaca su inmenso poder y energía. Sigue desplazándote para ver cómo pudo haber sido."
+          },
+          "scene": "cosmos",
+          "sceneState": "void",
+          "stages": [
+            {
+              "state": "quarks",
+              "title": {
+                "pl": "Kwarki",
+                "en": "Quarks",
+                "sv": "Kvarkar",
+                "de": "Quarks",
+                "es": "Quarks"
+              },
+              "text": {
+                "pl": "Najmniejsze znane cegiełki materii. Fizycy uważają, że na samym początku wypełniały wszechświat jak gorąca, gęsta „zupa”.",
+                "en": "The smallest known building blocks of matter. Physicists believe that at the very start they filled the universe like a hot, dense “soup.”",
+                "sv": "Materiens minsta kända byggstenar. Fysiker tror att de i allra första början fyllde universum som en het, tät ”soppa”.",
+                "de": "Die kleinsten bekannten Bausteine der Materie. Physiker gehen davon aus, dass sie ganz am Anfang das Universum wie eine heiße, dichte „Suppe“ füllten.",
+                "es": "Los componentes más pequeños conocidos de la materia. Los físicos creen que al principio llenaban el universo como una «sopa» caliente y densa."
+              }
+            },
+            {
+              "state": "hadrons",
+              "title": {
+                "pl": "Protony i neutrony",
+                "en": "Protons and neutrons",
+                "sv": "Protoner och neutroner",
+                "de": "Protonen und Neutronen",
+                "es": "Protones y neutrones"
+              },
+              "text": {
+                "pl": "Kwarki łączą się po trzy. Tak powstają protony i neutrony — jądra przyszłych atomów.",
+                "en": "Quarks bind together in threes, forming protons and neutrons — the nuclei of future atoms.",
+                "sv": "Kvarkar binds samman tre och tre och bildar protoner och neutroner – kärnorna i framtida atomer.",
+                "de": "Quarks verbinden sich zu dritt zu Protonen und Neutronen – den Kernen künftiger Atome.",
+                "es": "Los quarks se unen de tres en tres y forman protones y neutrones, los núcleos de los futuros átomos."
+              }
+            },
+            {
+              "state": "atoms",
+              "title": {
+                "pl": "Atomy",
+                "en": "Atoms",
+                "sv": "Atomer",
+                "de": "Atome",
+                "es": "Átomos"
+              },
+              "text": {
+                "pl": "Jądra przyciągają elektrony. Powstają pierwsze atomy — głównie wodoru i helu — i wszechświat staje się przejrzysty dla światła.",
+                "en": "Nuclei capture electrons. The first atoms form — mostly hydrogen and helium — and the universe becomes transparent to light.",
+                "sv": "Kärnorna fångar elektroner. De första atomerna bildas – mest väte och helium – och universum blir genomskinligt för ljus.",
+                "de": "Kerne fangen Elektronen ein. Die ersten Atome entstehen – vor allem Wasserstoff und Helium – und das Universum wird durchsichtig für Licht.",
+                "es": "Los núcleos capturan electrones. Se forman los primeros átomos, sobre todo de hidrógeno y helio, y el universo se vuelve transparente a la luz."
+              }
+            },
+            {
+              "state": "stars",
+              "title": {
+                "pl": "Pierwsze gwiazdy",
+                "en": "The first stars",
+                "sv": "De första stjärnorna",
+                "de": "Die ersten Sterne",
+                "es": "Las primeras estrellas"
+              },
+              "text": {
+                "pl": "Grawitacja zbiera obłoki gazu, aż w ich wnętrzu zapala się synteza jądrowa. Wszechświat rozbłyska światłem gwiazd.",
+                "en": "Gravity gathers clouds of gas until nuclear fusion ignites in their cores. The universe lights up with starlight.",
+                "sv": "Gravitationen samlar gasmoln tills kärnfusion tänds i deras inre. Universum lyser upp av stjärnljus.",
+                "de": "Die Schwerkraft verdichtet Gaswolken, bis in ihrem Inneren die Kernfusion zündet. Das Universum erstrahlt im Sternenlicht.",
+                "es": "La gravedad reúne nubes de gas hasta que en su interior se enciende la fusión nuclear. El universo se ilumina con la luz de las estrellas."
+              }
+            },
+            {
+              "state": "galaxies",
+              "refs": [
+                "isa 40:26",
+                "psa 147:4"
+              ],
+              "title": {
+                "pl": "Galaktyki",
+                "en": "Galaxies",
+                "sv": "Galaxer",
+                "de": "Galaxien",
+                "es": "Galaxias"
+              },
+              "text": {
+                "pl": "Gwiazdy układają się w ogromne, wirujące galaktyki. Jest ich miliardy, a Jehowa zna każdą gwiazdę po imieniu.",
+                "en": "Stars gather into vast, spinning galaxies. There are billions of them, yet Jehovah knows every star by name.",
+                "sv": "Stjärnorna samlas i väldiga, roterande galaxer. Det finns miljarder av dem, men Jehova känner varje stjärna vid namn.",
+                "de": "Sterne sammeln sich in riesigen, rotierenden Galaxien. Es gibt Milliarden davon, und doch kennt Jehova jeden Stern mit Namen.",
+                "es": "Las estrellas se agrupan en enormes galaxias en rotación. Hay miles de millones, y aun así Jehová conoce cada estrella por su nombre."
+              }
+            }
+          ]
         },
         {
           "year": null,
-          "refs": ["gen 1:1", "psa 19:1", "jer 31:35"],
+          "refs": [
+            "gen 1:1",
+            "psa 19:1",
+            "jer 31:35"
+          ],
           "title": {
             "pl": "Układ Słoneczny",
             "en": "The solar system",
@@ -103,11 +214,16 @@
             "sv": "Solen, månen och planeterna hör till ”himlarna” i 1 Moseboken 1:1. Bibeln går inte in på detaljer men framhåller den ordning som Jehova gav himlakropparna.",
             "de": "Sonne, Mond und Planeten gehören zu den „Himmeln“ aus 1. Mose 1:1. Die Bibel nennt keine Einzelheiten, hebt aber die Ordnung hervor, die Jehova den Himmelskörpern gab.",
             "es": "El Sol, la Luna y los planetas forman parte de «los cielos» de Génesis 1:1. La Biblia no da detalles, pero destaca el orden con que Jehová estableció los cuerpos celestes."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "solar"
         },
         {
           "year": null,
-          "refs": ["gen 1:2", "job 26:7"],
+          "refs": [
+            "gen 1:2",
+            "job 26:7"
+          ],
           "title": {
             "pl": "Ziemia",
             "en": "The earth",
@@ -121,11 +237,15 @@
             "sv": "Jorden, som hänger ”på ingenting”, är först formlös och öde, täckt av vatten och mörker. Guds verksamma kraft rör sig över vattnet.",
             "de": "Die Erde, die „an nichts“ aufgehängt ist, ist anfangs formlos und öde, bedeckt von Wasser und Finsternis. Gottes wirksame Kraft bewegt sich über den Wassern.",
             "es": "Suspendida «sobre nada», la tierra está al principio sin forma y desierta, cubierta de agua y oscuridad. La fuerza activa de Dios se mueve sobre las aguas."
-          }
+          },
+          "scene": "cosmos",
+          "sceneState": "earth"
         },
         {
           "year": null,
-          "refs": ["gen 1:3-5"],
+          "refs": [
+            "gen 1:3-5"
+          ],
           "title": {
             "pl": "Dzień 1: światło",
             "en": "Day 1: Light",
@@ -143,7 +263,9 @@
         },
         {
           "year": null,
-          "refs": ["gen 1:6-8"],
+          "refs": [
+            "gen 1:6-8"
+          ],
           "title": {
             "pl": "Dzień 2: przestworze",
             "en": "Day 2: The expanse",
@@ -161,7 +283,9 @@
         },
         {
           "year": null,
-          "refs": ["gen 1:9-13"],
+          "refs": [
+            "gen 1:9-13"
+          ],
           "title": {
             "pl": "Dzień 3: ląd i rośliny",
             "en": "Day 3: Land and plants",
@@ -179,7 +303,9 @@
         },
         {
           "year": null,
-          "refs": ["gen 1:14-19"],
+          "refs": [
+            "gen 1:14-19"
+          ],
           "title": {
             "pl": "Dzień 4: Słońce, Księżyc i gwiazdy",
             "en": "Day 4: Sun, moon, and stars",
@@ -197,7 +323,9 @@
         },
         {
           "year": null,
-          "refs": ["gen 1:20-23"],
+          "refs": [
+            "gen 1:20-23"
+          ],
           "title": {
             "pl": "Dzień 5: ryby i ptaki",
             "en": "Day 5: Sea creatures and birds",
@@ -215,7 +343,9 @@
         },
         {
           "year": null,
-          "refs": ["gen 1:24, 25"],
+          "refs": [
+            "gen 1:24, 25"
+          ],
           "title": {
             "pl": "Dzień 6: zwierzęta lądowe",
             "en": "Day 6: Land animals",
@@ -233,7 +363,9 @@
         },
         {
           "year": null,
-          "refs": ["gen 2:8-10, 15"],
+          "refs": [
+            "gen 2:8-10, 15"
+          ],
           "title": {
             "pl": "Ogród Eden",
             "en": "The garden of Eden",
@@ -281,7 +413,10 @@
       "events": [
         {
           "year": -4026,
-          "refs": ["gen 2:7", "gen 2:15"],
+          "refs": [
+            "gen 2:7",
+            "gen 2:15"
+          ],
           "title": {
             "pl": "Stworzenie Adama",
             "en": "Creation of Adam",
@@ -300,7 +435,11 @@
         {
           "year": -4026,
           "approx": true,
-          "refs": ["gen 2:21-24", "gen 2:2, 3", "heb 4:4-6"],
+          "refs": [
+            "gen 2:21-24",
+            "gen 2:2, 3",
+            "heb 4:4-6"
+          ],
           "title": {
             "pl": "Stworzenie Ewy",
             "en": "Creation of Eve",
@@ -318,7 +457,9 @@
         },
         {
           "year": -3896,
-          "refs": ["gen 5:3"],
+          "refs": [
+            "gen 5:3"
+          ],
           "title": {
             "pl": "Narodziny Seta",
             "en": "Birth of Seth",
@@ -336,7 +477,10 @@
         },
         {
           "year": -3404,
-          "refs": ["gen 5:18, 22", "jud 14"],
+          "refs": [
+            "gen 5:18, 22",
+            "jud 14"
+          ],
           "title": {
             "pl": "Narodziny Henocha",
             "en": "Birth of Enoch",
@@ -354,7 +498,9 @@
         },
         {
           "year": -3339,
-          "refs": ["gen 5:21, 27"],
+          "refs": [
+            "gen 5:21, 27"
+          ],
           "title": {
             "pl": "Narodziny Metuszelacha",
             "en": "Birth of Methuselah",
@@ -372,7 +518,10 @@
         },
         {
           "year": -3096,
-          "refs": ["gen 5:5", "gen 3:19"],
+          "refs": [
+            "gen 5:5",
+            "gen 3:19"
+          ],
           "title": {
             "pl": "Śmierć Adama",
             "en": "Death of Adam",
@@ -390,7 +539,10 @@
         },
         {
           "year": -3039,
-          "refs": ["gen 5:23, 24", "heb 11:5"],
+          "refs": [
+            "gen 5:23, 24",
+            "heb 11:5"
+          ],
           "title": {
             "pl": "Henoch zabrany przez Boga",
             "en": "God takes Enoch",
@@ -408,7 +560,9 @@
         },
         {
           "year": -2970,
-          "refs": ["gen 5:28, 29"],
+          "refs": [
+            "gen 5:28, 29"
+          ],
           "title": {
             "pl": "Narodziny Noego",
             "en": "Birth of Noah",
@@ -426,7 +580,10 @@
         },
         {
           "year": -2370,
-          "refs": ["gen 7:6, 11", "1pe 3:20"],
+          "refs": [
+            "gen 7:6, 11",
+            "1pe 3:20"
+          ],
           "title": {
             "pl": "Potop",
             "en": "The Flood",
@@ -474,7 +631,10 @@
       "events": [
         {
           "year": -2369,
-          "refs": ["gen 8:13-19", "gen 9:12-16"],
+          "refs": [
+            "gen 8:13-19",
+            "gen 9:12-16"
+          ],
           "title": {
             "pl": "Wyjście z arki",
             "en": "Leaving the ark",
@@ -492,7 +652,9 @@
         },
         {
           "year": -2368,
-          "refs": ["gen 11:10"],
+          "refs": [
+            "gen 11:10"
+          ],
           "title": {
             "pl": "Narodziny Arpachszada",
             "en": "Birth of Arpachshad",
@@ -510,7 +672,10 @@
         },
         {
           "year": -2269,
-          "refs": ["gen 10:25", "gen 11:1-9"],
+          "refs": [
+            "gen 10:25",
+            "gen 11:1-9"
+          ],
           "title": {
             "pl": "Narodziny Pelega",
             "en": "Birth of Peleg",
@@ -528,7 +693,9 @@
         },
         {
           "year": -2020,
-          "refs": ["gen 9:28, 29"],
+          "refs": [
+            "gen 9:28, 29"
+          ],
           "title": {
             "pl": "Śmierć Noego",
             "en": "Death of Noah",
@@ -546,7 +713,10 @@
         },
         {
           "year": -2018,
-          "refs": ["gen 11:26, 27", "jas 2:23"],
+          "refs": [
+            "gen 11:26, 27",
+            "jas 2:23"
+          ],
           "title": {
             "pl": "Narodziny Abrama",
             "en": "Birth of Abram",
@@ -564,7 +734,10 @@
         },
         {
           "year": -1943,
-          "refs": ["gen 12:1-7", "gal 3:17"],
+          "refs": [
+            "gen 12:1-7",
+            "gal 3:17"
+          ],
           "title": {
             "pl": "Przymierze z Abrahamem",
             "en": "Covenant with Abraham",
@@ -612,7 +785,9 @@
       "events": [
         {
           "year": -1932,
-          "refs": ["gen 16:15, 16"],
+          "refs": [
+            "gen 16:15, 16"
+          ],
           "title": {
             "pl": "Narodziny Izmaela",
             "en": "Birth of Ishmael",
@@ -630,7 +805,10 @@
         },
         {
           "year": -1919,
-          "refs": ["gen 17:1-5, 24", "gen 19:24, 25"],
+          "refs": [
+            "gen 17:1-5, 24",
+            "gen 19:24, 25"
+          ],
           "title": {
             "pl": "Przymierze obrzezania",
             "en": "Covenant of circumcision",
@@ -648,7 +826,9 @@
         },
         {
           "year": -1918,
-          "refs": ["gen 21:1-5"],
+          "refs": [
+            "gen 21:1-5"
+          ],
           "title": {
             "pl": "Narodziny Izaaka",
             "en": "Birth of Isaac",
@@ -666,7 +846,9 @@
         },
         {
           "year": -1858,
-          "refs": ["gen 25:24-26"],
+          "refs": [
+            "gen 25:24-26"
+          ],
           "title": {
             "pl": "Narodziny Ezawa i Jakuba",
             "en": "Birth of Esau and Jacob",
@@ -684,7 +866,9 @@
         },
         {
           "year": -1843,
-          "refs": ["gen 25:7, 8"],
+          "refs": [
+            "gen 25:7, 8"
+          ],
           "title": {
             "pl": "Śmierć Abrahama",
             "en": "Death of Abraham",
@@ -702,7 +886,9 @@
         },
         {
           "year": -1767,
-          "refs": ["gen 30:22-24"],
+          "refs": [
+            "gen 30:22-24"
+          ],
           "title": {
             "pl": "Narodziny Józefa",
             "en": "Birth of Joseph",
@@ -720,7 +906,9 @@
         },
         {
           "year": -1750,
-          "refs": ["gen 37:2, 28"],
+          "refs": [
+            "gen 37:2, 28"
+          ],
           "title": {
             "pl": "Józef sprzedany w niewolę",
             "en": "Joseph sold into slavery",
@@ -738,7 +926,9 @@
         },
         {
           "year": -1737,
-          "refs": ["gen 41:39-46"],
+          "refs": [
+            "gen 41:39-46"
+          ],
           "title": {
             "pl": "Józef zarządcą Egiptu",
             "en": "Joseph becomes ruler in Egypt",
@@ -756,7 +946,10 @@
         },
         {
           "year": -1728,
-          "refs": ["gen 46:26, 27", "gen 47:9"],
+          "refs": [
+            "gen 46:26, 27",
+            "gen 47:9"
+          ],
           "title": {
             "pl": "Jakub przenosi się do Egiptu",
             "en": "Jacob moves to Egypt",
@@ -774,7 +967,9 @@
         },
         {
           "year": -1657,
-          "refs": ["gen 50:24-26"],
+          "refs": [
+            "gen 50:24-26"
+          ],
           "title": {
             "pl": "Śmierć Józefa",
             "en": "Death of Joseph",
@@ -792,7 +987,9 @@
         },
         {
           "year": -1593,
-          "refs": ["exo 2:1-10"],
+          "refs": [
+            "exo 2:1-10"
+          ],
           "title": {
             "pl": "Narodziny Mojżesza",
             "en": "Birth of Moses",
@@ -840,7 +1037,10 @@
       "events": [
         {
           "year": -1513,
-          "refs": ["exo 12:40, 41", "exo 24:3-8"],
+          "refs": [
+            "exo 12:40, 41",
+            "exo 24:3-8"
+          ],
           "title": {
             "pl": "Wyjście z Egiptu",
             "en": "The Exodus",
@@ -858,7 +1058,9 @@
         },
         {
           "year": -1512,
-          "refs": ["exo 40:17"],
+          "refs": [
+            "exo 40:17"
+          ],
           "title": {
             "pl": "Przybytek ukończony",
             "en": "Tabernacle completed",
@@ -876,7 +1078,10 @@
         },
         {
           "year": -1473,
-          "refs": ["deu 34:5-9", "jos 3:14-17"],
+          "refs": [
+            "deu 34:5-9",
+            "jos 3:14-17"
+          ],
           "title": {
             "pl": "Wejście do Kanaanu",
             "en": "Entry into Canaan",
@@ -895,7 +1100,9 @@
         {
           "year": -1467,
           "approx": true,
-          "refs": ["jos 14:7-10"],
+          "refs": [
+            "jos 14:7-10"
+          ],
           "title": {
             "pl": "Podział ziemi",
             "en": "Division of the land",
@@ -913,7 +1120,10 @@
         },
         {
           "year": -1117,
-          "refs": ["1sa 8:5", "1sa 10:1"],
+          "refs": [
+            "1sa 8:5",
+            "1sa 10:1"
+          ],
           "title": {
             "pl": "Saul pierwszym królem",
             "en": "Saul becomes the first king",

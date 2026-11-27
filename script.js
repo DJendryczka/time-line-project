@@ -15,6 +15,7 @@ const state = {
   i18n: null,
   data: null,
   observers: [],
+  scenes: [],
 };
 
 /* ---------- Tłumaczenia ---------- */
@@ -102,7 +103,14 @@ function renderEvent(event, prev) {
     li.style.setProperty("--gap", gapForYears(yearsBetween(prev.year, event.year)));
   }
 
-  const card = el("article", "event__card");
+  li.append(buildCard(event, "event__card"));
+  return li;
+}
+
+// Karta wydarzenia: rok, tytuł, opis, wersety
+function buildCard(event, className) {
+  const card = el("article", className);
+  const dated = isDated(event.year);
   const year = el(dated ? "time" : "p", "event__year", formatYear(event.year, event.approx));
   if (dated) year.dateTime = String(event.year);
 
@@ -110,15 +118,51 @@ function renderEvent(event, prev) {
 
   const desc = tr(event.description);
   if (desc) card.append(el("p", "event__desc", desc));
+  appendRefs(card, event.refs);
+  return card;
+}
 
-  if (event.refs?.length) {
-    const refs = el("ul", "event__refs");
-    refs.setAttribute("aria-label", ui("versesLabel"));
-    event.refs.forEach((ref) => refs.append(el("li", null, formatRef(ref))));
-    card.append(refs);
-  }
+function appendRefs(card, refsData) {
+  if (!refsData?.length) return;
+  const refs = el("ul", "event__refs");
+  refs.setAttribute("aria-label", ui("versesLabel"));
+  refsData.forEach((ref) => refs.append(el("li", null, formatRef(ref))));
+  card.append(refs);
+}
 
-  li.append(card);
+/* ---------- Scena kosmosu (animacja sterowana przewijaniem) ----------
+   Kolejne wydarzenia z "scene": "cosmos" tworzą jeden blok: przyklejone płótno
+   w tle i karty przewijane nad nim. Każda karta = jeden etap animacji. */
+
+function renderCosmos(events) {
+  const steps = [];
+  events.forEach((event) => {
+    steps.push({ state: event.sceneState, card: buildCard(event, "cosmos__card event--undated") });
+    (event.stages ?? []).forEach((stage) => {
+      const card = el("article", "cosmos__card cosmos__card--stage");
+      card.append(el("h3", "event__title", tr(stage.title)), el("p", "event__desc", tr(stage.text)));
+      appendRefs(card, stage.refs);
+      steps.push({ state: stage.state, card });
+    });
+  });
+
+  const li = el("li", "cosmos-item");
+  const root = el("div", "cosmos");
+  root.dataset.states = steps.map((s) => s.state).join(",");
+
+  const stage = el("div", "cosmos__stage");
+  const canvas = el("canvas", "cosmos__canvas");
+  canvas.setAttribute("aria-hidden", "true");
+  stage.append(canvas, el("p", "cosmos__note", ui("sceneNote")));
+  root.append(stage);
+
+  steps.forEach(({ card }) => {
+    const step = el("div", "cosmos__step");
+    step.append(card);
+    root.append(step);
+  });
+
+  li.append(root);
   return li;
 }
 
@@ -142,7 +186,19 @@ function renderEra(era) {
 
   // Kolejność jak w pliku danych (wydarzeń bez dat nie da się sortować)
   const list = el("ol", "era__events");
-  (era.events ?? []).forEach((event, i, all) => list.append(renderEvent(event, all[i - 1])));
+  const events = era.events ?? [];
+  for (let i = 0; i < events.length; i++) {
+    const scene = events[i].scene;
+    if (scene && window.Cosmos) {
+      // Zbierz wszystkie kolejne wydarzenia tej samej sceny
+      const group = [];
+      while (i < events.length && events[i].scene === scene) group.push(events[i++]);
+      i--;
+      list.append(renderCosmos(group));
+    } else {
+      list.append(renderEvent(events[i], events[i - 1]));
+    }
+  }
 
   section.append(header, list);
   return section;
@@ -254,8 +310,10 @@ function watchReveals(container, animate) {
 function mountTimeline({ animate = true } = {}) {
   state.observers.forEach((o) => o.disconnect());
   state.observers = [];
+  state.scenes.forEach((scene) => scene.destroy());
   const container = document.getElementById("timeline");
   renderTimeline(container);
+  state.scenes = [...container.querySelectorAll(".cosmos")].map((root) => window.Cosmos.mount(root));
   watchEras(container);
   watchReveals(container, animate);
 }

@@ -437,6 +437,79 @@ a { color: inherit; }
   transform: none;
 }
 
+/* ---------- Scena kosmosu ----------
+   Płótno przykleja się do ekranu, a karty etapów przewijają się nad nim.
+   Każdy krok ma wysokość ekranu = jeden etap animacji. */
+.cosmos-item {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-block: var(--space-lg);
+}
+
+.cosmos { position: relative; }
+
+.cosmos__stage {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  margin-bottom: -100vh;   /* kroki przewijają się nad przyklejonym płótnem */
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+}
+
+.cosmos__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cosmos__note {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 12vh;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.cosmos__step {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 1rem 14vh;
+  pointer-events: none;
+}
+
+.cosmos__card {
+  width: min(100%, 26rem);
+  padding: 1.1rem 1.3rem 1.2rem;
+  background: rgba(8, 8, 20, 0.6);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  pointer-events: auto;
+}
+
+.cosmos__card--stage .event__title {
+  font-size: var(--fs-xl);
+  color: var(--accent);
+  transition: color 1.2s ease;
+}
+
+@media (min-width: 860px) {
+  .cosmos__step {
+    align-items: center;
+    padding: 0 0 0 6vw;
+  }
+}
+
 /* ---------- Desktop: oś na środku, karty naprzemiennie ---------- */
 @media (min-width: 860px) {
   :root { --axis-x: 50%; }

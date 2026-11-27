@@ -16,6 +16,7 @@ Dane są wczytywane przez `fetch`, dlatego strona musi działać przez lokalny s
 ```
 index.html          intro z paralaksą, przełącznik języka, kontener osi
 style.css           zmienne, fonty, responsywność, wygląd osi
+cosmos.js           animacja kosmosu (cząstki na canvas) sterowana przewijaniem
 script.js           wczytuje dane, renderuje oś, języki, paralaksa, kolory epok
 data/events.json    epoki i wydarzenia (treść w 5 językach)
 data/i18n.json      teksty interfejsu, oznaczenia lat, skróty ksiąg biblijnych
@@ -44,6 +45,7 @@ Wydarzenie w `data/events.json`:
 - **`refs`:** kod księgi + werset, np. `"joh 1:1-3"`. Skrót wyświetla się w każdym języku osobno (np. Jn / Joh / Joh / Joh / Jn). Nowe księgi dopisuje się w `data/i18n.json` → `books`.
 - **Brak tłumaczenia:** pokaże się wersja polska.
 - **Epoka bez dat:** `"start": null, "end": null`.
+- **Scena kosmosu:** kolejne wydarzenia z `"scene": "cosmos"` tworzą jedną animowaną scenę. `sceneState` i `stages[].state` wybierają etap animacji: `void`, `quarks`, `hadrons`, `atoms`, `stars`, `galaxies`, `solar`, `earth`.
 - Wydarzenia wyświetlają się w kolejności z pliku. Odstęp między datowanymi wydarzeniami rośnie z liczbą lat.
 
 ## Plan
@@ -52,6 +54,7 @@ Wydarzenie w `data/events.json`:
 - [x] Kolory tła zmieniające się per epoka
 - [x] Epoka „Stwarzanie” (przed Adamem, bez dat)
 - [x] 5 języków: PL, EN, SV, DE, ES
+- [x] Animacja kosmosu: kwarki → atomy → gwiazdy → galaktyki → Układ Słoneczny → Ziemia
 - [ ] Przyklejony licznik roku
 - [ ] Minimapa w prawdziwej skali
 - [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)

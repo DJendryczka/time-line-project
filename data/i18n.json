@@ -104,39 +104,195 @@
       "sv": "Språk",
       "de": "Sprache",
       "es": "Idioma"
+    },
+    "sceneNote": {
+      "pl": "Wizualizacja poglądowa",
+      "en": "Artistic visualization",
+      "sv": "Konstnärlig visualisering",
+      "de": "Künstlerische Darstellung",
+      "es": "Visualización artística"
     }
   },
   "years": {
-    "bce": { "pl": "p.n.e.", "en": "B.C.E.", "sv": "f.v.t.", "de": "v. u. Z.", "es": "a. E.C." },
-    "ce": { "pl": "n.e.", "en": "C.E.", "sv": "v.t.", "de": "u. Z.", "es": "E.C." },
-    "approx": { "pl": "ok.", "en": "c.", "sv": "omkr.", "de": "um", "es": "h." },
+    "bce": {
+      "pl": "p.n.e.",
+      "en": "B.C.E.",
+      "sv": "f.v.t.",
+      "de": "v. u. Z.",
+      "es": "a. E.C."
+    },
+    "ce": {
+      "pl": "n.e.",
+      "en": "C.E.",
+      "sv": "v.t.",
+      "de": "u. Z.",
+      "es": "E.C."
+    },
+    "approx": {
+      "pl": "ok.",
+      "en": "c.",
+      "sv": "omkr.",
+      "de": "um",
+      "es": "h."
+    },
     "plural": {
-      "pl": { "one": "rok", "few": "lata", "many": "lat", "other": "lat" },
-      "en": { "one": "year", "other": "years" },
-      "sv": { "one": "år", "other": "år" },
-      "de": { "one": "Jahr", "other": "Jahre" },
-      "es": { "one": "año", "other": "años" }
+      "pl": {
+        "one": "rok",
+        "few": "lata",
+        "many": "lat",
+        "other": "lat"
+      },
+      "en": {
+        "one": "year",
+        "other": "years"
+      },
+      "sv": {
+        "one": "år",
+        "other": "år"
+      },
+      "de": {
+        "one": "Jahr",
+        "other": "Jahre"
+      },
+      "es": {
+        "one": "año",
+        "other": "años"
+      }
     }
   },
   "books": {
-    "gen": { "pl": "Rdz", "en": "Ge", "sv": "1Mo", "de": "1Mo", "es": "Gé" },
-    "exo": { "pl": "Wj", "en": "Ex", "sv": "2Mo", "de": "2Mo", "es": "Éx" },
-    "deu": { "pl": "Pwt", "en": "De", "sv": "5Mo", "de": "5Mo", "es": "Dt" },
-    "jos": { "pl": "Joz", "en": "Jos", "sv": "Jos", "de": "Jos", "es": "Jos" },
-    "1sa": { "pl": "1Sm", "en": "1Sa", "sv": "1Sa", "de": "1Sa", "es": "1Sa" },
-    "job": { "pl": "Hi", "en": "Job", "sv": "Job", "de": "Hi", "es": "Job" },
-    "psa": { "pl": "Ps", "en": "Ps", "sv": "Ps", "de": "Ps", "es": "Sl" },
-    "pro": { "pl": "Prz", "en": "Pr", "sv": "Ord", "de": "Spr", "es": "Pr" },
-    "isa": { "pl": "Iz", "en": "Isa", "sv": "Jes", "de": "Jes", "es": "Is" },
-    "jer": { "pl": "Jer", "en": "Jer", "sv": "Jer", "de": "Jer", "es": "Jer" },
-    "dan": { "pl": "Dn", "en": "Da", "sv": "Da", "de": "Da", "es": "Da" },
-    "joh": { "pl": "Jn", "en": "Joh", "sv": "Joh", "de": "Joh", "es": "Jn" },
-    "gal": { "pl": "Gal", "en": "Ga", "sv": "Gal", "de": "Gal", "es": "Gál" },
-    "col": { "pl": "Kol", "en": "Col", "sv": "Kol", "de": "Kol", "es": "Col" },
-    "heb": { "pl": "Heb", "en": "Heb", "sv": "Heb", "de": "Heb", "es": "Heb" },
-    "jas": { "pl": "Jk", "en": "Jas", "sv": "Jak", "de": "Jak", "es": "Snt" },
-    "1pe": { "pl": "1P", "en": "1Pe", "sv": "1Pe", "de": "1Pe", "es": "1Pe" },
-    "jud": { "pl": "Jud", "en": "Jude", "sv": "Jud", "de": "Jud", "es": "Jud" },
-    "rev": { "pl": "Obj", "en": "Re", "sv": "Upp", "de": "Off", "es": "Ap" }
+    "gen": {
+      "pl": "Rdz",
+      "en": "Ge",
+      "sv": "1Mo",
+      "de": "1Mo",
+      "es": "Gé"
+    },
+    "exo": {
+      "pl": "Wj",
+      "en": "Ex",
+      "sv": "2Mo",
+      "de": "2Mo",
+      "es": "Éx"
+    },
+    "deu": {
+      "pl": "Pwt",
+      "en": "De",
+      "sv": "5Mo",
+      "de": "5Mo",
+      "es": "Dt"
+    },
+    "jos": {
+      "pl": "Joz",
+      "en": "Jos",
+      "sv": "Jos",
+      "de": "Jos",
+      "es": "Jos"
+    },
+    "1sa": {
+      "pl": "1Sm",
+      "en": "1Sa",
+      "sv": "1Sa",
+      "de": "1Sa",
+      "es": "1Sa"
+    },
+    "job": {
+      "pl": "Hi",
+      "en": "Job",
+      "sv": "Job",
+      "de": "Hi",
+      "es": "Job"
+    },
+    "psa": {
+      "pl": "Ps",
+      "en": "Ps",
+      "sv": "Ps",
+      "de": "Ps",
+      "es": "Sl"
+    },
+    "pro": {
+      "pl": "Prz",
+      "en": "Pr",
+      "sv": "Ord",
+      "de": "Spr",
+      "es": "Pr"
+    },
+    "isa": {
+      "pl": "Iz",
+      "en": "Isa",
+      "sv": "Jes",
+      "de": "Jes",
+      "es": "Is"
+    },
+    "jer": {
+      "pl": "Jer",
+      "en": "Jer",
+      "sv": "Jer",
+      "de": "Jer",
+      "es": "Jer"
+    },
+    "dan": {
+      "pl": "Dn",
+      "en": "Da",
+      "sv": "Da",
+      "de": "Da",
+      "es": "Da"
+    },
+    "joh": {
+      "pl": "Jn",
+      "en": "Joh",
+      "sv": "Joh",
+      "de": "Joh",
+      "es": "Jn"
+    },
+    "gal": {
+      "pl": "Gal",
+      "en": "Ga",
+      "sv": "Gal",
+      "de": "Gal",
+      "es": "Gál"
+    },
+    "col": {
+      "pl": "Kol",
+      "en": "Col",
+      "sv": "Kol",
+      "de": "Kol",
+      "es": "Col"
+    },
+    "heb": {
+      "pl": "Heb",
+      "en": "Heb",
+      "sv": "Heb",
+      "de": "Heb",
+      "es": "Heb"
+    },
+    "jas": {
+      "pl": "Jk",
+      "en": "Jas",
+      "sv": "Jak",
+      "de": "Jak",
+      "es": "Snt"
+    },
+    "1pe": {
+      "pl": "1P",
+      "en": "1Pe",
+      "sv": "1Pe",
+      "de": "1Pe",
+      "es": "1Pe"
+    },
+    "jud": {
+      "pl": "Jud",
+      "en": "Jude",
+      "sv": "Jud",
+      "de": "Jud",
+      "es": "Jud"
+    },
+    "rev": {
+      "pl": "Obj",
+      "en": "Re",
+      "sv": "Upp",
+      "de": "Off",
+      "es": "Ap"
+    }
   }
 }
