@@ -214,24 +214,27 @@
       const list = document.createElement("ul");
       list.className = "pop__family-list";
 
+      // Wszyscy zawsze na liście (nieurodzeni przygaszeni), żeby ramka nie zmieniała wysokości
       (cfg.family ?? []).forEach((m) => {
-        if (t < m.born) return; // jeszcze się nie urodził(a)
         const li = document.createElement("li");
         const name = document.createElement("span");
         name.className = "pop__family-name";
         name.textContent = tr(m.name);
         const age = document.createElement("span");
         age.className = "pop__family-age";
-        const years = t - m.born;
 
-        if (m.deadFrom != null && t >= m.deadFrom) {
-          age.textContent = `† ${tr(m.deadNote)}`;
+        if (t < m.born) {
+          age.textContent = "—";
+          li.classList.add("is-unborn");
+          li.title = `${tr(m.name)}: ${formatYear(startYear + m.born)}`;
+        } else if (m.deadFrom != null && t >= m.deadFrom) {
+          age.textContent = "†";
           li.classList.add("is-dead");
+          li.title = tr(m.deadNote);
         } else {
-          age.textContent = `${m.exact ? "" : "~"}${formatDuration(years)}`;
-          if (m.uncertainFrom != null && t >= m.uncertainFrom) {
-            age.textContent += ` (${ui("popIfAlive")})`;
-          }
+          const uncertain = m.uncertainFrom != null && t >= m.uncertainFrom;
+          age.textContent = `${m.exact ? "" : "~"}${formatDuration(t - m.born)}${uncertain ? " ?" : ""}`;
+          if (uncertain) li.title = ui("popIfAlive");
         }
         li.append(name, age);
         list.append(li);
@@ -239,8 +242,7 @@
 
       box.append(head, list);
 
-      // Ród Kaina — imiona znane, lata nie
-      if (cfg.cainLine && t > 100) {
+      if (cfg.cainLine) {
         const cain = document.createElement("p");
         cain.className = "pop__family-extra";
         const label = document.createElement("strong");
@@ -248,16 +250,14 @@
         cain.append(label, ` ${tr(cfg.cainLine)}`);
         box.append(cain);
       }
-      if (t >= span - 60) {
-        const noah = document.createElement("p");
-        noah.className = "pop__family-extra";
-        noah.textContent = ui("popNoah");
-        box.append(noah);
-      }
+      const noah = document.createElement("p");
+      noah.className = "pop__family-extra";
+      noah.textContent = ui("popNoah");
+      box.append(noah);
 
       const note = document.createElement("p");
       note.className = "pop__family-note";
-      note.textContent = ui("popFamilyNote");
+      note.textContent = `${ui("popSymbols")} ${ui("popFamilyNote")}`;
       box.append(note);
       return box;
     }

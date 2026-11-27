@@ -489,7 +489,10 @@ a { color: inherit; }
   color: var(--text-muted);
 }
 
-.pop__stats { font-size: var(--fs-lg); }
+.pop__stats {
+  font-size: var(--fs-lg);
+  font-variant-numeric: tabular-nums;
+}
 
 .pop__stats strong {
   font-family: var(--font-display);
@@ -498,6 +501,7 @@ a { color: inherit; }
 }
 
 .pop__sexes {
+  font-variant-numeric: tabular-nums;
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem 1.4rem;
@@ -523,25 +527,39 @@ a { color: inherit; }
   margin-bottom: 0.4rem;
 }
 
+/* Stała siatka: kolumny równej szerokości, liczby o stałej szerokości cyfr */
 .pop__family-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
   gap: 0.35rem 0.5rem;
   list-style: none;
 }
 
 .pop__family-list li {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
   gap: 0.4rem;
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
   font-size: var(--fs-sm);
+  white-space: nowrap;
+  transition: opacity 0.3s;
 }
 
-.pop__family-name { font-weight: 600; }
-.pop__family-age { color: var(--accent); }
-.pop__family-list li.is-dead { opacity: 0.6; }
+.pop__family-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pop__family-age {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.pop__family-list li.is-unborn { opacity: 0.3; }
+.pop__family-list li.is-dead { opacity: 0.55; }
 .pop__family-list li.is-dead .pop__family-age { color: var(--text-muted); }
 
 .pop__family-extra {
