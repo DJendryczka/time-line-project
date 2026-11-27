@@ -434,5 +434,42 @@
       "de": "3Mo",
       "es": "Le"
     }
+  },
+  "adamYears": {
+    "year": {
+      "pl": "rok {n} od Adama",
+      "en": "year {n} from Adam",
+      "sv": "år {n} från Adam",
+      "de": "Jahr {n} seit Adam",
+      "es": "año {n} desde Adán"
+    },
+    "range": {
+      "pl": "lata {a}–{b} od Adama",
+      "en": "years {a}–{b} from Adam",
+      "sv": "år {a}–{b} från Adam",
+      "de": "Jahre {a}–{b} seit Adam",
+      "es": "años {a}–{b} desde Adán"
+    },
+    "approx": {
+      "pl": "ok. roku {n} od Adama",
+      "en": "c. year {n} from Adam",
+      "sv": "omkr. år {n} från Adam",
+      "de": "um Jahr {n} seit Adam",
+      "es": "h. año {n} desde Adán"
+    },
+    "before": {
+      "pl": "przed rokiem {n} od Adama",
+      "en": "before year {n} from Adam",
+      "sv": "före år {n} från Adam",
+      "de": "vor Jahr {n} seit Adam",
+      "es": "antes del año {n} desde Adán"
+    },
+    "after": {
+      "pl": "po roku {n} od Adama",
+      "en": "after year {n} from Adam",
+      "sv": "efter år {n} från Adam",
+      "de": "nach Jahr {n} seit Adam",
+      "es": "después del año {n} desde Adán"
+    }
   }
 }

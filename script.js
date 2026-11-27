@@ -64,6 +64,22 @@ function formatEventDate(event) {
   return formatYear(event.year, event.qualifier ?? (event.approx ? "approx" : null));
 }
 
+/* Licznik lat od stworzenia Adama (Adam = rok 0, 4026 p.n.e.) */
+const ADAM_YEAR = -4026;
+const sinceAdam = (year) => toAstro(year) - toAstro(ADAM_YEAR);
+
+function formatAdamYears(event) {
+  const t = state.i18n.adamYears;
+  if (!t) return "";
+  if (event.yearRange) {
+    const [a, b] = event.yearRange.map(sinceAdam);
+    return a < 0 ? "" : tr(t.range).replace("{a}", a).replace("{b}", b);
+  }
+  if (!isDated(event.year) || sinceAdam(event.year) < 0) return "";
+  const kind = event.qualifier ?? (event.approx ? "approx" : "year");
+  return tr(t[kind] ?? t.year).replace("{n}", sinceAdam(event.year));
+}
+
 // Rok używany do odstępów na osi (dla zakresu — jego koniec)
 const eventYear = (event) => (isDated(event.year) ? event.year : event.yearRange?.[1] ?? null);
 
@@ -131,7 +147,10 @@ function buildCard(event, className) {
   const year = el(dated ? "time" : "p", "event__year", formatEventDate(event));
   if (dated) year.dateTime = String(event.year);
 
-  card.append(year, el("h3", "event__title", tr(event.title)));
+  card.append(year);
+  const adam = formatAdamYears(event);
+  if (adam) card.append(el("p", "event__am", adam));
+  card.append(el("h3", "event__title", tr(event.title)));
 
   const desc = tr(event.description);
   if (desc) card.append(el("p", "event__desc", desc));
@@ -211,7 +230,10 @@ function renderEra(era) {
   const title = el("h2", "era__title", tr(era.title));
   title.id = `${era.id}-title`;
 
-  header.append(el("p", "era__range", formatRange(era.start, era.end)), title);
+  header.append(el("p", "era__range", formatRange(era.start, era.end)));
+  const eraAdam = isDated(era.start) && isDated(era.end) ? formatAdamYears({ yearRange: [era.start, era.end] }) : "";
+  if (eraAdam) header.append(el("p", "era__am", eraAdam));
+  header.append(title);
   if (era.subtitle) header.append(el("p", "era__subtitle", tr(era.subtitle)));
   if (era.summary) header.append(el("p", "era__summary", tr(era.summary)));
   if (isDated(era.start) && isDated(era.end)) {

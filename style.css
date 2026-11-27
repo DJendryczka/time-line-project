@@ -414,6 +414,17 @@ a { color: inherit; }
   box-shadow: 0 0 0 5px var(--page-bg), 0 0 14px var(--accent);
 }
 
+/* Licznik lat od Adama pod datą */
+.event__am,
+.era__am {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.era__am { margin-top: 0.15rem; }
+
 .event__title {
   font-size: var(--fs-lg);
   font-weight: 600;
