@@ -4,7 +4,7 @@ Te obrazy zastępują animację od 4. dnia. Wrzuć je do tego folderu pod dokła
 
 | Plik | Etap |
 |---|---|
-| `day4.jpg` | Dzień 4: Słońce, Księżyc i gwiazdy |
+| `day4.jpg` | Dzień 3 i 4: ląd, rośliny, Słońce, Księżyc i gwiazdy |
 | `day5.jpg` | Dzień 5: ryby i ptaki |
 | `day6.jpg` | Dzień 6: zwierzęta lądowe |
 | `eden.jpg` | Ogród Eden |

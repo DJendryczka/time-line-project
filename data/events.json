@@ -305,7 +305,8 @@
             "es": "Surge la tierra seca de entre las aguas. Aparecen la hierba, las plantas que dan semilla y los árboles frutales, cada uno «según su género»."
           },
           "scene": "cosmos",
-          "sceneState": "day3"
+          "sceneState": "day3",
+          "image": "images/creation/day4"
         },
         {
           "year": null,

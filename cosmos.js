@@ -528,14 +528,23 @@
   function createImages(root, steps) {
     const holder = document.createElement("div");
     holder.className = "cosmos__images";
-    const list = steps.map((step) => {
+    const list = [];
+
+    // Kolejne kroki z tym samym obrazem dzielą jeden element (obraz „trzyma się” przez kilka dni)
+    steps.forEach((step, k) => {
       const base = step.dataset.image;
-      if (!base) return null;
+      if (!base) return;
+      const last = list[list.length - 1];
+      if (last && last.base === base && last.end === k - 1) {
+        last.end = k;
+        return;
+      }
+
       const el = document.createElement("img");
       el.className = "cosmos__img";
       el.alt = "";
       el.decoding = "async";
-      const entry = { el, ready: false };
+      const entry = { el, base, start: k, end: k, ready: false };
       const candidates = /\.\w{3,4}$/.test(base) ? [base] : ["webp", "jpg", "png"].map((ext) => `${base}.${ext}`);
       let attempt = 0;
       el.addEventListener("load", () => { entry.ready = true; });
@@ -545,10 +554,10 @@
       });
       el.src = candidates[0];
       holder.append(el);
-      return entry;
+      list.push(entry);
     });
 
-    if (list.some(Boolean)) {
+    if (list.length) {
       const shade = document.createElement("div");
       shade.className = "cosmos__shade";
       holder.append(shade);
@@ -612,13 +621,15 @@
 
       // Obrazy (np. od 4. dnia) przenikają się z animacją i ze sobą nawzajem
       let cover = 0;
-      images.forEach((img, k) => {
-        if (!img) return;
-        const w = img.ready ? clamp(1 - Math.abs(current - k)) : 0;
+      images.forEach((img) => {
+        // Odległość od zakresu kroków obrazu: 0 w środku zakresu, potem płynne wygaszanie
+        const dist = Math.max(0, img.start - current, current - img.end);
+        const w = img.ready ? clamp(1 - dist) : 0;
         cover += w;
         img.el.style.opacity = w.toFixed(3);
-        // Powolne zbliżenie kamery (efekt Kena Burnsa)
-        const zoom = reducedMotion ? 1.04 : 1.03 + 0.07 * clamp((current - k + 1) / 2);
+        // Powolne zbliżenie kamery (efekt Kena Burnsa) przez cały zakres obrazu
+        const span = img.end - img.start + 2;
+        const zoom = reducedMotion ? 1.04 : 1.03 + 0.07 * clamp((current - img.start + 1) / span);
         img.el.style.transform = `scale(${zoom.toFixed(4)})`;
       });
       cover = clamp(cover);
