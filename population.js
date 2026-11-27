@@ -228,7 +228,7 @@
           li.classList.add("is-unborn");
           li.title = `${tr(m.name)}: ${formatYear(startYear + m.born)}`;
         } else if (m.deadFrom != null && t >= m.deadFrom) {
-          age.textContent = "†";
+          age.textContent = ui("popDead");
           li.classList.add("is-dead");
           li.title = tr(m.deadNote);
         } else {

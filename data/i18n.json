@@ -218,11 +218,18 @@
       "es": "Noé nacerá 126 años después de la muerte de Adán (2970 a. E.C.)."
     },
     "popSymbols": {
-      "pl": "„?” — Abel mógł już nie żyć (zginął przed narodzinami Seta), „†” — nie żyje, „—” — jeszcze się nie urodził.",
-      "en": "“?” — Abel may already have died (he was killed before Seth was born), “†” — dead, “—” — not yet born.",
-      "sv": "”?” – Abel kan redan ha varit död (han dödades före Sets födelse), ”†” – död, ”—” – ännu inte född.",
-      "de": "„?“ – Abel lebte vielleicht nicht mehr (er wurde vor Seths Geburt getötet), „†“ – tot, „—“ – noch nicht geboren.",
-      "es": "«?»: puede que Abel ya hubiera muerto (lo mataron antes de que naciera Set); «†»: muerto; «—»: aún no ha nacido."
+      "pl": "„?” — Abel mógł już nie żyć (zginął przed narodzinami Seta), „—” — jeszcze się nie urodził.",
+      "en": "“?” — Abel may already have died (he was killed before Seth was born), “—” — not yet born.",
+      "sv": "”?” – Abel kan redan ha varit död (han dödades före Sets födelse), ”—” – ännu inte född.",
+      "de": "„?“ – Abel lebte vielleicht nicht mehr (er wurde vor Seths Geburt getötet), „—“ – noch nicht geboren.",
+      "es": "«?»: puede que Abel ya hubiera muerto (lo mataron antes de que naciera Set); «—»: aún no ha nacido."
+    },
+    "popDead": {
+      "pl": "nie żyje",
+      "en": "died",
+      "sv": "död",
+      "de": "tot",
+      "es": "murió"
     }
   },
   "years": {
