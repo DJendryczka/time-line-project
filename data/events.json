@@ -551,8 +551,7 @@
           ],
           "widget": "population",
           "widgetConfig": {
-            "children": 8,
-            "generation": 100,
+            "children": 6,
             "span": 930,
             "markers": [
               {
@@ -576,67 +575,15 @@
                 }
               }
             ],
-            "family": [
-              {
-                "name": {
-                  "pl": "Adam",
-                  "en": "Adam",
-                  "sv": "Adam",
-                  "de": "Adam",
-                  "es": "Adán"
-                },
-                "born": 0,
-                "exact": true
-              },
-              {
-                "name": {
-                  "pl": "Ewa",
-                  "en": "Eve",
-                  "sv": "Eva",
-                  "de": "Eva",
-                  "es": "Eva"
-                },
-                "born": 0
-              },
-              {
-                "name": {
-                  "pl": "Kain",
-                  "en": "Cain",
-                  "sv": "Kain",
-                  "de": "Kain",
-                  "es": "Caín"
-                },
-                "born": 1
-              },
-              {
-                "name": {
-                  "pl": "Abel",
-                  "en": "Abel",
-                  "sv": "Abel",
-                  "de": "Abel",
-                  "es": "Abel"
-                },
-                "born": 3,
-                "uncertainFrom": 3,
-                "deadFrom": 130,
-                "deadNote": {
-                  "pl": "zginął przed narodzinami Seta",
-                  "en": "killed before Seth was born",
-                  "sv": "dödad före Sets födelse",
-                  "de": "getötet vor Seths Geburt",
-                  "es": "murió antes de que naciera Set"
-                }
-              },
-              {
-                "name": {
-                  "pl": "najstarsza córka",
-                  "en": "eldest daughter",
-                  "sv": "äldsta dottern",
-                  "de": "älteste Tochter",
-                  "es": "hija mayor"
-                },
-                "born": 5
-              },
+            "cainLine": {
+              "pl": "Henoch, Irad, Mehujael, Metuszael, Lamech, Jabal, Jubal, Tubal-Kain, Naama",
+              "en": "Enoch, Irad, Mehujael, Methushael, Lamech, Jabal, Jubal, Tubal-cain, Naamah",
+              "sv": "Henok, Irad, Mehujael, Metusael, Lemek, Jabal, Jubal, Tubal-Kain, Naama",
+              "de": "Henoch, Irad, Mehujaël, Methuschaël, Lamech, Jabal, Jubal, Tubal-Kain, Naama",
+              "es": "Enoc, Irad, Mehujael, Metusael, Lamec, Jabal, Jubal, Tubal-caín, Naamá"
+            },
+            "marriageAge": 80,
+            "sethLine": [
               {
                 "name": {
                   "pl": "Set",
@@ -645,9 +592,7 @@
                   "de": "Seth",
                   "es": "Set"
                 },
-                "born": 130,
-                "exact": true,
-                "marker": true
+                "born": 130
               },
               {
                 "name": {
@@ -657,9 +602,7 @@
                   "de": "Enosch",
                   "es": "Enós"
                 },
-                "born": 235,
-                "exact": true,
-                "marker": true
+                "born": 235
               },
               {
                 "name": {
@@ -669,9 +612,7 @@
                   "de": "Kenan",
                   "es": "Quenán"
                 },
-                "born": 325,
-                "exact": true,
-                "marker": true
+                "born": 325
               },
               {
                 "name": {
@@ -681,9 +622,7 @@
                   "de": "Mahalalel",
                   "es": "Mahalalel"
                 },
-                "born": 395,
-                "exact": true,
-                "marker": true
+                "born": 395
               },
               {
                 "name": {
@@ -693,21 +632,17 @@
                   "de": "Jered",
                   "es": "Jared"
                 },
-                "born": 460,
-                "exact": true,
-                "marker": true
+                "born": 460
               },
               {
                 "name": {
-                  "pl": "Henoch",
-                  "en": "Enoch",
-                  "sv": "Henok",
-                  "de": "Henoch",
-                  "es": "Enoc"
+                  "pl": "Henoch, syn Jareda",
+                  "en": "Enoch, son of Jared",
+                  "sv": "Henok, son till Jered",
+                  "de": "Henoch, Sohn Jereds",
+                  "es": "Enoc, hijo de Jared"
                 },
-                "born": 622,
-                "exact": true,
-                "marker": true
+                "born": 622
               },
               {
                 "name": {
@@ -717,9 +652,7 @@
                   "de": "Methusalem",
                   "es": "Matusalén"
                 },
-                "born": 687,
-                "exact": true,
-                "marker": true
+                "born": 687
               },
               {
                 "name": {
@@ -729,18 +662,9 @@
                   "de": "Lamech",
                   "es": "Lamec"
                 },
-                "born": 874,
-                "exact": true,
-                "marker": true
+                "born": 874
               }
-            ],
-            "cainLine": {
-              "pl": "Henoch, Irad, Mehujael, Metuszael, Lamech, Jabal, Jubal, Tubal-Kain, Naama",
-              "en": "Enoch, Irad, Mehujael, Methushael, Lamech, Jabal, Jubal, Tubal-cain, Naamah",
-              "sv": "Henok, Irad, Mehujael, Metusael, Lemek, Jabal, Jubal, Tubal-Kain, Naama",
-              "de": "Henoch, Irad, Mehujaël, Methuschaël, Lamech, Jabal, Jubal, Tubal-Kain, Naama",
-              "es": "Enoc, Irad, Mehujael, Metusael, Lamec, Jabal, Jubal, Tubal-caín, Naamá"
-            }
+            ]
           },
           "refs": [
             "gen 4:17-22",

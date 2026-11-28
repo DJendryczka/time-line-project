@@ -134,7 +134,7 @@ function renderEvent(event, prev) {
 
   const card = buildCard(event, "event__card");
   if (event.widget === "population" && window.PopulationWidget) {
-    card.append(window.PopulationWidget.create(event, { ui, tr, lang: state.lang, formatYear, formatDuration }));
+    card.append(window.PopulationWidget.create(event, { ui, tr, lang: state.lang, formatYear, formatDuration, i18n: state.i18n }));
   }
   li.append(card);
   return li;

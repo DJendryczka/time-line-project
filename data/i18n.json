@@ -119,13 +119,6 @@
       "de": "Kinder pro Familie",
       "es": "Hijos por familia"
     },
-    "popGeneration": {
-      "pl": "Lata między pokoleniami",
-      "en": "Years between generations",
-      "sv": "År mellan generationer",
-      "de": "Jahre zwischen Generationen",
-      "es": "Años entre generaciones"
-    },
     "popPeople": {
       "pl": "ludzi",
       "en": "people",
@@ -175,34 +168,6 @@
       "de": "Frauen",
       "es": "mujeres"
     },
-    "popSexNote": {
-      "pl": "Przyjęto, że chłopców i dziewczynek rodzi się mniej więcej po równo",
-      "en": "Assumes roughly equal numbers of boys and girls are born",
-      "sv": "Förutsätter att ungefär lika många pojkar och flickor föds",
-      "de": "Angenommen: etwa gleich viele Jungen und Mädchen",
-      "es": "Se supone que nacen aproximadamente tantos niños como niñas"
-    },
-    "popFamilyTitle": {
-      "pl": "Rodzina Adama i Ewy w tym roku",
-      "en": "Adam and Eve’s family in this year",
-      "sv": "Adams och Evas familj detta år",
-      "de": "Adams und Evas Familie in diesem Jahr",
-      "es": "La familia de Adán y Eva en este año"
-    },
-    "popIfAlive": {
-      "pl": "jeśli jeszcze żył",
-      "en": "if still alive",
-      "sv": "om han levde",
-      "de": "falls er noch lebte",
-      "es": "si aún vivía"
-    },
-    "popFamilyNote": {
-      "pl": "Wiek Adama i jego potomków z rodowodu Seta (Set, Enosz, Kenan, Mahalalel, Jared, Henoch, Metuszelach, Lamech) wynika dokładnie z Rodzaju 5. Wiek Ewy, Kaina, Abla i córki to przypuszczenia: przyjęto, że Kain urodził się wkrótce po wypędzeniu z Edenu, Abel nieco później, a córki — w tym przyszła żona Kaina — w kolejnych latach.",
-      "en": "The ages of Adam and his descendants in Seth’s line (Seth, Enosh, Kenan, Mahalalel, Jared, Enoch, Methuselah, Lamech) follow exactly from Genesis 5. The ages of Eve, Cain, Abel and the daughter are assumptions: Cain is assumed to be born soon after the expulsion from Eden, Abel a little later, and daughters — including Cain’s future wife — in the following years.",
-      "sv": "Åldern för Adam och hans ättlingar i Sets släktlinje (Set, Enos, Kenan, Mahalalel, Jered, Henok, Metusela, Lemek) följer exakt av 1 Moseboken 5. Evas, Kains, Abels och dotterns ålder är antaganden: Kain antas vara född kort efter utdrivningen ur Eden, Abel lite senare och döttrarna – bland dem Kains blivande hustru – under de följande åren.",
-      "de": "Das Alter Adams und seiner Nachkommen in der Linie Seths (Seth, Enosch, Kenan, Mahalalel, Jered, Henoch, Methusalem, Lamech) ergibt sich genau aus 1. Mose 5. Das Alter von Eva, Kain, Abel und der Tochter ist angenommen: Kain wurde vermutlich kurz nach der Vertreibung aus Eden geboren, Abel etwas später und die Töchter – darunter Kains spätere Frau – in den folgenden Jahren.",
-      "es": "Las edades de Adán y sus descendientes por la línea de Set (Set, Enós, Quenán, Mahalalel, Jared, Enoc, Matusalén, Lamec) se deducen exactamente de Génesis 5. Las edades de Eva, Caín, Abel y la hija son suposiciones: se supone que Caín nació poco después de la expulsión de Edén, Abel algo más tarde y las hijas —entre ellas la futura esposa de Caín— en los años siguientes."
-    },
     "popCainLine": {
       "pl": "Ród Kaina (Rdz 4:17–22), lata nieznane:",
       "en": "Cain’s descendants (Genesis 4:17-22), years unknown:",
@@ -217,13 +182,6 @@
       "de": "Noah wird 126 Jahre nach Adams Tod geboren (2970 v. u. Z.).",
       "es": "Noé nacerá 126 años después de la muerte de Adán (2970 a. E.C.)."
     },
-    "popSymbols": {
-      "pl": "„?” — Abel mógł już nie żyć (zginął przed narodzinami Seta), „—” — jeszcze się nie urodził.",
-      "en": "“?” — Abel may already have died (he was killed before Seth was born), “—” — not yet born.",
-      "sv": "”?” – Abel kan redan ha varit död (han dödades före Sets födelse), ”—” – ännu inte född.",
-      "de": "„?“ – Abel lebte vielleicht nicht mehr (er wurde vor Seths Geburt getötet), „—“ – noch nicht geboren.",
-      "es": "«?»: puede que Abel ya hubiera muerto (lo mataron antes de que naciera Set); «—»: aún no ha nacido."
-    },
     "popDead": {
       "pl": "nie żyje",
       "en": "died",
@@ -237,6 +195,76 @@
       "sv": "Nästa",
       "de": "Weiter",
       "es": "Siguiente"
+    },
+    "popMarriage": {
+      "pl": "Wiek założenia rodziny",
+      "en": "Age when starting a family",
+      "sv": "Ålder vid giftermål",
+      "de": "Alter bei der Heirat",
+      "es": "Edad al casarse"
+    },
+    "popFirstPeople": {
+      "pl": "Pierwsi ludzie — kto żyje w tym roku",
+      "en": "The first people — who is alive this year",
+      "sv": "De första människorna – vem lever detta år",
+      "de": "Die ersten Menschen – wer lebt in diesem Jahr",
+      "es": "Los primeros seres humanos: quién vive este año"
+    },
+    "popSethLine": {
+      "pl": "Rodowód Seta (Rdz 5) — dokładny wiek",
+      "en": "Seth’s line (Genesis 5) — exact ages",
+      "sv": "Sets släktlinje (1 Mos 5) – exakt ålder",
+      "de": "Linie Seths (1. Mose 5) – genaues Alter",
+      "es": "Línea de Set (Génesis 5): edades exactas"
+    },
+    "popGenerations": {
+      "pl": "Wszyscy według pokoleń",
+      "en": "Everyone by generation",
+      "sv": "Alla per generation",
+      "de": "Alle nach Generationen",
+      "es": "Todos por generaciones"
+    },
+    "popGeneration": {
+      "pl": "Pokolenie",
+      "en": "Generation",
+      "sv": "Generation",
+      "de": "Generation",
+      "es": "Generación"
+    },
+    "popMenShort": {
+      "pl": "♂ mężczyźni",
+      "en": "♂ men",
+      "sv": "♂ män",
+      "de": "♂ Männer",
+      "es": "♂ hombres"
+    },
+    "popWomenShort": {
+      "pl": "♀ kobiety",
+      "en": "♀ women",
+      "sv": "♀ kvinnor",
+      "de": "♀ Frauen",
+      "es": "♀ mujeres"
+    },
+    "popTotal": {
+      "pl": "razem",
+      "en": "total",
+      "sv": "totalt",
+      "de": "gesamt",
+      "es": "total"
+    },
+    "popSpouse": {
+      "pl": "współmałżonek",
+      "en": "spouse",
+      "sv": "make/maka",
+      "de": "Ehepartner",
+      "es": "cónyuge"
+    },
+    "popRules": {
+      "pl": "Jak to liczymy: Biblia nie podaje liczb, więc przyjęto proste zasady. Adam i Ewa mają najpierw Kaina i Abla, potem na przemian córki i synów; Set rodzi się w 130. roku (Rdz 5:3). Każda rodzina ma tyle dzieci, ile ustawisz suwakiem, co 2 lata, na przemian syn i córka. Rodzinę zakłada się w wybranym wieku: najstarszy wolny mężczyzna bierze najstarszą wolną kobietę — dlatego żoną Kaina jest 1. córka Adama i Ewy. Abel ginie przed narodzinami Seta („?” — mógł już nie żyć). Ludzie żyją ok. 900 lat. Najedź na osobę, by zobaczyć jej współmałżonka.",
+      "en": "How we count: the Bible gives no numbers, so simple rules are assumed. Adam and Eve first have Cain and Abel, then daughters and sons in turn; Seth is born in year 130 (Genesis 5:3). Each family has as many children as you set with the slider, one every 2 years, son and daughter in turn. People marry at the chosen age: the oldest unmarried man marries the oldest unmarried woman — that is why Cain’s wife is the 1st daughter of Adam and Eve. Abel is killed before Seth is born (“?” — he may already have died). People live about 900 years. Hover over a person to see their spouse.",
+      "sv": "Så räknar vi: Bibeln anger inga siffror, så enkla regler har antagits. Adam och Eva får först Kain och Abel, sedan döttrar och söner turvis; Set föds år 130 (1 Moseboken 5:3). Varje familj får så många barn som du ställer in, ett vartannat år, son och dotter turvis. Man gifter sig vid vald ålder: den äldsta ogifta mannen gifter sig med den äldsta ogifta kvinnan – därför är Kains hustru Adams och Evas 1:a dotter. Abel dödas före Sets födelse (”?” – han kan redan ha varit död). Människor lever omkring 900 år. Håll muspekaren över en person för att se maken/makan.",
+      "de": "So rechnen wir: Die Bibel nennt keine Zahlen, daher gelten einfache Annahmen. Adam und Eva bekommen zuerst Kain und Abel, dann abwechselnd Töchter und Söhne; Seth wird im Jahr 130 geboren (1. Mose 5:3). Jede Familie hat so viele Kinder, wie du einstellst, alle 2 Jahre eins, abwechselnd Sohn und Tochter. Geheiratet wird im gewählten Alter: Der älteste ledige Mann heiratet die älteste ledige Frau – deshalb ist Kains Frau die 1. Tochter von Adam und Eva. Abel wird vor Seths Geburt getötet („?“ – er lebte vielleicht nicht mehr). Menschen leben etwa 900 Jahre. Fahre über eine Person, um den Ehepartner zu sehen.",
+      "es": "Cómo lo calculamos: la Biblia no da cifras, así que se usan reglas sencillas. Adán y Eva tienen primero a Caín y a Abel, y luego hijas e hijos alternadamente; Set nace en el año 130 (Génesis 5:3). Cada familia tiene tantos hijos como indiques, uno cada 2 años, alternando hijo e hija. Se casan a la edad elegida: el hombre soltero de más edad se casa con la mujer soltera de más edad; por eso la esposa de Caín es la 1.ª hija de Adán y Eva. Abel muere antes de que nazca Set («?»: puede que ya hubiera muerto). La gente vive unos 900 años. Pasa el cursor sobre una persona para ver su cónyuge."
     }
   },
   "years": {
@@ -477,6 +505,141 @@
       "sv": "efter år {n} från Adam",
       "de": "nach Jahr {n} seit Adam",
       "es": "después del año {n} desde Adán"
+    }
+  },
+  "generations": [
+    {
+      "pl": "Adam i Ewa",
+      "en": "Adam and Eve",
+      "sv": "Adam och Eva",
+      "de": "Adam und Eva",
+      "es": "Adán y Eva"
+    },
+    {
+      "pl": "dzieci",
+      "en": "children",
+      "sv": "barn",
+      "de": "Kinder",
+      "es": "hijos"
+    },
+    {
+      "pl": "wnuki",
+      "en": "grandchildren",
+      "sv": "barnbarn",
+      "de": "Enkel",
+      "es": "nietos"
+    },
+    {
+      "pl": "prawnuki",
+      "en": "great-grandchildren",
+      "sv": "barnbarnsbarn",
+      "de": "Urenkel",
+      "es": "bisnietos"
+    }
+  ],
+  "generationN": {
+    "pl": "{n}. pokolenie",
+    "en": "generation {n}",
+    "sv": "generation {n}",
+    "de": "{n}. Generation",
+    "es": "{n}.ª generación"
+  },
+  "generationsMore": {
+    "pl": "{n}. i dalsze pokolenia",
+    "en": "generation {n} and later",
+    "sv": "generation {n} och senare",
+    "de": "{n}. und spätere Generationen",
+    "es": "{n}.ª generación y siguientes"
+  },
+  "names": {
+    "adam": {
+      "pl": "Adam",
+      "en": "Adam",
+      "sv": "Adam",
+      "de": "Adam",
+      "es": "Adán"
+    },
+    "eve": {
+      "pl": "Ewa",
+      "en": "Eve",
+      "sv": "Eva",
+      "de": "Eva",
+      "es": "Eva"
+    },
+    "cain": {
+      "pl": "Kain",
+      "en": "Cain",
+      "sv": "Kain",
+      "de": "Kain",
+      "es": "Caín"
+    },
+    "abel": {
+      "pl": "Abel",
+      "en": "Abel",
+      "sv": "Abel",
+      "de": "Abel",
+      "es": "Abel"
+    },
+    "seth": {
+      "pl": "Set",
+      "en": "Seth",
+      "sv": "Set",
+      "de": "Seth",
+      "es": "Set"
+    },
+    "henoch": {
+      "pl": "Henoch, syn Kaina",
+      "en": "Enoch, son of Cain",
+      "sv": "Henok, son till Kain",
+      "de": "Henoch, Sohn Kains",
+      "es": "Enoc, hijo de Caín"
+    }
+  },
+  "kin": {
+    "pl": {
+      "son": "{o} syn {p}",
+      "daughter": "{o} córka {p}",
+      "ofAdam": "Adama i Ewy",
+      "ofCain": "Kaina",
+      "ofSeth": "Seta",
+      "ofHenoch": "Henocha",
+      "ofSon": "{o} syna {p}"
+    },
+    "en": {
+      "son": "{o} son of {p}",
+      "daughter": "{o} daughter of {p}",
+      "ofAdam": "Adam and Eve",
+      "ofCain": "Cain",
+      "ofSeth": "Seth",
+      "ofHenoch": "Enoch",
+      "ofSon": "the {o} son of {p}"
+    },
+    "sv": {
+      "son": "{o} son till {p}",
+      "daughter": "{o} dotter till {p}",
+      "ofAdam": "Adam och Eva",
+      "ofCain": "Kain",
+      "ofSeth": "Set",
+      "ofHenoch": "Henok",
+      "ofSon": "{o} sonen till {p}"
+    },
+    "de": {
+      "son": "{o} Sohn von {p}",
+      "daughter": "{o} Tochter von {p}",
+      "ofAdam": "Adam und Eva",
+      "ofCain": "Kain",
+      "ofSeth": "Seth",
+      "ofHenoch": "Henoch",
+      "ofSon": "dem {o} Sohn von {p}"
+    },
+    "es": {
+      "son": "{o} hijo de {p}",
+      "daughter": "{o} hija de {p}",
+      "ofAdam": "Adán y Eva",
+      "ofCain": "Caín",
+      "ofSeth": "Set",
+      "ofHenoch": "Enoc",
+      "ofSon": "el {o} hijo de {p}"
     }
   }
 }

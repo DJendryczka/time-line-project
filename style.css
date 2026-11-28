@@ -561,40 +561,69 @@ a { color: inherit; }
   margin-bottom: 0.4rem;
 }
 
-/* Stała siatka: kolumny równej szerokości, liczby o stałej szerokości cyfr */
+/* Stała siatka: kolumny równej szerokości, liczby o stałej szerokości cyfr.
+   Etykiety się nie zmieniają przy przesuwaniu — zmienia się tylko wiek. */
 .pop__family-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr));
   gap: 0.35rem 0.5rem;
   list-style: none;
+  margin-bottom: 0.8rem;
 }
 
 .pop__family-list li {
   display: flex;
   justify-content: space-between;
-  gap: 0.4rem;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.06);
   font-size: var(--fs-sm);
-  white-space: nowrap;
+  line-height: 1.3;
   transition: opacity 0.3s;
 }
 
-.pop__family-name {
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+.pop__family-name { font-weight: 600; }
 
 .pop__family-age {
   color: var(--accent);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .pop__family-list li.is-unborn { opacity: 0.3; }
 .pop__family-list li.is-dead { opacity: 0.55; }
 .pop__family-list li.is-dead .pop__family-age { color: var(--text-muted); }
+
+/* Tabela pokoleń */
+.pop__gens {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.pop__gens th,
+.pop__gens td {
+  padding: 0.25rem 0.5rem;
+  text-align: right;
+  border-bottom: 1px solid var(--line);
+}
+
+.pop__gens th:first-child,
+.pop__gens td:first-child { text-align: left; }
+
+.pop__gens th {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.pop__gens td:nth-child(2) { color: #9cc7ff; }
+.pop__gens td:nth-child(3) { color: #f4a9c8; }
+.pop__gens td:nth-child(4) { color: var(--accent); font-weight: 600; }
+.pop__gens tr.is-empty td { opacity: 0.3; }
 
 .pop__family-extra {
   margin-top: 0.5rem;
