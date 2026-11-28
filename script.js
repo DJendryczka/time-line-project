@@ -350,8 +350,8 @@ function scrollToStop(stop) {
 
 /* Własne płynne przewijanie (wbudowane w przeglądarkę jest za szybkie i nie da się go zwolnić).
    Czas zależy od odległości; kółko myszy, dotyk lub klawisz przerywają ruch. */
-const SCROLL_MIN_MS = 1000;
-const SCROLL_MAX_MS = 2200;
+const SCROLL_MIN_MS = 1600;
+const SCROLL_MAX_MS = 3500;
 let scrollAnim = null;
 
 const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
@@ -368,7 +368,7 @@ function smoothScrollTo(top) {
   }
 
   cancelSmoothScroll();
-  const duration = Math.min(SCROLL_MAX_MS, Math.max(SCROLL_MIN_MS, 600 + Math.abs(distance) * 0.8));
+  const duration = Math.min(SCROLL_MAX_MS, Math.max(SCROLL_MIN_MS, 800 + Math.abs(distance) * 1.3));
   const start = performance.now();
 
   function frame(now) {
