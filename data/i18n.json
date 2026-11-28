@@ -503,6 +503,97 @@
       "sv": "3Mo",
       "de": "3Mo",
       "es": "Le"
+    },
+    "2sa": {
+      "pl": "2Sm",
+      "en": "2Sa",
+      "sv": "2Sa",
+      "de": "2Sa",
+      "es": "2Sa"
+    },
+    "1ki": {
+      "pl": "1Kl",
+      "en": "1Ki",
+      "sv": "1Ku",
+      "de": "1Kö",
+      "es": "1Re"
+    },
+    "2ki": {
+      "pl": "2Kl",
+      "en": "2Ki",
+      "sv": "2Ku",
+      "de": "2Kö",
+      "es": "2Re"
+    },
+    "ezr": {
+      "pl": "Ezd",
+      "en": "Ezr",
+      "sv": "Esr",
+      "de": "Esr",
+      "es": "Esd"
+    },
+    "neh": {
+      "pl": "Ne",
+      "en": "Ne",
+      "sv": "Neh",
+      "de": "Ne",
+      "es": "Ne"
+    },
+    "mal": {
+      "pl": "Ml",
+      "en": "Mal",
+      "sv": "Mal",
+      "de": "Mal",
+      "es": "Mal"
+    },
+    "mic": {
+      "pl": "Mi",
+      "en": "Mic",
+      "sv": "Mik",
+      "de": "Mi",
+      "es": "Miq"
+    },
+    "mat": {
+      "pl": "Mt",
+      "en": "Mt",
+      "sv": "Mt",
+      "de": "Mat",
+      "es": "Mt"
+    },
+    "luk": {
+      "pl": "Łk",
+      "en": "Lu",
+      "sv": "Lu",
+      "de": "Luk",
+      "es": "Lu"
+    },
+    "act": {
+      "pl": "Dz",
+      "en": "Ac",
+      "sv": "Apg",
+      "de": "Apg",
+      "es": "Hch"
+    },
+    "1co": {
+      "pl": "1Ko",
+      "en": "1Co",
+      "sv": "1Ko",
+      "de": "1Ko",
+      "es": "1Co"
+    },
+    "2th": {
+      "pl": "2Ts",
+      "en": "2Th",
+      "sv": "2Th",
+      "de": "2Th",
+      "es": "2Te"
+    },
+    "2ti": {
+      "pl": "2Tm",
+      "en": "2Ti",
+      "sv": "2Ti",
+      "de": "2Ti",
+      "es": "2Ti"
     }
   },
   "adamYears": {

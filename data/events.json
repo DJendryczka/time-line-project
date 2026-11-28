@@ -1416,6 +1416,1151 @@
           }
         }
       ]
+    },
+    {
+      "id": "krolestwo",
+      "start": -1117,
+      "end": -617,
+      "color": "#1e0f12",
+      "accent": "#e8838f",
+      "title": {
+        "pl": "Królestwo Izraela",
+        "en": "The kingdom of Israel",
+        "sv": "Kungariket Israel",
+        "de": "Das Königreich Israel",
+        "es": "El reino de Israel"
+      },
+      "subtitle": {
+        "pl": "Od Dawida do pierwszej niewoli",
+        "en": "From David to the first exile",
+        "sv": "Från David till den första fångenskapen",
+        "de": "Von David bis zur ersten Verbannung",
+        "es": "De David al primer destierro"
+      },
+      "summary": {
+        "pl": "Izraelem rządzą królowie. Jehowa obiecuje Dawidowi królestwo trwające na zawsze, Salomon buduje świątynię, ale naród się dzieli i coraz bardziej odchodzi od Boga.",
+        "en": "Kings rule Israel. Jehovah promises David a kingdom lasting forever, Solomon builds the temple, but the nation splits and drifts further from God.",
+        "sv": "Kungar styr Israel. Jehova lovar David ett kungarike som ska bestå för alltid, Salomo bygger templet, men folket splittras och vänder sig alltmer bort från Gud.",
+        "de": "Könige regieren Israel. Jehova verheißt David ein Königreich für immer, Salomo baut den Tempel, doch das Volk spaltet sich und entfernt sich immer mehr von Gott.",
+        "es": "Reyes gobiernan Israel. Jehová promete a David un reino eterno, Salomón construye el templo, pero la nación se divide y se aleja cada vez más de Dios."
+      },
+      "events": [
+        {
+          "year": -1077,
+          "refs": [
+            "2sa 2:4",
+            "2sa 5:4, 5"
+          ],
+          "title": {
+            "pl": "Dawid królem",
+            "en": "David becomes king",
+            "sv": "David blir kung",
+            "de": "David wird König",
+            "es": "David, rey"
+          },
+          "description": {
+            "pl": "Po śmierci Saula Dawid zostaje królem w Hebronie, a później nad całym Izraelem. Panuje 40 lat.",
+            "en": "After Saul’s death, David becomes king in Hebron and later over all Israel. He rules 40 years.",
+            "sv": "Efter Sauls död blir David kung i Hebron och senare över hela Israel. Han regerar i 40 år.",
+            "de": "Nach Sauls Tod wird David König in Hebron und später über ganz Israel. Er regiert 40 Jahre.",
+            "es": "Tras la muerte de Saúl, David llega a ser rey en Hebrón y después sobre todo Israel. Reina 40 años."
+          }
+        },
+        {
+          "year": -1070,
+          "refs": [
+            "2sa 5:6-9",
+            "2sa 7:12-16"
+          ],
+          "title": {
+            "pl": "Jerozolima stolicą; przymierze królestwa",
+            "en": "Jerusalem the capital; Kingdom covenant",
+            "sv": "Jerusalem blir huvudstad; förbundet om ett kungarike",
+            "de": "Jerusalem wird Hauptstadt; Königreichsbund",
+            "es": "Jerusalén, capital; pacto del Reino"
+          },
+          "description": {
+            "pl": "Dawid zdobywa Jerozolimę. Jehowa obiecuje mu, że jego tron będzie trwał na zawsze — zapowiedź Mesjasza.",
+            "en": "David captures Jerusalem. Jehovah promises him that his throne will last forever — a pointer to the Messiah.",
+            "sv": "David intar Jerusalem. Jehova lovar honom att hans tron ska bestå för alltid – en förebild om Messias.",
+            "de": "David erobert Jerusalem. Jehova verheißt ihm, dass sein Thron für immer bestehen wird – ein Hinweis auf den Messias.",
+            "es": "David conquista Jerusalén. Jehová le promete que su trono durará para siempre, lo que apunta al Mesías."
+          },
+          "qualifier": "approx"
+        },
+        {
+          "year": -1037,
+          "refs": [
+            "1ki 1:39",
+            "1ki 3:9-12"
+          ],
+          "title": {
+            "pl": "Salomon królem",
+            "en": "Solomon becomes king",
+            "sv": "Salomo blir kung",
+            "de": "Salomo wird König",
+            "es": "Salomón, rey"
+          },
+          "description": {
+            "pl": "Syn Dawida prosi Boga o mądrość, by dobrze sądzić lud, i otrzymuje ją w obfitości.",
+            "en": "David’s son asks God for wisdom to judge the people well and receives it in abundance.",
+            "sv": "Davids son ber Gud om vishet för att döma folket väl och får den i överflöd.",
+            "de": "Davids Sohn bittet Gott um Weisheit, um das Volk gut zu richten, und erhält sie reichlich.",
+            "es": "El hijo de David pide a Dios sabiduría para juzgar bien al pueblo y la recibe en abundancia."
+          }
+        },
+        {
+          "year": -1027,
+          "refs": [
+            "1ki 6:38",
+            "1ki 8:10, 11"
+          ],
+          "title": {
+            "pl": "Świątynia ukończona",
+            "en": "Temple completed",
+            "sv": "Templet blir klart",
+            "de": "Tempel fertiggestellt",
+            "es": "Se termina el templo"
+          },
+          "description": {
+            "pl": "Po 7 latach budowy Salomon kończy wspaniałą świątynię Jehowy w Jerozolimie.",
+            "en": "After 7 years of building, Solomon completes Jehovah’s magnificent temple in Jerusalem.",
+            "sv": "Efter 7 års byggande blir Salomos praktfulla tempel åt Jehova i Jerusalem klart.",
+            "de": "Nach 7 Jahren Bauzeit vollendet Salomo den prächtigen Tempel Jehovas in Jerusalem.",
+            "es": "Tras 7 años de obras, Salomón termina el magnífico templo de Jehová en Jerusalén."
+          }
+        },
+        {
+          "year": -997,
+          "refs": [
+            "1ki 12:16-20"
+          ],
+          "title": {
+            "pl": "Podział królestwa",
+            "en": "The kingdom divides",
+            "sv": "Kungariket delas",
+            "de": "Das Reich wird geteilt",
+            "es": "Se divide el reino"
+          },
+          "description": {
+            "pl": "Po śmierci Salomona 10 plemion odrywa się i tworzy królestwo Izraela; Juda i Beniamin zostają przy Jerozolimie.",
+            "en": "After Solomon’s death, 10 tribes break away to form the kingdom of Israel; Judah and Benjamin remain with Jerusalem.",
+            "sv": "Efter Salomos död bryter sig 10 stammar loss och bildar kungariket Israel; Juda och Benjamin stannar kvar hos Jerusalem.",
+            "de": "Nach Salomos Tod spalten sich 10 Stämme ab und bilden das Königreich Israel; Juda und Benjamin bleiben bei Jerusalem.",
+            "es": "Tras la muerte de Salomón, 10 tribus se separan y forman el reino de Israel; Judá y Benjamín se quedan con Jerusalén."
+          }
+        },
+        {
+          "year": -740,
+          "refs": [
+            "2ki 17:5, 6",
+            "2ki 17:18"
+          ],
+          "title": {
+            "pl": "Upadek Samarii",
+            "en": "Fall of Samaria",
+            "sv": "Samaria faller",
+            "de": "Fall Samarias",
+            "es": "Cae Samaria"
+          },
+          "description": {
+            "pl": "Asyryjczycy zdobywają Samarię i uprowadzają mieszkańców. Królestwo 10 plemion przestaje istnieć.",
+            "en": "The Assyrians capture Samaria and deport its people. The ten-tribe kingdom comes to an end.",
+            "sv": "Assyrierna intar Samaria och för bort invånarna. Tiostammarsriket upphör.",
+            "de": "Die Assyrer erobern Samaria und verschleppen die Bewohner. Das Zehnstämmereich endet.",
+            "es": "Los asirios toman Samaria y deportan a sus habitantes. El reino de las diez tribus llega a su fin."
+          }
+        },
+        {
+          "year": -647,
+          "refs": [
+            "jer 1:1-3"
+          ],
+          "title": {
+            "pl": "Jeremiasz zaczyna prorokować",
+            "en": "Jeremiah begins prophesying",
+            "sv": "Jeremia börjar profetera",
+            "de": "Jeremia beginnt zu prophezeien",
+            "es": "Jeremías empieza a profetizar"
+          },
+          "description": {
+            "pl": "W 13. roku panowania Jozjasza Jehowa powołuje młodego Jeremiasza, by ostrzegał Judę przed zagładą.",
+            "en": "In Josiah’s 13th year, Jehovah commissions young Jeremiah to warn Judah of coming destruction.",
+            "sv": "I Josias 13:e regeringsår kallar Jehova den unge Jeremia att varna Juda för undergången.",
+            "de": "Im 13. Regierungsjahr Josias beauftragt Jehova den jungen Jeremia, Juda vor der Vernichtung zu warnen.",
+            "es": "En el año 13 de Josías, Jehová comisiona al joven Jeremías para advertir a Judá de su destrucción."
+          }
+        },
+        {
+          "year": -617,
+          "refs": [
+            "2ki 24:12-16",
+            "dan 1:1-6"
+          ],
+          "title": {
+            "pl": "Pierwsza niewola babilońska",
+            "en": "First exile to Babylon",
+            "sv": "Den första fångenskapen i Babylon",
+            "de": "Erste Verbannung nach Babylon",
+            "es": "Primer destierro a Babilonia"
+          },
+          "description": {
+            "pl": "Nebukadneccar uprowadza króla Jehojachina i tysiące mieszkańców Judy, wśród nich Ezechiela i — według „Wnikliwego poznawania Pism” — Daniela.",
+            "en": "Nebuchadnezzar carries off King Jehoiachin and thousands of Judeans, among them Ezekiel and, according to Insight on the Scriptures, Daniel.",
+            "sv": "Nebukadnessar för bort kung Jojakin och tusentals judéer, bland dem Hesekiel och – enligt Insikt i Skrifterna – Daniel.",
+            "de": "Nebukadnezar verschleppt König Jojachin und Tausende Judäer, darunter Hesekiel und – laut Einsichten über die Heilige Schrift – Daniel.",
+            "es": "Nabucodonosor se lleva al rey Joaquín y a miles de judíos, entre ellos Ezequiel y, según Perspicacia, Daniel."
+          }
+        }
+      ]
+    },
+    {
+      "id": "niewola",
+      "start": -607,
+      "end": -2,
+      "color": "#0c1a1a",
+      "accent": "#6cc7b8",
+      "title": {
+        "pl": "Od niewoli do Mesjasza",
+        "en": "From exile to the Messiah",
+        "sv": "Från fångenskapen till Messias",
+        "de": "Vom Exil bis zum Messias",
+        "es": "Del destierro al Mesías"
+      },
+      "subtitle": {
+        "pl": "Zburzenie Jerozolimy, powrót i oczekiwanie",
+        "en": "Jerusalem destroyed, the return, and the wait",
+        "sv": "Jerusalems förstöring, återkomsten och väntan",
+        "de": "Jerusalems Zerstörung, die Rückkehr und das Warten",
+        "es": "La destrucción de Jerusalén, el regreso y la espera"
+      },
+      "summary": {
+        "pl": "Jerozolima leży w gruzach 70 lat. Potem Żydzi wracają, odbudowują świątynię i mury, a Pisma Hebrajskie zostają ukończone. Kolejne mocarstwa — Persja, Grecja, Rzym — przychodzą tak, jak zapowiedział Daniel.",
+        "en": "Jerusalem lies desolate for 70 years. Then the Jews return, rebuild the temple and the walls, and the Hebrew Scriptures are completed. World powers — Persia, Greece, Rome — follow as Daniel foretold.",
+        "sv": "Jerusalem ligger öde i 70 år. Sedan återvänder judarna, bygger upp templet och murarna, och de hebreiska skrifterna fullbordas. Världsmakterna Persien, Grekland och Rom följer som Daniel förutsade.",
+        "de": "Jerusalem liegt 70 Jahre verwüstet. Dann kehren die Juden zurück, bauen Tempel und Mauern wieder auf, und die Hebräischen Schriften werden vollendet. Weltmächte – Persien, Griechenland, Rom – folgen, wie Daniel es vorhersagte.",
+        "es": "Jerusalén queda desolada 70 años. Luego los judíos regresan, reconstruyen el templo y las murallas, y se completan las Escrituras Hebreas. Las potencias mundiales —Persia, Grecia, Roma— se suceden como predijo Daniel."
+      },
+      "events": [
+        {
+          "year": -607,
+          "refs": [
+            "2ki 25:8-10",
+            "jer 25:11"
+          ],
+          "title": {
+            "pl": "Zburzenie Jerozolimy",
+            "en": "Jerusalem destroyed",
+            "sv": "Jerusalem förstörs",
+            "de": "Zerstörung Jerusalems",
+            "es": "Destrucción de Jerusalén"
+          },
+          "description": {
+            "pl": "Babilończycy palą Jerozolimę i świątynię. Zaczyna się 70 lat spustoszenia — i „wyznaczone czasy narodów”, które skończą się w 1914 roku.",
+            "en": "The Babylonians burn Jerusalem and the temple. The 70 years of desolation begin — and the “appointed times of the nations,” which will end in 1914.",
+            "sv": "Babylonierna bränner Jerusalem och templet. De 70 åren av ödeläggelse börjar – och ”nationernas fastställda tider”, som tar slut 1914.",
+            "de": "Die Babylonier verbrennen Jerusalem und den Tempel. Die 70 Jahre der Verwüstung beginnen – und die „bestimmten Zeiten der Nationen“, die 1914 enden.",
+            "es": "Los babilonios queman Jerusalén y el templo. Empiezan los 70 años de desolación y los «tiempos señalados de las naciones», que terminarán en 1914."
+          }
+        },
+        {
+          "year": -539,
+          "refs": [
+            "dan 5:30, 31",
+            "isa 45:1"
+          ],
+          "title": {
+            "pl": "Upadek Babilonu",
+            "en": "Babylon falls",
+            "sv": "Babylon faller",
+            "de": "Babylons Fall",
+            "es": "Cae Babilonia"
+          },
+          "description": {
+            "pl": "Cyrus zdobywa Babilon w jedną noc — dokładnie tak, jak ponad 150 lat wcześniej zapowiedział Izajasz, wymieniając go z imienia.",
+            "en": "Cyrus captures Babylon in one night — just as Isaiah foretold more than 150 years earlier, naming him.",
+            "sv": "Cyrus intar Babylon på en natt – precis som Jesaja förutsade mer än 150 år tidigare och nämnde honom vid namn.",
+            "de": "Cyrus erobert Babylon in einer Nacht – genau wie Jesaja es über 150 Jahre zuvor vorhergesagt hatte, sogar mit Namen.",
+            "es": "Ciro conquista Babilonia en una noche, tal como Isaías predijo más de 150 años antes, mencionándolo por nombre."
+          }
+        },
+        {
+          "year": -537,
+          "refs": [
+            "ezr 1:1-4",
+            "jer 29:10"
+          ],
+          "title": {
+            "pl": "Powrót z niewoli",
+            "en": "Return from exile",
+            "sv": "Återkomsten från fångenskapen",
+            "de": "Rückkehr aus dem Exil",
+            "es": "Regreso del destierro"
+          },
+          "description": {
+            "pl": "Dekret Cyrusa pozwala Żydom wrócić do Jerozolimy. Mija dokładnie 70 lat spustoszenia.",
+            "en": "Cyrus’ decree lets the Jews return to Jerusalem. Exactly 70 years of desolation have passed.",
+            "sv": "Cyrus påbud låter judarna återvända till Jerusalem. Exakt 70 år av ödeläggelse har gått.",
+            "de": "Ein Erlass des Cyrus erlaubt den Juden die Rückkehr nach Jerusalem. Genau 70 Jahre der Verwüstung sind vorbei.",
+            "es": "El decreto de Ciro permite a los judíos volver a Jerusalén. Han pasado exactamente 70 años de desolación."
+          }
+        },
+        {
+          "year": -515,
+          "refs": [
+            "ezr 6:14, 15"
+          ],
+          "title": {
+            "pl": "Odbudowana świątynia",
+            "en": "Temple rebuilt",
+            "sv": "Templet återuppbyggt",
+            "de": "Tempel wieder aufgebaut",
+            "es": "Templo reconstruido"
+          },
+          "description": {
+            "pl": "Zachęcani przez proroków Aggeusza i Zachariasza, Żydzi kończą odbudowę świątyni.",
+            "en": "Encouraged by the prophets Haggai and Zechariah, the Jews finish rebuilding the temple.",
+            "sv": "Uppmuntrade av profeterna Haggaj och Sakarja bygger judarna färdigt templet.",
+            "de": "Ermutigt durch die Propheten Haggai und Sacharja vollenden die Juden den Wiederaufbau des Tempels.",
+            "es": "Animados por los profetas Ageo y Zacarías, los judíos terminan de reconstruir el templo."
+          }
+        },
+        {
+          "year": -455,
+          "refs": [
+            "neh 2:1-8",
+            "dan 9:25"
+          ],
+          "title": {
+            "pl": "Mury Jerozolimy; początek 70 tygodni",
+            "en": "Jerusalem’s walls; the 70 weeks begin",
+            "sv": "Jerusalems murar; de 70 veckorna börjar",
+            "de": "Jerusalems Mauern; die 70 Wochen beginnen",
+            "es": "Murallas de Jerusalén; empiezan las 70 semanas"
+          },
+          "description": {
+            "pl": "Nehemiasz odbudowuje mury w 52 dni. Od tego rozkazu Daniel liczył 69 „tygodni lat” do pojawienia się Mesjasza — 483 lata, czyli do 29 roku n.e.",
+            "en": "Nehemiah rebuilds the walls in 52 days. From this command Daniel counted 69 “weeks of years” to the Messiah’s appearance — 483 years, to 29 C.E.",
+            "sv": "Nehemja bygger upp murarna på 52 dagar. Från detta påbud räknade Daniel 69 ”årsveckor” fram till Messias – 483 år, till år 29 v.t.",
+            "de": "Nehemia baut die Mauern in 52 Tagen wieder auf. Ab diesem Befehl zählte Daniel 69 „Jahrwochen“ bis zum Messias – 483 Jahre, bis 29 u. Z.",
+            "es": "Nehemías reconstruye las murallas en 52 días. Desde esta orden, Daniel contó 69 «semanas de años» hasta el Mesías: 483 años, hasta el 29 E.C."
+          }
+        },
+        {
+          "year": -443,
+          "refs": [
+            "mal 1:1",
+            "mal 4:5, 6"
+          ],
+          "title": {
+            "pl": "Pisma Hebrajskie ukończone",
+            "en": "Hebrew Scriptures completed",
+            "sv": "De hebreiska skrifterna fullbordas",
+            "de": "Hebräische Schriften vollendet",
+            "es": "Se completan las Escrituras Hebreas"
+          },
+          "description": {
+            "pl": "Malachiasz spisuje ostatnią księgę Pism Hebrajskich. Potem przez ponad 400 lat nie powstaje żadna natchniona księga.",
+            "en": "Malachi writes the last book of the Hebrew Scriptures. No inspired book is written for over 400 years after that.",
+            "sv": "Malaki skriver den sista boken i de hebreiska skrifterna. Därefter skrivs ingen inspirerad bok på över 400 år.",
+            "de": "Maleachi schreibt das letzte Buch der Hebräischen Schriften. Danach entsteht über 400 Jahre lang kein inspiriertes Buch.",
+            "es": "Malaquías escribe el último libro de las Escrituras Hebreas. Después no se escribe ningún libro inspirado durante más de 400 años."
+          },
+          "qualifier": "after"
+        },
+        {
+          "year": -332,
+          "refs": [
+            "dan 8:5-8, 21"
+          ],
+          "title": {
+            "pl": "Aleksander Wielki",
+            "en": "Alexander the Great",
+            "sv": "Alexander den store",
+            "de": "Alexander der Große",
+            "es": "Alejandro Magno"
+          },
+          "description": {
+            "pl": "Grecja staje się mocarstwem światowym. Daniel opisał ją jako kozła, który błyskawicznie pokonuje Persję, a potem jego wielki róg się łamie.",
+            "en": "Greece becomes the world power. Daniel described it as a he-goat that swiftly defeats Persia, after which its great horn is broken.",
+            "sv": "Grekland blir världsmakt. Daniel beskrev den som en bock som snabbt besegrar Persien, varefter dess stora horn bryts av.",
+            "de": "Griechenland wird Weltmacht. Daniel beschrieb es als Ziegenbock, der Persien blitzschnell besiegt, worauf sein großes Horn zerbricht.",
+            "es": "Grecia llega a ser potencia mundial. Daniel la describió como un macho cabrío que derrota rápidamente a Persia y luego se le rompe el gran cuerno."
+          }
+        },
+        {
+          "year": -63,
+          "refs": [
+            "dan 7:7"
+          ],
+          "title": {
+            "pl": "Rzym zdobywa Jerozolimę",
+            "en": "Rome takes Jerusalem",
+            "sv": "Rom intar Jerusalem",
+            "de": "Rom erobert Jerusalem",
+            "es": "Roma toma Jerusalén"
+          },
+          "description": {
+            "pl": "Pompejusz zajmuje Jerozolimę. Judea trafia pod władzę Rzymu — mocarstwa, za którego panowania pojawi się Mesjasz.",
+            "en": "Pompey occupies Jerusalem. Judea comes under Rome — the world power in whose days the Messiah will appear.",
+            "sv": "Pompejus intar Jerusalem. Judeen hamnar under Rom – den världsmakt under vilken Messias ska framträda.",
+            "de": "Pompeius besetzt Jerusalem. Judäa kommt unter Rom – die Weltmacht, in deren Tagen der Messias erscheint.",
+            "es": "Pompeyo ocupa Jerusalén. Judea queda bajo Roma, la potencia mundial en cuyos días aparecerá el Mesías."
+          }
+        }
+      ]
+    },
+    {
+      "id": "jezus",
+      "start": -2,
+      "end": 98,
+      "color": "#15121f",
+      "accent": "#e9d38a",
+      "title": {
+        "pl": "Jezus i pierwsi chrześcijanie",
+        "en": "Jesus and the first Christians",
+        "sv": "Jesus och de första kristna",
+        "de": "Jesus und die ersten Christen",
+        "es": "Jesús y los primeros cristianos"
+      },
+      "subtitle": {
+        "pl": "Od narodzin Mesjasza do ukończenia Biblii",
+        "en": "From the Messiah’s birth to the completion of the Bible",
+        "sv": "Från Messias födelse till att Bibeln fullbordas",
+        "de": "Von der Geburt des Messias bis zur Vollendung der Bibel",
+        "es": "Del nacimiento del Mesías a la terminación de la Biblia"
+      },
+      "summary": {
+        "pl": "Przychodzi obiecany Mesjasz. Jezus głosi o Królestwie Bożym, oddaje życie jako okup i zostaje wskrzeszony. Jego uczniowie zanoszą dobrą nowinę aż po krańce ówczesnego świata.",
+        "en": "The promised Messiah arrives. Jesus preaches God’s Kingdom, gives his life as a ransom, and is resurrected. His disciples carry the good news to the ends of the known world.",
+        "sv": "Den utlovade Messias kommer. Jesus predikar om Guds kungarike, ger sitt liv som lösen och uppväcks. Hans lärjungar sprider de goda nyheterna till den kända världens ändar.",
+        "de": "Der verheißene Messias kommt. Jesus predigt Gottes Königreich, gibt sein Leben als Lösegeld und wird auferweckt. Seine Jünger tragen die gute Botschaft bis an die Enden der damaligen Welt.",
+        "es": "Llega el Mesías prometido. Jesús predica el Reino de Dios, da su vida como rescate y es resucitado. Sus discípulos llevan las buenas noticias hasta los confines del mundo conocido."
+      },
+      "events": [
+        {
+          "year": -2,
+          "refs": [
+            "luk 2:1-7",
+            "mic 5:2"
+          ],
+          "title": {
+            "pl": "Narodziny Jezusa",
+            "en": "Birth of Jesus",
+            "sv": "Jesus föds",
+            "de": "Geburt Jesu",
+            "es": "Nace Jesús"
+          },
+          "description": {
+            "pl": "Jezus rodzi się w Betlejem, tak jak zapowiedział Micheasz. Jego życie w niebie zostaje przeniesione do łona Marii.",
+            "en": "Jesus is born in Bethlehem, as Micah foretold. His life is transferred from heaven to Mary’s womb.",
+            "sv": "Jesus föds i Betlehem, så som Mika förutsade. Hans liv överförs från himlen till Marias livmoder.",
+            "de": "Jesus wird in Bethlehem geboren, wie Micha vorhersagte. Sein Leben wird vom Himmel in Marias Mutterleib übertragen.",
+            "es": "Jesús nace en Belén, como predijo Miqueas. Su vida se transfiere del cielo al vientre de María."
+          }
+        },
+        {
+          "year": 29,
+          "refs": [
+            "luk 3:21, 22",
+            "dan 9:25"
+          ],
+          "title": {
+            "pl": "Chrzest Jezusa — przychodzi Mesjasz",
+            "en": "Jesus’ baptism — the Messiah appears",
+            "sv": "Jesus döps – Messias framträder",
+            "de": "Taufe Jesu – der Messias erscheint",
+            "es": "Bautismo de Jesús: aparece el Mesías"
+          },
+          "description": {
+            "pl": "Jezus zostaje ochrzczony i namaszczony duchem świętym — dokładnie po 69 „tygodniach lat” z proroctwa Daniela.",
+            "en": "Jesus is baptized and anointed with holy spirit — exactly at the end of Daniel’s 69 “weeks of years.”",
+            "sv": "Jesus döps och smörjs med helig ande – precis efter Daniels 69 ”årsveckor”.",
+            "de": "Jesus wird getauft und mit heiligem Geist gesalbt – genau nach Daniels 69 „Jahrwochen“.",
+            "es": "Jesús es bautizado y ungido con espíritu santo, justo al cumplirse las 69 «semanas de años» de Daniel."
+          }
+        },
+        {
+          "year": 33,
+          "refs": [
+            "mat 20:28",
+            "mat 28:5-7"
+          ],
+          "title": {
+            "pl": "Śmierć i zmartwychwstanie Jezusa",
+            "en": "Jesus’ death and resurrection",
+            "sv": "Jesu död och uppståndelse",
+            "de": "Tod und Auferstehung Jesu",
+            "es": "Muerte y resurrección de Jesús"
+          },
+          "description": {
+            "pl": "14 Nisan Jezus umiera jako okup za ludzkość. Trzeciego dnia Jehowa go wskrzesza.",
+            "en": "On Nisan 14, Jesus dies as a ransom for mankind. On the third day, Jehovah raises him.",
+            "sv": "Den 14 nisan dör Jesus som en lösen för mänskligheten. På tredje dagen uppväcker Jehova honom.",
+            "de": "Am 14. Nisan stirbt Jesus als Lösegeld für die Menschheit. Am dritten Tag auferweckt ihn Jehova.",
+            "es": "El 14 de nisán, Jesús muere como rescate por la humanidad. Al tercer día, Jehová lo resucita."
+          }
+        },
+        {
+          "year": 33,
+          "refs": [
+            "act 2:1-4",
+            "act 2:41"
+          ],
+          "title": {
+            "pl": "Pięćdziesiątnica — powstaje zbór chrześcijański",
+            "en": "Pentecost — the Christian congregation is born",
+            "sv": "Pingst – den kristna församlingen bildas",
+            "de": "Pfingsten – die Christenversammlung entsteht",
+            "es": "Pentecostés: nace la congregación cristiana"
+          },
+          "description": {
+            "pl": "Duch święty zostaje wylany na uczniów w Jerozolimie. Tego dnia chrzci się około 3000 osób.",
+            "en": "Holy spirit is poured out on the disciples in Jerusalem. About 3,000 are baptized that day.",
+            "sv": "Helig ande utgjuts över lärjungarna i Jerusalem. Omkring 3 000 döps den dagen.",
+            "de": "Heiliger Geist wird auf die Jünger in Jerusalem ausgegossen. An diesem Tag lassen sich etwa 3 000 taufen.",
+            "es": "Se derrama espíritu santo sobre los discípulos en Jerusalén. Ese día se bautizan unas 3.000 personas."
+          }
+        },
+        {
+          "year": 36,
+          "refs": [
+            "act 10:44-48",
+            "dan 9:27"
+          ],
+          "title": {
+            "pl": "Korneliusz — dobra nowina dla nie-Żydów",
+            "en": "Cornelius — the good news reaches the Gentiles",
+            "sv": "Kornelius – de goda nyheterna når icke-judar",
+            "de": "Kornelius – die gute Botschaft erreicht Nichtjuden",
+            "es": "Cornelio: las buenas noticias llegan a los gentiles"
+          },
+          "description": {
+            "pl": "Rzymski setnik Korneliusz jako pierwszy nieobrzezany poganin otrzymuje ducha świętego. Kończy się 70. „tydzień” z proroctwa Daniela.",
+            "en": "The Roman army officer Cornelius becomes the first uncircumcised Gentile to receive holy spirit. Daniel’s 70th “week” ends.",
+            "sv": "Den romerske officeren Kornelius blir den förste oomskurne icke-jude som får helig ande. Daniels 70:e ”vecka” tar slut.",
+            "de": "Der römische Offizier Kornelius erhält als erster unbeschnittener Nichtjude heiligen Geist. Daniels 70. „Woche“ endet.",
+            "es": "El oficial romano Cornelio es el primer gentil incircunciso que recibe espíritu santo. Termina la «semana» 70 de Daniel."
+          }
+        },
+        {
+          "year": 47,
+          "refs": [
+            "act 13:2-4"
+          ],
+          "title": {
+            "pl": "Pierwsza podróż misyjna Pawła",
+            "en": "Paul’s first missionary tour",
+            "sv": "Paulus första missionsresa",
+            "de": "Paulus’ erste Missionsreise",
+            "es": "Primer viaje misional de Pablo"
+          },
+          "description": {
+            "pl": "Paweł i Barnaba wyruszają z Antiochii na Cypr i do Azji Mniejszej, zakładając nowe zbory.",
+            "en": "Paul and Barnabas set out from Antioch to Cyprus and Asia Minor, founding new congregations.",
+            "sv": "Paulus och Barnabas reser från Antiokia till Cypern och Mindre Asien och bildar nya församlingar.",
+            "de": "Paulus und Barnabas brechen von Antiochia nach Zypern und Kleinasien auf und gründen neue Versammlungen.",
+            "es": "Pablo y Bernabé parten de Antioquía hacia Chipre y Asia Menor, y fundan nuevas congregaciones."
+          },
+          "qualifier": "approx"
+        },
+        {
+          "year": 70,
+          "refs": [
+            "luk 19:43, 44",
+            "luk 21:20-22"
+          ],
+          "title": {
+            "pl": "Rzymianie burzą Jerozolimę",
+            "en": "Romans destroy Jerusalem",
+            "sv": "Romarna förstör Jerusalem",
+            "de": "Die Römer zerstören Jerusalem",
+            "es": "Los romanos destruyen Jerusalén"
+          },
+          "description": {
+            "pl": "Spełnia się proroctwo Jezusa: Jerozolima i świątynia zostają zburzone. Chrześcijanie, posłuszni jego ostrzeżeniu, wcześniej uciekli.",
+            "en": "Jesus’ prophecy is fulfilled: Jerusalem and the temple are destroyed. Christians, heeding his warning, had fled beforehand.",
+            "sv": "Jesu profetia uppfylls: Jerusalem och templet förstörs. De kristna, som lydde hans varning, hade redan flytt.",
+            "de": "Jesu Prophezeiung erfüllt sich: Jerusalem und der Tempel werden zerstört. Die Christen, die seine Warnung beachteten, waren zuvor geflohen.",
+            "es": "Se cumple la profecía de Jesús: Jerusalén y el templo son destruidos. Los cristianos, que hicieron caso de su advertencia, ya habían huido."
+          }
+        },
+        {
+          "year": 98,
+          "refs": [
+            "rev 1:1",
+            "joh 20:31"
+          ],
+          "title": {
+            "pl": "Biblia ukończona",
+            "en": "The Bible completed",
+            "sv": "Bibeln fullbordas",
+            "de": "Die Bibel ist vollendet",
+            "es": "Se completa la Biblia"
+          },
+          "description": {
+            "pl": "Apostoł Jan spisuje Objawienie (ok. 96 n.e.), a potem swoją Ewangelię i listy. Biblia jest kompletna.",
+            "en": "The apostle John writes Revelation (c. 96 C.E.), then his Gospel and letters. The Bible is complete.",
+            "sv": "Aposteln Johannes skriver Uppenbarelseboken (omkr. 96 v.t.) och sedan sitt evangelium och sina brev. Bibeln är fullständig.",
+            "de": "Der Apostel Johannes schreibt die Offenbarung (um 96 u. Z.), dann sein Evangelium und seine Briefe. Die Bibel ist vollständig.",
+            "es": "El apóstol Juan escribe Apocalipsis (h. 96 E.C.) y luego su Evangelio y sus cartas. La Biblia está completa."
+          },
+          "qualifier": "approx"
+        }
+      ]
+    },
+    {
+      "id": "odstepstwo",
+      "start": 98,
+      "end": 1870,
+      "color": "#141414",
+      "accent": "#b9b1a3",
+      "title": {
+        "pl": "Odstępstwo",
+        "en": "The apostasy",
+        "sv": "Avfallet",
+        "de": "Der Abfall",
+        "es": "La apostasía"
+      },
+      "subtitle": {
+        "pl": "Od śmierci apostołów do odnowy prawdy biblijnej",
+        "en": "From the apostles’ death to the restoration of Bible truth",
+        "sv": "Från apostlarnas död till att Bibelns sanning återupprättas",
+        "de": "Vom Tod der Apostel bis zur Wiederherstellung der biblischen Wahrheit",
+        "es": "De la muerte de los apóstoles a la restauración de la verdad bíblica"
+      },
+      "summary": {
+        "pl": "Jak zapowiedzieli Jezus i Paweł, po śmierci apostołów do zborów wkradają się fałszywe nauki. Mimo to Biblia przetrwa, zostanie przetłumaczona i trafi do milionów ludzi.",
+        "en": "As Jesus and Paul foretold, false teachings creep into the congregations after the apostles die. Even so, the Bible survives, is translated, and reaches millions.",
+        "sv": "Som Jesus och Paulus förutsade smyger sig falska läror in i församlingarna efter apostlarnas död. Ändå överlever Bibeln, översätts och når miljoner.",
+        "de": "Wie Jesus und Paulus vorhersagten, dringen nach dem Tod der Apostel falsche Lehren in die Versammlungen ein. Trotzdem überdauert die Bibel, wird übersetzt und erreicht Millionen.",
+        "es": "Como predijeron Jesús y Pablo, tras la muerte de los apóstoles se infiltran enseñanzas falsas en las congregaciones. Aun así, la Biblia sobrevive, se traduce y llega a millones."
+      },
+      "events": [
+        {
+          "year": 100,
+          "refs": [
+            "act 20:29, 30",
+            "2th 2:3, 7"
+          ],
+          "title": {
+            "pl": "Rozwija się odstępstwo",
+            "en": "Apostasy spreads",
+            "sv": "Avfallet sprider sig",
+            "de": "Der Abfall breitet sich aus",
+            "es": "Se extiende la apostasía"
+          },
+          "description": {
+            "pl": "Po śmierci ostatniego apostoła nic już nie powstrzymuje odstępstwa. Do nauk chrześcijańskich wnikają filozofia grecka i zwyczaje pogańskie.",
+            "en": "With the last apostle dead, nothing restrains the apostasy any longer. Greek philosophy and pagan customs seep into Christian teaching.",
+            "sv": "När den siste aposteln har dött finns inget som håller tillbaka avfallet. Grekisk filosofi och hedniska seder tränger in i den kristna läran.",
+            "de": "Nach dem Tod des letzten Apostels hält den Abfall nichts mehr zurück. Griechische Philosophie und heidnische Bräuche dringen in die christliche Lehre ein.",
+            "es": "Muerto el último apóstol, ya nada frena la apostasía. La filosofía griega y las costumbres paganas se infiltran en la enseñanza cristiana."
+          },
+          "qualifier": "after"
+        },
+        {
+          "year": 325,
+          "refs": [
+            "joh 14:28",
+            "1co 8:6"
+          ],
+          "title": {
+            "pl": "Sobór w Nicei",
+            "en": "Council of Nicaea",
+            "sv": "Konciliet i Nicaea",
+            "de": "Konzil von Nizäa",
+            "es": "Concilio de Nicea"
+          },
+          "description": {
+            "pl": "Cesarz Konstantyn zwołuje sobór, który ogłasza Jezusa „współistotnym” Ojcu — krok w stronę nauki o Trójcy, której nie ma w Biblii.",
+            "en": "Emperor Constantine convenes a council that declares Jesus “of one substance” with the Father — a step toward the Trinity doctrine, which is not in the Bible.",
+            "sv": "Kejsar Konstantin sammankallar ett koncilium som förklarar Jesus ”av samma väsen” som Fadern – ett steg mot treenighetsläran, som inte finns i Bibeln.",
+            "de": "Kaiser Konstantin beruft ein Konzil ein, das Jesus für „wesensgleich“ mit dem Vater erklärt – ein Schritt zur Dreieinigkeitslehre, die nicht in der Bibel steht.",
+            "es": "El emperador Constantino convoca un concilio que declara a Jesús «de la misma sustancia» que el Padre, un paso hacia la doctrina de la Trinidad, que no está en la Biblia."
+          }
+        },
+        {
+          "year": 1455,
+          "refs": [
+            "isa 40:8"
+          ],
+          "title": {
+            "pl": "Biblia Gutenberga",
+            "en": "The Gutenberg Bible",
+            "sv": "Gutenbergbibeln",
+            "de": "Die Gutenberg-Bibel",
+            "es": "La Biblia de Gutenberg"
+          },
+          "description": {
+            "pl": "Pierwsza duża książka drukowana ruchomą czcionką. Druk sprawi, że Biblia stanie się dostępna dla zwykłych ludzi.",
+            "en": "The first major book printed with movable type. Printing will make the Bible available to ordinary people.",
+            "sv": "Den första stora boken som trycks med lösa typer. Boktrycket gör att Bibeln blir tillgänglig för vanliga människor.",
+            "de": "Das erste große Buch, gedruckt mit beweglichen Lettern. Der Buchdruck macht die Bibel einfachen Menschen zugänglich.",
+            "es": "El primer gran libro impreso con tipos móviles. La imprenta pondrá la Biblia al alcance de la gente común."
+          },
+          "qualifier": "approx"
+        },
+        {
+          "year": 1530,
+          "refs": [
+            "exo 6:3",
+            "psa 83:18"
+          ],
+          "title": {
+            "pl": "Imię Jehowa w angielskiej Biblii",
+            "en": "God’s name in the English Bible",
+            "sv": "Guds namn i den engelska Bibeln",
+            "de": "Gottes Name in der englischen Bibel",
+            "es": "El nombre de Dios en la Biblia inglesa"
+          },
+          "description": {
+            "pl": "William Tyndale wydaje przekład Pięcioksięgu, w którym używa imienia Bożego „Iehouah” (Jehowa).",
+            "en": "William Tyndale publishes his translation of the Pentateuch, using God’s name “Iehouah” (Jehovah).",
+            "sv": "William Tyndale ger ut sin översättning av Moseböckerna och använder Guds namn ”Iehouah” (Jehova).",
+            "de": "William Tyndale veröffentlicht seine Übersetzung des Pentateuchs und verwendet darin Gottes Namen „Iehouah“ (Jehova).",
+            "es": "William Tyndale publica su traducción del Pentateuco y usa el nombre de Dios «Iehouah» (Jehová)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiadkowie",
+      "start": 1870,
+      "end": 2026,
+      "color": "#0e1a2b",
+      "accent": "#7fb0ff",
+      "title": {
+        "pl": "Współcześni Świadkowie Jehowy",
+        "en": "Jehovah’s Witnesses in modern times",
+        "sv": "Jehovas vittnen i modern tid",
+        "de": "Jehovas Zeugen in neuerer Zeit",
+        "es": "Los testigos de Jehová en tiempos modernos"
+      },
+      "subtitle": {
+        "pl": "Od grupy studium Biblii do ogólnoświatowej rodziny",
+        "en": "From a Bible study group to a worldwide family",
+        "sv": "Från en bibelstudiegrupp till en världsvid familj",
+        "de": "Von einem Bibelstudienkreis zu einer weltweiten Familie",
+        "es": "De un grupo de estudio bíblico a una familia mundial"
+      },
+      "summary": {
+        "pl": "Mała grupa Badaczy Pisma Świętego odkrywa na nowo prawdy biblijne. W 1914 roku zaczyna panować Królestwo Boże, a dobra nowina dociera do wszystkich narodów.",
+        "en": "A small group of Bible Students rediscovers Bible truths. In 1914 God’s Kingdom begins to rule, and the good news reaches all nations.",
+        "sv": "En liten grupp bibelforskare återupptäcker Bibelns sanningar. 1914 börjar Guds kungarike regera, och de goda nyheterna når alla nationer.",
+        "de": "Eine kleine Gruppe von Bibelforschern entdeckt biblische Wahrheiten neu. 1914 beginnt Gottes Königreich zu regieren, und die gute Botschaft erreicht alle Nationen.",
+        "es": "Un pequeño grupo de Estudiantes de la Biblia redescubre verdades bíblicas. En 1914 empieza a gobernar el Reino de Dios, y las buenas noticias llegan a todas las naciones."
+      },
+      "events": [
+        {
+          "year": 1870,
+          "refs": [
+            "mat 24:45"
+          ],
+          "title": {
+            "pl": "Grupa studium Biblii",
+            "en": "A Bible study group",
+            "sv": "En bibelstudiegrupp",
+            "de": "Ein Bibelstudienkreis",
+            "es": "Un grupo de estudio bíblico"
+          },
+          "description": {
+            "pl": "Charles Taze Russell i jego przyjaciele z Pittsburgha i Allegheny (USA) zaczynają systematycznie badać Biblię.",
+            "en": "Charles Taze Russell and his friends in Pittsburgh and Allegheny, U.S.A., begin a systematic study of the Bible.",
+            "sv": "Charles Taze Russell och hans vänner i Pittsburgh och Allegheny i USA börjar studera Bibeln systematiskt.",
+            "de": "Charles Taze Russell und seine Freunde in Pittsburgh und Allegheny (USA) beginnen ein systematisches Bibelstudium.",
+            "es": "Charles Taze Russell y sus amigos de Pittsburgh y Allegheny (EE. UU.) empiezan a estudiar la Biblia de forma sistemática."
+          },
+          "qualifier": "approx"
+        },
+        {
+          "year": 1879,
+          "refs": [
+            "isa 21:8"
+          ],
+          "title": {
+            "pl": "Pierwsza „Strażnica”",
+            "en": "The first Watch Tower",
+            "sv": "Det första numret av Vakttornet",
+            "de": "Der erste Wachtturm",
+            "es": "La primera Atalaya"
+          },
+          "description": {
+            "pl": "W lipcu ukazuje się pierwszy numer czasopisma „Zion’s Watch Tower and Herald of Christ’s Presence” — dzisiejszej „Strażnicy”.",
+            "en": "In July, the first issue of Zion’s Watch Tower and Herald of Christ’s Presence appears — today’s Watchtower.",
+            "sv": "I juli kommer det första numret av Zion’s Watch Tower and Herald of Christ’s Presence – dagens Vakttornet.",
+            "de": "Im Juli erscheint die erste Ausgabe von Zion’s Watch Tower and Herald of Christ’s Presence – des heutigen Wachtturms.",
+            "es": "En julio sale el primer número de Zion’s Watch Tower and Herald of Christ’s Presence, la actual Atalaya."
+          }
+        },
+        {
+          "year": 1884,
+          "refs": [
+            "mat 24:14"
+          ],
+          "title": {
+            "pl": "Towarzystwo prawnie zarejestrowane",
+            "en": "The Society is incorporated",
+            "sv": "Sällskapet registreras",
+            "de": "Die Gesellschaft wird eingetragen",
+            "es": "Se constituye legalmente la Sociedad"
+          },
+          "description": {
+            "pl": "Zion’s Watch Tower Tract Society (utworzone w 1881 roku) zostaje prawnie zarejestrowane, by organizować głoszenie i druk publikacji.",
+            "en": "Zion’s Watch Tower Tract Society (formed in 1881) is legally incorporated to organize the preaching and printing.",
+            "sv": "Zion’s Watch Tower Tract Society (bildat 1881) registreras juridiskt för att organisera predikandet och tryckandet.",
+            "de": "Zion’s Watch Tower Tract Society (gegründet 1881) wird rechtlich eingetragen, um Predigtwerk und Druck zu organisieren.",
+            "es": "Zion’s Watch Tower Tract Society (formada en 1881) se constituye legalmente para organizar la predicación y la impresión."
+          }
+        },
+        {
+          "year": 1909,
+          "refs": [
+            "isa 60:22"
+          ],
+          "title": {
+            "pl": "Siedziba w Brooklynie",
+            "en": "Headquarters in Brooklyn",
+            "sv": "Huvudkontoret i Brooklyn",
+            "de": "Zentrale in Brooklyn",
+            "es": "Sede en Brooklyn"
+          },
+          "description": {
+            "pl": "Siedziba zostaje przeniesiona z Pittsburgha do Brooklynu w Nowym Jorku, gdzie pozostanie przez ponad 100 lat.",
+            "en": "Headquarters moves from Pittsburgh to Brooklyn, New York, where it will remain for over 100 years.",
+            "sv": "Huvudkontoret flyttas från Pittsburgh till Brooklyn i New York, där det blir kvar i över 100 år.",
+            "de": "Die Zentrale zieht von Pittsburgh nach Brooklyn (New York) um und bleibt dort über 100 Jahre.",
+            "es": "La sede se traslada de Pittsburgh a Brooklyn (Nueva York), donde permanecerá más de 100 años."
+          }
+        },
+        {
+          "year": 1914,
+          "refs": [
+            "dan 4:16, 17",
+            "luk 21:24",
+            "rev 12:7-10"
+          ],
+          "title": {
+            "pl": "Królestwo Boże zaczyna panować",
+            "en": "God’s Kingdom begins to rule",
+            "sv": "Guds kungarike börjar regera",
+            "de": "Gottes Königreich beginnt zu regieren",
+            "es": "Empieza a gobernar el Reino de Dios"
+          },
+          "description": {
+            "pl": "Kończą się „wyznaczone czasy narodów” — 2520 lat od 607 p.n.e. Jezus zostaje intronizowany jako Król w niebie, a na ziemi wybucha I wojna światowa — początek „dni ostatnich”.",
+            "en": "The “appointed times of the nations” end — 2,520 years after 607 B.C.E. Jesus is enthroned as King in heaven, and World War I breaks out on earth — the start of the “last days.”",
+            "sv": "”Nationernas fastställda tider” tar slut – 2 520 år efter 607 f.v.t. Jesus kröns till kung i himlen, och på jorden bryter första världskriget ut – början på ”de sista dagarna”.",
+            "de": "Die „bestimmten Zeiten der Nationen“ enden – 2 520 Jahre nach 607 v. u. Z. Jesus wird im Himmel als König eingesetzt, und auf der Erde bricht der Erste Weltkrieg aus – der Beginn der „letzten Tage“.",
+            "es": "Terminan los «tiempos señalados de las naciones»: 2.520 años después del 607 a. E.C. Jesús es entronizado como Rey en el cielo, y en la tierra estalla la Primera Guerra Mundial, el comienzo de los «últimos días»."
+          }
+        },
+        {
+          "year": 1919,
+          "refs": [
+            "mat 24:45-47"
+          ],
+          "title": {
+            "pl": "„Niewolnik wierny i roztropny”",
+            "en": "The “faithful and discreet slave”",
+            "sv": "Den ”trogne och kloke slaven”",
+            "de": "Der „treue und verständige Sklave“",
+            "es": "El «esclavo fiel y prudente»"
+          },
+          "description": {
+            "pl": "Niesłusznie uwięzieni w 1918 roku bracia zostają uwolnieni. Jezus ustanawia „niewolnika wiernego i roztropnego”, by karmił jego domowników. Na kongresie w Cedar Point zapowiedziano nowe czasopismo — dzisiejsze „Przebudźcie się!”.",
+            "en": "Brothers wrongly imprisoned in 1918 are released. Jesus appoints the “faithful and discreet slave” to feed his domestics. A new magazine — today’s Awake! — is announced at the Cedar Point convention.",
+            "sv": "Bröder som oskyldigt fängslades 1918 släpps fria. Jesus förordnar den ”trogne och kloke slaven” att ge hans tjänstefolk mat. På konventet i Cedar Point tillkännages en ny tidskrift – dagens Vakna!",
+            "de": "1918 zu Unrecht inhaftierte Brüder kommen frei. Jesus setzt den „treuen und verständigen Sklaven“ ein, damit er seine Hausknechte ernährt. Auf dem Kongress in Cedar Point wird eine neue Zeitschrift angekündigt – das heutige Erwachet!",
+            "es": "Los hermanos encarcelados injustamente en 1918 son liberados. Jesús nombra al «esclavo fiel y prudente» para alimentar a sus domésticos. En la asamblea de Cedar Point se anuncia una nueva revista, la actual ¡Despertad!"
+          }
+        },
+        {
+          "year": 1922,
+          "refs": [
+            "mat 24:14"
+          ],
+          "title": {
+            "pl": "„Ogłaszajcie Króla i jego Królestwo”",
+            "en": "“Advertise the King and his Kingdom”",
+            "sv": "”Förkunna kungen och hans kungarike”",
+            "de": "„Verkündigt den König und sein Königreich“",
+            "es": "«Anuncien al Rey y su Reino»"
+          },
+          "description": {
+            "pl": "Na kongresie w Cedar Point (Ohio) pada wezwanie, które daje nowy zapał do głoszenia od domu do domu na całym świecie.",
+            "en": "At the Cedar Point, Ohio, convention a call is made that gives new zeal to preaching from house to house worldwide.",
+            "sv": "Vid konventet i Cedar Point i Ohio kommer en uppmaning som ger nytt nit åt predikandet från hus till hus i hela världen.",
+            "de": "Auf dem Kongress in Cedar Point (Ohio) ergeht ein Aufruf, der dem Predigen von Haus zu Haus weltweit neuen Eifer gibt.",
+            "es": "En la asamblea de Cedar Point (Ohio) se hace un llamado que da nuevo celo a la predicación de casa en casa en todo el mundo."
+          }
+        },
+        {
+          "year": 1931,
+          "refs": [
+            "isa 43:10-12"
+          ],
+          "title": {
+            "pl": "Nazwa „Świadkowie Jehowy”",
+            "en": "The name “Jehovah’s Witnesses”",
+            "sv": "Namnet ”Jehovas vittnen”",
+            "de": "Der Name „Jehovas Zeugen“",
+            "es": "El nombre «testigos de Jehová»"
+          },
+          "description": {
+            "pl": "26 lipca na kongresie w Columbus (Ohio) Badacze Pisma Świętego przyjmują nazwę opartą na Izajasza 43:10.",
+            "en": "On July 26, at the Columbus, Ohio, convention, the Bible Students adopt a name based on Isaiah 43:10.",
+            "sv": "Den 26 juli, vid konventet i Columbus i Ohio, antar bibelforskarna ett namn som bygger på Jesaja 43:10.",
+            "de": "Am 26. Juli nehmen die Bibelforscher auf dem Kongress in Columbus (Ohio) einen Namen an, der auf Jesaja 43:10 beruht.",
+            "es": "El 26 de julio, en la asamblea de Columbus (Ohio), los Estudiantes de la Biblia adoptan un nombre basado en Isaías 43:10."
+          }
+        },
+        {
+          "yearRange": [
+            1933,
+            1945
+          ],
+          "refs": [
+            "act 5:29",
+            "joh 15:19"
+          ],
+          "title": {
+            "pl": "Prześladowania w nazistowskich Niemczech",
+            "en": "Persecution in Nazi Germany",
+            "sv": "Förföljelse i Nazityskland",
+            "de": "Verfolgung im nationalsozialistischen Deutschland",
+            "es": "Persecución en la Alemania nazi"
+          },
+          "description": {
+            "pl": "Świadkowie odmawiają pozdrawiania Hitlera i służby wojskowej. Tysiące trafiają do obozów koncentracyjnych z fioletowym trójkątem; wielu ginie, zachowując neutralność.",
+            "en": "The Witnesses refuse to hail Hitler or to serve in the military. Thousands are sent to concentration camps marked with a purple triangle; many die keeping their neutrality.",
+            "sv": "Vittnena vägrar att hylla Hitler och göra militärtjänst. Tusentals skickas till koncentrationsläger märkta med en lila triangel; många dör för att de förblir neutrala.",
+            "de": "Die Zeugen verweigern den Hitlergruß und den Wehrdienst. Tausende kommen mit dem lila Winkel in Konzentrationslager; viele sterben, weil sie neutral bleiben.",
+            "es": "Los Testigos se niegan a saludar a Hitler y a hacer el servicio militar. Miles son enviados a campos de concentración con el triángulo morado; muchos mueren por mantener su neutralidad."
+          }
+        },
+        {
+          "year": 1935,
+          "refs": [
+            "rev 7:9, 10"
+          ],
+          "title": {
+            "pl": "„Wielki tłum”",
+            "en": "The “great crowd”",
+            "sv": "Den ”stora skaran”",
+            "de": "Die „große Volksmenge“",
+            "es": "La «gran muchedumbre»"
+          },
+          "description": {
+            "pl": "Na kongresie w Waszyngtonie wyjaśniono, że „wielki tłum” z Objawienia 7:9 to ludzie z nadzieją życia wiecznego na ziemi.",
+            "en": "At the Washington, D.C., convention it is explained that the “great crowd” of Revelation 7:9 are people with the hope of everlasting life on earth.",
+            "sv": "Vid konventet i Washington förklaras att den ”stora skaran” i Uppenbarelseboken 7:9 är människor med hoppet om evigt liv på jorden.",
+            "de": "Auf dem Kongress in Washington wird erklärt, dass die „große Volksmenge“ aus Offenbarung 7:9 Menschen mit der Hoffnung auf ewiges Leben auf der Erde sind.",
+            "es": "En la asamblea de Washington se explica que la «gran muchedumbre» de Apocalipsis 7:9 son personas con la esperanza de vivir para siempre en la tierra."
+          }
+        },
+        {
+          "year": 1943,
+          "refs": [
+            "mat 28:19, 20"
+          ],
+          "title": {
+            "pl": "Szkoła Gilead",
+            "en": "Gilead School",
+            "sv": "Gileadskolan",
+            "de": "Gileadschule",
+            "es": "Escuela de Galaad"
+          },
+          "description": {
+            "pl": "1 lutego rusza Biblijna Szkoła Strażnicy — Gilead, która przygotowuje misjonarzy do służby na całym świecie.",
+            "en": "On February 1, the Watchtower Bible School of Gilead opens, training missionaries for service worldwide.",
+            "sv": "Den 1 februari öppnar Vakttornets bibelskola Gilead, som utbildar missionärer för tjänst i hela världen.",
+            "de": "Am 1. Februar beginnt die Wachtturm-Bibelschule Gilead, die Missionare für den weltweiten Dienst ausbildet.",
+            "es": "El 1 de febrero abre la Escuela Bíblica de Galaad de la Watchtower, que prepara misioneros para servir en todo el mundo."
+          }
+        },
+        {
+          "year": 1950,
+          "refs": [
+            "psa 83:18"
+          ],
+          "title": {
+            "pl": "Przekład Nowego Świata",
+            "en": "The New World Translation",
+            "sv": "Nya världens översättning",
+            "de": "Die Neue-Welt-Übersetzung",
+            "es": "La Traducción del Nuevo Mundo"
+          },
+          "description": {
+            "pl": "Wychodzą Chrześcijańskie Pisma Greckie w Przekładzie Nowego Świata (po angielsku), z imieniem Jehowa przywróconym na właściwe miejsce. Cała Biblia ukazuje się w 1961 roku.",
+            "en": "The New World Translation of the Christian Greek Scriptures is released in English, restoring the name Jehovah to its rightful place. The complete Bible follows in 1961.",
+            "sv": "Nya världens översättning av de kristna grekiska skrifterna ges ut på engelska, med namnet Jehova återställt. Hela Bibeln kommer 1961.",
+            "de": "Die Neue-Welt-Übersetzung der Christlichen Griechischen Schriften erscheint auf Englisch, mit dem Namen Jehova an seinem rechtmäßigen Platz. Die vollständige Bibel folgt 1961.",
+            "es": "Se presenta en inglés la Traducción del Nuevo Mundo de las Escrituras Griegas Cristianas, que restituye el nombre Jehová a su lugar. La Biblia completa sale en 1961."
+          }
+        },
+        {
+          "year": 1989,
+          "refs": [
+            "isa 54:17"
+          ],
+          "title": {
+            "pl": "Polska: legalizacja i wielkie kongresy",
+            "en": "Poland: legal recognition and large conventions",
+            "sv": "Polen: lagligt erkännande och stora konvent",
+            "de": "Polen: Anerkennung und große Kongresse",
+            "es": "Polonia: reconocimiento legal y grandes asambleas"
+          },
+          "description": {
+            "pl": "W maju Świadkowie Jehowy w Polsce zostają zalegalizowani po prawie 40 latach zakazu. W sierpniu kongresy w Chorzowie, Poznaniu i Warszawie gromadzą łącznie 166 518 osób.",
+            "en": "In May, Jehovah’s Witnesses in Poland are legalized after almost 40 years of ban. In August, conventions in Chorzów, Poznań, and Warsaw draw a combined 166,518.",
+            "sv": "I maj blir Jehovas vittnen i Polen lagligt erkända efter nästan 40 års förbud. I augusti samlar konventen i Chorzów, Poznań och Warszawa sammanlagt 166 518 personer.",
+            "de": "Im Mai werden Jehovas Zeugen in Polen nach fast 40 Jahren Verbot legalisiert. Im August besuchen insgesamt 166 518 Personen die Kongresse in Chorzów, Posen und Warschau.",
+            "es": "En mayo, los testigos de Jehová de Polonia son legalizados tras casi 40 años de prohibición. En agosto, las asambleas de Chorzów, Poznań y Varsovia reúnen a 166.518 personas."
+          }
+        },
+        {
+          "year": 2013,
+          "refs": [
+            "neh 8:8"
+          ],
+          "title": {
+            "pl": "Zrewidowany Przekład Nowego Świata",
+            "en": "Revised New World Translation",
+            "sv": "Reviderade Nya världens översättning",
+            "de": "Revidierte Neue-Welt-Übersetzung",
+            "es": "Traducción del Nuevo Mundo revisada"
+          },
+          "description": {
+            "pl": "Ukazuje się zrewidowane wydanie angielskie — prostsze i bardziej zrozumiałe. Wydanie polskie oparte na nim wychodzi w 2018 roku.",
+            "en": "A revised English edition is released — simpler and easier to understand. The Polish edition based on it follows in 2018.",
+            "sv": "En reviderad engelsk utgåva ges ut – enklare och lättare att förstå. Den svenska reviderade utgåvan bygger på den.",
+            "de": "Eine revidierte englische Ausgabe erscheint – einfacher und verständlicher. Sie dient als Grundlage für viele weitere Sprachen.",
+            "es": "Se publica una edición revisada en inglés, más sencilla y fácil de entender. Sirve de base para la revisión en muchos otros idiomas."
+          }
+        },
+        {
+          "year": 2014,
+          "refs": [
+            "mat 24:45"
+          ],
+          "title": {
+            "pl": "JW Broadcasting",
+            "en": "JW Broadcasting",
+            "sv": "JW Broadcasting",
+            "de": "JW Broadcasting",
+            "es": "JW Broadcasting"
+          },
+          "description": {
+            "pl": "6 października startuje internetowa telewizja Świadków Jehowy. Dziś dociera w setkach języków.",
+            "en": "On October 6, the Witnesses’ Internet TV station goes live. Today it reaches viewers in hundreds of languages.",
+            "sv": "Den 6 oktober startar Jehovas vittnens internet-tv. I dag når den tittare på hundratals språk.",
+            "de": "Am 6. Oktober geht der Internetsender der Zeugen Jehovas online. Heute erreicht er Zuschauer in Hunderten Sprachen.",
+            "es": "El 6 de octubre empieza a emitirse la televisión por Internet de los testigos de Jehová. Hoy llega a cientos de idiomas."
+          }
+        },
+        {
+          "year": 2017,
+          "refs": [
+            "isa 2:2"
+          ],
+          "title": {
+            "pl": "Nowa siedziba w Warwick",
+            "en": "New headquarters at Warwick",
+            "sv": "Nytt huvudkontor i Warwick",
+            "de": "Neue Zentrale in Warwick",
+            "es": "Nueva sede en Warwick"
+          },
+          "description": {
+            "pl": "Światowe Biuro Główne przenosi się z Brooklynu do Warwick w stanie Nowy Jork, zbudowanego w dużej mierze przez wolontariuszy.",
+            "en": "World headquarters moves from Brooklyn to Warwick, New York, built largely by volunteers.",
+            "sv": "Världshögkvarteret flyttar från Brooklyn till Warwick i delstaten New York, som till stor del byggts av frivilliga.",
+            "de": "Die Weltzentrale zieht von Brooklyn nach Warwick (New York) um, das größtenteils von Freiwilligen errichtet wurde.",
+            "es": "La sede mundial se traslada de Brooklyn a Warwick (Nueva York), construida en gran parte por voluntarios."
+          }
+        },
+        {
+          "year": 2017,
+          "refs": [
+            "2ti 3:12"
+          ],
+          "title": {
+            "pl": "Zakaz w Rosji",
+            "en": "Ban in Russia",
+            "sv": "Förbud i Ryssland",
+            "de": "Verbot in Russland",
+            "es": "Proscripción en Rusia"
+          },
+          "description": {
+            "pl": "20 kwietnia Sąd Najwyższy Rosji delegalizuje działalność Świadków Jehowy. Mimo więzień i rewizji bracia nadal wielbią Jehowę.",
+            "en": "On April 20, Russia’s Supreme Court bans the activity of Jehovah’s Witnesses. Despite imprisonments and raids, the brothers keep worshipping Jehovah.",
+            "sv": "Den 20 april förbjuder Rysslands högsta domstol Jehovas vittnens verksamhet. Trots fängelsestraff och husrannsakningar fortsätter bröderna att tillbe Jehova.",
+            "de": "Am 20. April verbietet das Oberste Gericht Russlands die Tätigkeit der Zeugen Jehovas. Trotz Haftstrafen und Durchsuchungen beten die Brüder Jehova weiter an.",
+            "es": "El 20 de abril, el Tribunal Supremo de Rusia prohíbe la actividad de los testigos de Jehová. Pese a encarcelamientos y registros, los hermanos siguen adorando a Jehová."
+          }
+        },
+        {
+          "year": 2020,
+          "refs": [
+            "heb 10:24, 25"
+          ],
+          "title": {
+            "pl": "Pandemia — zebrania online",
+            "en": "Pandemic — meetings online",
+            "sv": "Pandemin – möten via internet",
+            "de": "Pandemie – Zusammenkünfte online",
+            "es": "Pandemia: reuniones por videoconferencia"
+          },
+          "description": {
+            "pl": "Z powodu COVID-19 zebrania odbywają się przez wideokonferencje, a głoszenie — listownie i telefonicznie.",
+            "en": "Because of COVID-19, meetings are held by videoconference, and the preaching continues by letter and phone.",
+            "sv": "På grund av covid-19 hålls mötena via videokonferens, och predikandet fortsätter genom brev och telefon.",
+            "de": "Wegen COVID-19 finden die Zusammenkünfte per Videokonferenz statt; gepredigt wird per Brief und Telefon.",
+            "es": "Debido a la COVID-19, las reuniones se celebran por videoconferencia y la predicación continúa por carta y teléfono."
+          }
+        },
+        {
+          "year": 2022,
+          "refs": [
+            "act 20:20"
+          ],
+          "title": {
+            "pl": "Powrót do głoszenia od domu do domu",
+            "en": "Return to house-to-house preaching",
+            "sv": "Tillbaka till att predika från hus till hus",
+            "de": "Wieder Predigen von Haus zu Haus",
+            "es": "Vuelve la predicación de casa en casa"
+          },
+          "description": {
+            "pl": "1 września, po ok. 30 miesiącach przerwy, Świadkowie wracają do służby od drzwi do drzwi.",
+            "en": "On September 1, after about 30 months, the Witnesses return to door-to-door ministry.",
+            "sv": "Den 1 september, efter omkring 30 månader, återupptar vittnena tjänsten från dörr till dörr.",
+            "de": "Am 1. September kehren die Zeugen nach rund 30 Monaten zum Dienst von Tür zu Tür zurück.",
+            "es": "El 1 de septiembre, tras unos 30 meses, los Testigos vuelven a predicar de puerta en puerta."
+          }
+        },
+        {
+          "year": 2025,
+          "refs": [
+            "mat 24:14",
+            "isa 60:22"
+          ],
+          "title": {
+            "pl": "Ponad 9 milionów głosicieli",
+            "en": "Over 9 million publishers",
+            "sv": "Över 9 miljoner förkunnare",
+            "de": "Über 9 Millionen Verkündiger",
+            "es": "Más de 9 millones de publicadores"
+          },
+          "description": {
+            "pl": "Raport za rok służbowy 2025: 9 205 326 Świadków Jehowy w 241 krajach, 119 652 zbory, a na Pamiątce śmierci Chrystusa 20 635 015 obecnych.",
+            "en": "The 2025 service year report: 9,205,326 Jehovah’s Witnesses in 241 lands, 119,652 congregations, and 20,635,015 at the Memorial of Christ’s death.",
+            "sv": "Rapporten för tjänsteåret 2025: 9 205 326 Jehovas vittnen i 241 länder, 119 652 församlingar och 20 635 015 vid åminnelsen av Kristi död.",
+            "de": "Bericht für das Dienstjahr 2025: 9 205 326 Zeugen Jehovas in 241 Ländern, 119 652 Versammlungen und 20 635 015 Anwesende beim Gedächtnismahl.",
+            "es": "Informe del año de servicio 2025: 9.205.326 testigos de Jehová en 241 países, 119.652 congregaciones y 20.635.015 asistentes a la Conmemoración de la muerte de Cristo."
+          }
+        }
+      ]
     }
   ]
 }

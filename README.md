@@ -69,4 +69,4 @@ Wydarzenie w `data/events.json`:
 - [x] Bunt w Edenie, Kain i Abel, wykres „Ludzkości przybywa”
 - [x] Przyklejony licznik roku i panel „Kto wtedy żył?” (Adam–Abraham)
 - [ ] Minimapa w prawdziwej skali
-- [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)
+- [x] Oś aż do dziś: królowie, niewola, Jezus, odstępstwo, współcześni Świadkowie Jehowy (dane z raportu 2025 — aktualizować co rok)
