@@ -414,6 +414,29 @@ a { color: inherit; }
   box-shadow: 0 0 0 5px var(--page-bg), 0 0 14px var(--accent);
 }
 
+/* Strzałka „dalej” pod tekstem */
+.next-btn {
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0.9rem auto 0;
+  padding: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, color 1.2s ease;
+}
+
+.next-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(2px);
+}
+
+.next-btn svg { width: 18px; height: 18px; }
+
 /* Licznik lat od Adama pod datą */
 .event__am,
 .era__am {
@@ -636,7 +659,8 @@ a { color: inherit; }
   top: 0;
   z-index: 1;
   height: 100vh;
-  margin-bottom: -100vh;   /* kroki przewijają się nad przyklejonym płótnem */
+  /* Bez ujemnego marginesu na samym płótnie — inaczej przyklejone płótno
+     wysuwało się o cały ekran poniżej sceny i zasłaniało dalszą treść. */
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
           mask-image: linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
@@ -690,6 +714,9 @@ a { color: inherit; }
   color: var(--text-muted);
   opacity: 0.6;
 }
+
+/* Pierwszy krok wjeżdża na przyklejone płótno */
+.cosmos__stage + .cosmos__step { margin-top: -100vh; }
 
 .cosmos__step {
   position: relative;

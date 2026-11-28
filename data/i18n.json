@@ -230,6 +230,13 @@
       "sv": "död",
       "de": "tot",
       "es": "murió"
+    },
+    "next": {
+      "pl": "Dalej",
+      "en": "Next",
+      "sv": "Nästa",
+      "de": "Weiter",
+      "es": "Siguiente"
     }
   },
   "years": {

@@ -316,6 +316,38 @@ function setLanguage(lang) {
   }
 }
 
+/* ---------- Strzałka „dalej” ----------
+   Przystanki: nagłówki epok, wydarzenia i kroki sceny kosmosu (w kolejności na stronie).
+   Strzałka pod tekstem przewija do następnego przystanku. */
+
+const ARROW_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function addNextButtons(container) {
+  const stops = [...container.querySelectorAll(".era__header, .event, .cosmos__step:not(.cosmos__step--outro)")];
+  stops.forEach((stop, i) => {
+    const next = stops[i + 1];
+    if (!next) return;
+    const target = stop.querySelector(".event__card, .cosmos__card") ?? stop;
+    const btn = el("button", "next-btn");
+    btn.type = "button";
+    btn.setAttribute("aria-label", ui("next"));
+    btn.title = ui("next");
+    btn.innerHTML = ARROW_SVG;
+    btn.addEventListener("click", () => scrollToStop(next));
+    target.append(btn);
+  });
+}
+
+function scrollToStop(stop) {
+  const behavior = prefersReducedMotion ? "auto" : "smooth";
+  if (stop.classList.contains("cosmos__step")) {
+    // Krok sceny ma wysokość ekranu: jego góra przy górze ekranu = etap animacji w całości
+    window.scrollTo({ top: window.scrollY + stop.getBoundingClientRect().top, behavior });
+  } else {
+    stop.scrollIntoView({ block: "center", behavior });
+  }
+}
+
 /* ---------- Kolory tła per epoka ---------- */
 
 function setTheme({ color, accent, backdrop }) {
@@ -389,6 +421,7 @@ function mountTimeline({ animate = true } = {}) {
   state.scenes.forEach((scene) => scene.destroy());
   const container = document.getElementById("timeline");
   renderTimeline(container);
+  addNextButtons(container);
   state.scenes = [...container.querySelectorAll(".cosmos")].map((root) => window.Cosmos.mount(root));
   watchEras(container);
   watchReveals(container, animate);
