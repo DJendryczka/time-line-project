@@ -339,14 +339,54 @@ function addNextButtons(container) {
 }
 
 function scrollToStop(stop) {
-  const behavior = prefersReducedMotion ? "auto" : "smooth";
-  if (stop.classList.contains("cosmos__step")) {
-    // Krok sceny ma wysokość ekranu: jego góra przy górze ekranu = etap animacji w całości
-    window.scrollTo({ top: window.scrollY + stop.getBoundingClientRect().top, behavior });
-  } else {
-    stop.scrollIntoView({ block: "center", behavior });
-  }
+  const rect = stop.getBoundingClientRect();
+  // Krok sceny ma wysokość ekranu: jego góra przy górze ekranu = etap animacji w całości.
+  // Pozostałe przystanki lądują na środku ekranu.
+  const target = stop.classList.contains("cosmos__step")
+    ? window.scrollY + rect.top
+    : window.scrollY + rect.top + rect.height / 2 - window.innerHeight / 2;
+  smoothScrollTo(target);
 }
+
+/* Własne płynne przewijanie (wbudowane w przeglądarkę jest za szybkie i nie da się go zwolnić).
+   Czas zależy od odległości; kółko myszy, dotyk lub klawisz przerywają ruch. */
+const SCROLL_MIN_MS = 1000;
+const SCROLL_MAX_MS = 2200;
+let scrollAnim = null;
+
+const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+function smoothScrollTo(top) {
+  const maxTop = document.documentElement.scrollHeight - window.innerHeight;
+  const to = Math.max(0, Math.min(top, maxTop));
+  const from = window.scrollY;
+  const distance = to - from;
+
+  if (prefersReducedMotion || Math.abs(distance) < 2) {
+    window.scrollTo({ top: to, behavior: "instant" });
+    return;
+  }
+
+  cancelSmoothScroll();
+  const duration = Math.min(SCROLL_MAX_MS, Math.max(SCROLL_MIN_MS, 600 + Math.abs(distance) * 0.8));
+  const start = performance.now();
+
+  function frame(now) {
+    const t = Math.min(1, (now - start) / duration);
+    window.scrollTo({ top: from + distance * easeInOutCubic(t), behavior: "instant" });
+    scrollAnim = t < 1 ? requestAnimationFrame(frame) : null;
+  }
+  scrollAnim = requestAnimationFrame(frame);
+}
+
+function cancelSmoothScroll() {
+  if (scrollAnim) cancelAnimationFrame(scrollAnim);
+  scrollAnim = null;
+}
+
+["wheel", "touchstart", "keydown"].forEach((type) =>
+  window.addEventListener(type, cancelSmoothScroll, { passive: true })
+);
 
 /* ---------- Kolory tła per epoka ---------- */
 
@@ -484,6 +524,12 @@ function showError(error) {
 
 async function init() {
   initParallax();
+  document.querySelector(".intro__scroll")?.addEventListener("click", (e) => {
+    const timeline = document.getElementById("timeline");
+    if (!timeline) return;
+    e.preventDefault();
+    smoothScrollTo(window.scrollY + timeline.getBoundingClientRect().top);
+  });
   try {
     const [i18n, data] = await Promise.all([fetchJson(I18N_URL), fetchJson(EVENTS_URL)]);
     state.i18n = i18n;
