@@ -6,6 +6,7 @@
 
 const EVENTS_URL = "data/events.json";
 const I18N_URL = "data/i18n.json";
+const LIFESPANS_URL = "data/lifespans.json";
 const DEFAULT_LANG = "pl";
 const STORAGE_KEY = "timeline-lang";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -127,6 +128,7 @@ function renderEvent(event, prev) {
   if (!dated) classes.push("event--undated");
   if (event.widget) classes.push("event--wide");
   const li = el("li", classes.join(" "));
+  if (isDated(event.year)) li.dataset.year = event.year; // punkt odniesienia dla licznika roku
 
   if (prev && dated && isDated(eventYear(prev))) {
     li.style.setProperty("--gap", gapForYears(yearsBetween(eventYear(prev), eventYear(event))));
@@ -227,6 +229,7 @@ function renderEra(era) {
   section.setAttribute("aria-labelledby", `${era.id}-title`);
 
   const header = el("header", "era__header reveal");
+  if (isDated(era.start)) header.dataset.year = era.start;
   const title = el("h2", "era__title", tr(era.title));
   title.id = `${era.id}-title`;
 
@@ -465,6 +468,11 @@ function mountTimeline({ animate = true } = {}) {
   state.scenes = [...container.querySelectorAll(".cosmos")].map((root) => window.Cosmos.mount(root));
   watchEras(container);
   watchReveals(container, animate);
+  window.Lifespans?.mount(container, {
+    data: state.lifespans,
+    ui, tr, formatYear, formatDuration,
+    adamYears: (year) => tr(state.i18n.adamYears.year).replace("{n}", sinceAdam(year)),
+  });
 }
 
 /* ---------- Paralaksa intro ---------- */
@@ -531,9 +539,14 @@ async function init() {
     smoothScrollTo(window.scrollY + timeline.getBoundingClientRect().top);
   });
   try {
-    const [i18n, data] = await Promise.all([fetchJson(I18N_URL), fetchJson(EVENTS_URL)]);
+    const [i18n, data, lifespans] = await Promise.all([
+      fetchJson(I18N_URL),
+      fetchJson(EVENTS_URL),
+      fetchJson(LIFESPANS_URL).catch(() => null), // panel „Kto wtedy żył?” jest opcjonalny
+    ]);
     state.i18n = i18n;
     state.data = data;
+    state.lifespans = lifespans;
     state.lang = detectLanguage(Object.keys(i18n.languages));
 
     applyStaticTexts();

@@ -16,10 +16,12 @@ Dane są wczytywane przez `fetch`, dlatego strona musi działać przez lokalny s
 ```
 index.html          intro z paralaksą, przełącznik języka, kontener osi
 style.css           zmienne, fonty, responsywność, wygląd osi
+lifespans.js        panel „Kto wtedy żył?” (paski życia Adam–Abraham, licznik roku)
 population.js       widżet „Ludzkości przybywa” (wykres + suwaki)
 cosmos.js           animacja kosmosu (cząstki na canvas) sterowana przewijaniem
 script.js           wczytuje dane, renderuje oś, języki, paralaksa, kolory epok
 data/events.json    epoki i wydarzenia (treść w 5 językach)
+data/lifespans.json lata życia z Rdz 5 i 11 dla panelu „Kto wtedy żył?”
 data/i18n.json      teksty interfejsu, oznaczenia lat, skróty ksiąg biblijnych
 images/time.png     tło intro (kosmos)
 images/creation/    obrazy dni 4–6 i Edenu + PROMPTY.md (jak je wygenerować)
@@ -65,6 +67,6 @@ Wydarzenie w `data/events.json`:
 - [x] Od 4. dnia przejście z animacji w obrazy (czekają na pliki, patrz `images/creation/PROMPTY.md`)
 - [x] Eden przechodzi w rozmyte tło epoki przed potopem
 - [x] Bunt w Edenie, Kain i Abel, wykres „Ludzkości przybywa”
-- [ ] Przyklejony licznik roku
+- [x] Przyklejony licznik roku i panel „Kto wtedy żył?” (Adam–Abraham)
 - [ ] Minimapa w prawdziwej skali
 - [ ] Kolejne epoki (królowie, niewola babilońska, czasy Jezusa, …)

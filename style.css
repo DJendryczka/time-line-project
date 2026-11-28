@@ -838,6 +838,172 @@ a { color: inherit; }
 }
 
 /* =========================================================
+   4b. PANEL „KTO WTEDY ŻYŁ?”
+   Duży ekran: stała kolumna po lewej (oś jest węższa, żeby się nie nakładały).
+   Mniejszy ekran: przycisk w lewym dolnym rogu, panel otwiera się nad treścią.
+   ========================================================= */
+.lifespans {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-height: calc(100vh - 2rem);
+}
+
+.lifespans.is-visible { display: flex; }
+
+.lifespans__toggle {
+  order: 2;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: rgba(8, 8, 16, 0.75);
+  backdrop-filter: blur(8px);
+  color: var(--text);
+  font: 600 0.8rem/1 var(--font-body);
+  cursor: pointer;
+}
+
+.lifespans.is-open .lifespans__toggle { display: none; }
+
+.lifespans__body {
+  display: none;
+  width: min(17rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  background: rgba(8, 8, 16, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.lifespans.is-open .lifespans__body { display: block; }
+
+.lifespans__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lifespans__title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lifespans__close {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lifespans__close:hover { background: rgba(255, 255, 255, 0.08); color: var(--text); }
+
+.lifespans__year { margin: 0.3rem 0 0.7rem; }
+
+.lifespans__year-main {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  transition: color 1.2s ease;
+}
+
+.lifespans__year-adam {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.lifespans__list {
+  display: grid;
+  gap: 0.45rem;
+  list-style: none;
+}
+
+.lifespans__row-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.lifespans__name { font-weight: 600; }
+
+.lifespans__age {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.lifespans__track {
+  height: 6px;
+  margin-top: 0.2rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.lifespans__fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent);
+  transition: background-color 1.2s ease;
+}
+
+.lifespans__event {
+  margin-top: 0.7rem;
+  padding: 0.5rem 0.6rem;
+  border-left: 2px solid var(--accent);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.lifespans__note {
+  margin-top: 0.7rem;
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* Duży ekran: otwarty panel to stała kolumna po lewej, a oś przesuwa się w prawo,
+   żeby się nie nakładały. Zwinięty panel = oś znów na środku. */
+@media (min-width: 1100px) {
+  body.lifespans-docked { --tl-offset: max(19.5rem, calc((100vw - var(--content-width)) / 2)); }
+
+  body.lifespans-docked .timeline {
+    width: min(var(--content-width), 100vw - 21rem);
+    margin-left: var(--tl-offset);
+    margin-right: auto;
+  }
+
+  /* Scena kosmosu dalej na całą szerokość ekranu */
+  body.lifespans-docked .cosmos-item { margin-left: calc(-1 * var(--tl-offset)); }
+
+  .lifespans {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+/* =========================================================
    5. STOPKA
    ========================================================= */
 .site-footer {

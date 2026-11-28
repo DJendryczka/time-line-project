@@ -265,6 +265,41 @@
       "sv": "Så räknar vi: Bibeln anger inga siffror, så enkla regler har antagits. Adam och Eva får först Kain och Abel, sedan döttrar och söner turvis; Set föds år 130 (1 Moseboken 5:3). Varje familj får så många barn som du ställer in, ett vartannat år, son och dotter turvis. Man gifter sig vid vald ålder: den äldsta ogifta mannen gifter sig med den äldsta ogifta kvinnan – därför är Kains hustru Adams och Evas 1:a dotter. Abel dödas före Sets födelse (”?” – han kan redan ha varit död). Människor lever omkring 900 år. Håll muspekaren över en person för att se maken/makan.",
       "de": "So rechnen wir: Die Bibel nennt keine Zahlen, daher gelten einfache Annahmen. Adam und Eva bekommen zuerst Kain und Abel, dann abwechselnd Töchter und Söhne; Seth wird im Jahr 130 geboren (1. Mose 5:3). Jede Familie hat so viele Kinder, wie du einstellst, alle 2 Jahre eins, abwechselnd Sohn und Tochter. Geheiratet wird im gewählten Alter: Der älteste ledige Mann heiratet die älteste ledige Frau – deshalb ist Kains Frau die 1. Tochter von Adam und Eva. Abel wird vor Seths Geburt getötet („?“ – er lebte vielleicht nicht mehr). Menschen leben etwa 900 Jahre. Fahre über eine Person, um den Ehepartner zu sehen.",
       "es": "Cómo lo calculamos: la Biblia no da cifras, así que se usan reglas sencillas. Adán y Eva tienen primero a Caín y a Abel, y luego hijas e hijos alternadamente; Set nace en el año 130 (Génesis 5:3). Cada familia tiene tantos hijos como indiques, uno cada 2 años, alternando hijo e hija. Se casan a la edad elegida: el hombre soltero de más edad se casa con la mujer soltera de más edad; por eso la esposa de Caín es la 1.ª hija de Adán y Eva. Abel muere antes de que nazca Set («?»: puede que ya hubiera muerto). La gente vive unos 900 años. Pasa el cursor sobre una persona para ver su cónyuge."
+    },
+    "lifeTitle": {
+      "pl": "Kto wtedy żył?",
+      "en": "Who was alive then?",
+      "sv": "Vem levde då?",
+      "de": "Wer lebte damals?",
+      "es": "¿Quién vivía entonces?"
+    },
+    "lifeToggle": {
+      "pl": "Kto żył?",
+      "en": "Who lived?",
+      "sv": "Vem levde?",
+      "de": "Wer lebte?",
+      "es": "¿Quién vivía?"
+    },
+    "lifeClose": {
+      "pl": "Zwiń",
+      "en": "Collapse",
+      "sv": "Fäll ihop",
+      "de": "Einklappen",
+      "es": "Contraer"
+    },
+    "lifeNote": {
+      "pl": "Rodowód z Rdz 5 i 11. Pasek = całe życie, wypełnienie = przeżyte lata. Kto umiera, znika z listy.",
+      "en": "Line from Genesis 5 and 11. Bar = whole life, fill = years lived so far. Those who die disappear from the list.",
+      "sv": "Släktlinje från 1 Mos 5 och 11. Stapel = hela livet, fyllning = levda år. Den som dör försvinner från listan.",
+      "de": "Linie aus 1. Mose 5 und 11. Balken = ganzes Leben, Füllung = gelebte Jahre. Wer stirbt, verschwindet aus der Liste.",
+      "es": "Línea de Génesis 5 y 11. Barra = toda la vida; relleno = años vividos. Quien muere desaparece de la lista."
+    },
+    "lifeLifespan": {
+      "pl": "żył {n}",
+      "en": "lived {n}",
+      "sv": "levde {n}",
+      "de": "lebte {n}",
+      "es": "vivió {n}"
     }
   },
   "years": {

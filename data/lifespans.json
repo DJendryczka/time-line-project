@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "source": "Rdz 5 i 11; daty wg „Wnikliwe poznawanie Pism”",
+    "range": "Panel widoczny od stworzenia Adama do śmierci Abrahama"
+  },
+  "range": [
+    -4026,
+    -1843
+  ],
+  "people": [
+    {
+      "id": "adam",
+      "name": {
+        "pl": "Adam",
+        "en": "Adam",
+        "sv": "Adam",
+        "de": "Adam",
+        "es": "Adán"
+      },
+      "born": -4026,
+      "died": -3096,
+      "ref": "gen 5:5"
+    },
+    {
+      "id": "seth",
+      "name": {
+        "pl": "Set",
+        "en": "Seth",
+        "sv": "Set",
+        "de": "Seth",
+        "es": "Set"
+      },
+      "born": -3896,
+      "died": -2984,
+      "ref": "gen 5:8"
+    },
+    {
+      "id": "enosh",
+      "name": {
+        "pl": "Enosz",
+        "en": "Enosh",
+        "sv": "Enos",
+        "de": "Enosch",
+        "es": "Enós"
+      },
+      "born": -3791,
+      "died": -2886,
+      "ref": "gen 5:11"
+    },
+    {
+      "id": "kenan",
+      "name": {
+        "pl": "Kenan",
+        "en": "Kenan",
+        "sv": "Kenan",
+        "de": "Kenan",
+        "es": "Quenán"
+      },
+      "born": -3701,
+      "died": -2791,
+      "ref": "gen 5:14"
+    },
+    {
+      "id": "mahalalel",
+      "name": {
+        "pl": "Mahalalel",
+        "en": "Mahalalel",
+        "sv": "Mahalalel",
+        "de": "Mahalalel",
+        "es": "Mahalalel"
+      },
+      "born": -3631,
+      "died": -2736,
+      "ref": "gen 5:17"
+    },
+    {
+      "id": "jared",
+      "name": {
+        "pl": "Jared",
+        "en": "Jared",
+        "sv": "Jered",
+        "de": "Jered",
+        "es": "Jared"
+      },
+      "born": -3566,
+      "died": -2604,
+      "ref": "gen 5:20"
+    },
+    {
+      "id": "enoch",
+      "name": {
+        "pl": "Henoch",
+        "en": "Enoch",
+        "sv": "Henok",
+        "de": "Henoch",
+        "es": "Enoc"
+      },
+      "born": -3404,
+      "died": -3039,
+      "ref": "gen 5:23, 24"
+    },
+    {
+      "id": "methuselah",
+      "name": {
+        "pl": "Metuszelach",
+        "en": "Methuselah",
+        "sv": "Metusela",
+        "de": "Methusalem",
+        "es": "Matusalén"
+      },
+      "born": -3339,
+      "died": -2370,
+      "ref": "gen 5:27"
+    },
+    {
+      "id": "lamech",
+      "name": {
+        "pl": "Lamech",
+        "en": "Lamech",
+        "sv": "Lemek",
+        "de": "Lamech",
+        "es": "Lamec"
+      },
+      "born": -3152,
+      "died": -2375,
+      "ref": "gen 5:31"
+    },
+    {
+      "id": "noah",
+      "name": {
+        "pl": "Noe",
+        "en": "Noah",
+        "sv": "Noa",
+        "de": "Noah",
+        "es": "Noé"
+      },
+      "born": -2970,
+      "died": -2020,
+      "ref": "gen 9:29"
+    },
+    {
+      "id": "shem",
+      "name": {
+        "pl": "Sem",
+        "en": "Shem",
+        "sv": "Sem",
+        "de": "Sem",
+        "es": "Sem"
+      },
+      "born": -2468,
+      "died": -1868,
+      "ref": "gen 11:10, 11"
+    },
+    {
+      "id": "arpachshad",
+      "name": {
+        "pl": "Arpachszad",
+        "en": "Arpachshad",
+        "sv": "Arpaksad",
+        "de": "Arpachschad",
+        "es": "Arpaksad"
+      },
+      "born": -2368,
+      "died": -1930,
+      "ref": "gen 11:12, 13"
+    },
+    {
+      "id": "shelah",
+      "name": {
+        "pl": "Szelach",
+        "en": "Shelah",
+        "sv": "Shela",
+        "de": "Schelach",
+        "es": "Selah"
+      },
+      "born": -2333,
+      "died": -1900,
+      "ref": "gen 11:14, 15"
+    },
+    {
+      "id": "eber",
+      "name": {
+        "pl": "Eber",
+        "en": "Eber",
+        "sv": "Eber",
+        "de": "Eber",
+        "es": "Éber"
+      },
+      "born": -2303,
+      "died": -1839,
+      "ref": "gen 11:16, 17"
+    },
+    {
+      "id": "peleg",
+      "name": {
+        "pl": "Peleg",
+        "en": "Peleg",
+        "sv": "Peleg",
+        "de": "Peleg",
+        "es": "Péleg"
+      },
+      "born": -2269,
+      "died": -2030,
+      "ref": "gen 11:18, 19"
+    },
+    {
+      "id": "reu",
+      "name": {
+        "pl": "Reu",
+        "en": "Reu",
+        "sv": "Reu",
+        "de": "Reu",
+        "es": "Reú"
+      },
+      "born": -2239,
+      "died": -2000,
+      "ref": "gen 11:20, 21"
+    },
+    {
+      "id": "serug",
+      "name": {
+        "pl": "Serug",
+        "en": "Serug",
+        "sv": "Serug",
+        "de": "Serug",
+        "es": "Serug"
+      },
+      "born": -2207,
+      "died": -1977,
+      "ref": "gen 11:22, 23"
+    },
+    {
+      "id": "nahor",
+      "name": {
+        "pl": "Nachor",
+        "en": "Nahor",
+        "sv": "Nahor",
+        "de": "Nahor",
+        "es": "Nacor"
+      },
+      "born": -2177,
+      "died": -2029,
+      "ref": "gen 11:24, 25"
+    },
+    {
+      "id": "terah",
+      "name": {
+        "pl": "Terach",
+        "en": "Terah",
+        "sv": "Tera",
+        "de": "Terach",
+        "es": "Taré"
+      },
+      "born": -2148,
+      "died": -1943,
+      "ref": "gen 11:32"
+    },
+    {
+      "id": "abraham",
+      "name": {
+        "pl": "Abraham",
+        "en": "Abraham",
+        "sv": "Abraham",
+        "de": "Abraham",
+        "es": "Abrahán"
+      },
+      "born": -2018,
+      "died": -1843,
+      "ref": "gen 25:7"
+    }
+  ],
+  "notes": [
+    {
+      "from": -2370,
+      "to": -2368,
+      "text": {
+        "pl": "W arce ocalało tylko 8 osób: Noe z żoną, ich synowie Sem, Cham i Jafet oraz ich żony (1 Pt 3:20). Chama i Jafeta Biblia nie datuje.",
+        "en": "Only 8 people survived in the ark: Noah and his wife, their sons Shem, Ham, and Japheth, and their wives (1 Peter 3:20). The Bible gives no dates for Ham and Japheth.",
+        "sv": "Bara 8 människor överlevde i arken: Noa och hans hustru, deras söner Sem, Ham och Jafet och deras hustrur (1 Petrus 3:20). Bibeln anger inga datum för Ham och Jafet.",
+        "de": "Nur 8 Menschen überlebten in der Arche: Noah und seine Frau, ihre Söhne Sem, Ham und Japhet und deren Frauen (1. Petrus 3:20). Für Ham und Japhet nennt die Bibel keine Daten.",
+        "es": "Solo 8 personas sobrevivieron en el arca: Noé y su esposa, sus hijos Sem, Cam y Jafet, y las esposas de ellos (1 Pedro 3:20). La Biblia no da fechas de Cam y Jafet."
+      }
+    }
+  ]
+}
